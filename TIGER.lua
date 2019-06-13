@@ -1227,7 +1227,7 @@ TIGERBOT:incr(TIGER_ID..'add:mempar'..msg.chat_id_..':'..msg.sender_user_id_)
 end
 if TIGERBOT:get(TIGER_ID..'viewchannel'..msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID..'viewchannel'..msg.sender_user_id_)
 return false  end 
 if not msg.forward_info_ then 
@@ -1243,7 +1243,7 @@ return false end
 end  
 if TIGERBOT:get(TIGER_ID.."get:info:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."get:info:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."get:info:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
@@ -1294,7 +1294,7 @@ end,nil)
 end
 if TIGERBOT:get(TIGER_ID.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
@@ -1304,18 +1304,18 @@ ID = "SearchPublicChat",
 username_ = username  
 },function(arg,data) 
 if data and data.message_ and data.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*📮 ※ المعرف لا يوجد فيه قناة *'
+local taha = '*❕ ※ المعرف لا يوجد فيه قناة *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if data and data.type_ and data.type_.ID and data.type_.ID == 'PrivateChatInfo' then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📮 ※ عذا لا يمكنك وضع معرف حسابات في الاشتراك *\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرا لا يمكنك وضع معرف حسابات في الاشتراك *\n✓', 1, 'md') 
 return false  end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == true then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📮 ※ عذا لا يمكنك وضع معرف مجوعه في الاشتراك *\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📮 ※ عذرا لا يمكنك وضع معرف مجوعه في الاشتراك *\n✓', 1, 'md') 
 return false  end
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == false then
 if data and data.type_ and data.type_.channel_ and data.type_.channel_.ID and data.type_.channel_.status_.ID == 'ChatMemberStatusEditor' then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📮 ※ البوت ادمن في القناة \n📮 ※ تم تفعيل الاشتراك الاجباري في *\n*📮 ※ ايدي القناة ('..data.id_..')*\n*📮 ※ معرف القناة *([@'..data.type_.channel_.username_..'])\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ البوت ادمن في القناة \n☑ ※ تم تفعيل الاشتراك الاجباري في *\n*📮 ※ ايدي القناة ('..data.id_..')*\n*🎟 ※ معرف القناة *([@'..data.type_.channel_.username_..'])\n✓', 1, 'md') 
 TIGERBOT:set(TIGER_ID..'add:ch:id',data.id_)
 TIGERBOT:set(TIGER_ID..'add:ch:username','@'..data.type_.channel_.username_)
 else
@@ -1326,7 +1326,7 @@ end,nil)
 end
 if TIGERBOT:get(TIGER_ID.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."textch:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
@@ -1336,7 +1336,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📮 ※ تم تغيير رسالة ا
 end
 if TIGERBOT:get(TIGER_ID.."get:link:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."get:link:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."get:link:gp" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
@@ -1382,7 +1382,7 @@ getChannelFull(ch, taha, {chat_id=ch,msg_id=msg.id})
 end 
 if TIGERBOT:get(TIGER_ID..'namebot:witting'..msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID..'namebot:witting'..msg.sender_user_id_) 
 return false  end 
 TIGERBOT:del(TIGER_ID..'namebot:witting'..msg.sender_user_id_) 
@@ -1391,7 +1391,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*♻ ※* تم تغير اسم البو
 end 
 if TIGERBOT:get(TIGER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
@@ -1401,7 +1401,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n📬* ※* تم وضع الترحيب 
 end
 if TIGERBOT:get(TIGER_ID.."numadd:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."numadd:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."numadd:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
@@ -1410,7 +1410,7 @@ TIGERBOT:set(TIGER_ID..'setadd:bot'..bot_id,numadded)  TIGER_sendMsg(msg.chat_id
 end
 if TIGERBOT:get(TIGER_ID.."set:description" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."set:description" .. msg.chat_id_ .. "" .. msg.sender_user_id_)
 return false  end 
 TIGERBOT:del(TIGER_ID.."set:description" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
@@ -1421,13 +1421,13 @@ end
 
 if TIGERBOT:get(TIGER_ID.."photo:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."photo:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)
 return false  end 
 TIGERBOT:del(TIGER_ID.."photo:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  local pro = tonumber(text:match("(%d+)")) local function myprofile(extra, result, success) if result.total_count_ == 0 then TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '*🔖 ※* عذرا انت لا تمتلك صور في البروفايل\n', 1, 'md') else if result.total_count_ >= pro then if result.photos_[0] then sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_, '\n🌄 ※ صورتك رقم  '..pro..' \n📋 ※ عدد صورك  '..result.total_count_..' \n📊 ※ حجم صورتك  '..result.photos_[0].sizes_[1].photo_.size_..' ') end else TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '\n*📛 ※* انت لا تمتلك صوره رقم  *{'..pro..'}*\n*🌁 ※* عدد صورك هي *{'..result.total_count_..'}*', 1, 'md')  end end end getUserProfilePhotos(msg.sender_user_id_, pro-1, 1000, myprofile)  end
 if TIGERBOT:get(TIGER_ID.."link:group"..msg.chat_id_) == 'setlinkwai' and is_mod(msg) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."link:group" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 else  
 if text and text:match("(https://telegram.me/joinchat/%S+)") or text and text:match("(https://t.me/joinchat/%S+)") then     
@@ -1440,7 +1440,7 @@ end
 end
 if TIGERBOT:get(TIGER_ID.."bc:in:gropsfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الاذاعه بالتوجيه للمجموعات *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الاذاعه بالتوجيه للمجموعات *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."bc:in:gropsfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  end 
 if msg.forward_info_ then 
@@ -1449,19 +1449,19 @@ local list = TIGERBOT:smembers(TIGER_ID..'botgps')
 for k,v in pairs(list) do  
 forwardMessages(v, msg.chat_id_, {[0] = msg.id_}, 1)  
 end   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮 ※ تم اذاعة الرساله الى » ❪"..gps.."❫ مجموعات في البوت *\n✓", 1, "md")     
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم اذاعة الرساله الى » ❪"..gps.."❫ مجموعات في البوت *\n✓", 1, "md")     
 TIGERBOT:del(TIGER_ID.."bc:in:gropsfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
 if TIGERBOT:get(TIGER_ID..'setphoto'..msg.chat_id_..':'..msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID..'setphoto'..msg.chat_id_..':'..msg.sender_user_id_) 
 return false  end 
 end
 if TIGERBOT:get(TIGER_ID.."bc:in:allfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الاذاعه بالتوجيه للكل *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الاذاعه بالتوجيه للكل *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."bc:in:allfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  end 
 if msg.forward_info_ then 
@@ -1484,7 +1484,7 @@ TIGERBOT:del(TIGER_ID.."bc:in:allfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_
 end
 if TIGERBOT:get(TIGER_ID.."bc:in:pvfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_,msg.id_ , 1, "*📬 ※ تم الغاء الاذاعه بالتوجيه للخاص *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_,msg.id_ , 1, "*☑ ※ تم الغاء الاذاعه بالتوجيه للخاص *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."bc:in:pvfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  end 
 if msg.forward_info_ then 
@@ -1493,13 +1493,13 @@ local list = TIGERBOT:smembers(TIGER_ID..'usersbot')
 for k,v in pairs(list) do  
 forwardMessages(v, msg.chat_id_, {[0] = msg.id_}, 1)  
 end   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮 ※ تم اذاعة الرساله الى » ❪"..gps.."❫ مشترك في البوت *\n✓", 1, "md")     
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم اذاعة الرساله الى » ❪"..gps.."❫ مشترك في البوت *\n✓", 1, "md")     
 TIGERBOT:del(TIGER_ID.."bc:in:pvfwd" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
 if TIGERBOT:get(TIGER_ID.."bc:in:grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الاذاعه للمجموعات *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الاذاعه للمجموعات *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."bc:in:grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 else 
 local gps = TIGERBOT:scard(TIGER_ID.."bot:gpsby:id") or 0 
@@ -1533,13 +1533,13 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮 ※ تم اذاعة "..whatbc.." الى » ❪"..gps.."❫ مجموعات في البوت *\n✓", 1, "md")     
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم اذاعة "..whatbc.." الى » ❪"..gps.."❫ مجموعات في البوت *\n✓", 1, "md")     
 TIGERBOT:del(TIGER_ID.."bc:in:grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
 if TIGERBOT:get(TIGER_ID.."bc:in:all" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then  
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الاذاعه للكل *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الاذاعه للكل *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."bc:in:all" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)  
 else  
 local gps = TIGERBOT:scard(TIGER_ID.."bot:gpsby:id") or 0  
@@ -1609,7 +1609,7 @@ end
 end
 if TIGERBOT:get(TIGER_ID.."bc:in:pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الاذاعه للمشتركين *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الاذاعه للمشتركين *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."bc:in:pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 else 
 local gps = TIGERBOT:scard(TIGER_ID.."usersbot") or 0 
@@ -1643,45 +1643,45 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮 ※ تم اذاعة "..whatbc.." الى » ❪"..gps.."❫ مشترك في البوت *\n✓", 1, "md")     
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم اذاعة "..whatbc.." الى » ❪"..gps.."❫ مشترك في البوت *\n✓", 1, "md")     
 TIGERBOT:del(TIGER_ID.."bc:in:pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
 if TIGERBOT:get(TIGER_ID.."rules" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."rules" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)
 return false  end 
-local rules = msg.content_.text_ TIGERBOT:set(TIGER_ID.."rules:group" .. msg.chat_id_, rules) TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📛 ※*تم حفظ القوانين ✔",  1, "md") end  TIGERBOT:del(TIGER_ID.."rules" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)
+local rules = msg.content_.text_ TIGERBOT:set(TIGER_ID.."rules:group" .. msg.chat_id_, rules) TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※*تم حفظ القوانين ✔",  1, "md") end  TIGERBOT:del(TIGER_ID.."rules" .. msg.chat_id_ .. ":" .. msg.sender_user_id_)
 if TIGERBOT:get(TIGER_ID.."sudo:dev" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."sudo:dev" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."sudo:dev" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 local dev = text:match("(.*)") TIGERBOT:set(TIGER_ID.."dev", dev)  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n*📛 ※* تم وضع كليشه المطور \n', 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n*☑ ※* تم وضع كليشه المطور \n', 1, 'md')   
 end
 if TIGERBOT:get(TIGER_ID.."start:msgofstart" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."start:msgofstart" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 return false  end 
 TIGERBOT:del(TIGER_ID.."start:msgofstart" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 local msgofstart = text:match("(.*)")  
 TIGERBOT:set(TIGER_ID.."start:msgofstart1", msgofstart)  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*📛 ※* تم وضع كليشه ستارت \n', 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑ ※* تم وضع كليشه ستارت \n', 1, 'md')   
 end
 
 if TIGERBOT:get(TIGER_ID.."sudo:pv" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") or text and text:match("^الغاء ✖$") then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📬 ※ تم الغاء الامر *\n✓", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."sudo:pv" .. msg.chat_id_ .. "" .. msg.sender_user_id_) 
 return false  end 
 TIGERBOT:del(TIGER_ID.."sudo:pv" .. msg.chat_id_ .. "" .. msg.sender_user_id_) 
 local pvstart = text:match("(.*)") 
 TIGERBOT:set(TIGER_ID.."pvstart", pvstart)  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n*📛 ※* تم وضع الرد في التواصل \n', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n*☑ ※* تم وضع الرد في التواصل \n', 1, 'md')  
 end
 if chat_type == 'user' then
 if text == '/start' then  
@@ -1824,11 +1824,11 @@ if text =='الغاء الحظر' then
 tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data) 
 if TIGERBOT:sismember(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) then
 if data.username_ == false then
-local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ تم الغاء حظره من التواصل\n✓'
+local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم الغاء حظره من التواصل\n✓'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*📮 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ تم الغاء حظره من التواصل\n✓*'
+zo = '*📮 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*☑ ※ تم الغاء حظره من التواصل\n✓*'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
@@ -3065,7 +3065,7 @@ end
 t = t..'*'..k..'• *❨`'..v..'`❩ *» {'..taha..'}*\n'    
 end  
 if #list == 0 then  
-t = "*🚫 ※* لا يوجد ردود مضافه"  
+t = "*❕ ※* لا يوجد ردود مضافه"  
 end  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, t, 1, 'md')  
 end  
@@ -3286,7 +3286,7 @@ end
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, t, 1, 'md')  
 end  
 if text and text == 'اضف رد' and is_monsh(msg)  then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ حسنآ ارسل لي الكلمه الان *\n', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*💬 ※ حسنآ ارسل لي الكلمه الان *\n', 1, 'md')  
 TIGERBOT:set(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_id_,"rep")  
 return false  
 end    
@@ -4289,7 +4289,7 @@ if text and text:match('^كشف @(.*)') then
 local username = text:match('^كشف @(.*)') 
 tdcli_function ({ID = "SearchPublicChat",username_ = username},function(extra, kk, success) 
 if kk and kk.message_ and kk.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if kk.type_.ID == "ChannelChatInfo" then 
@@ -4367,7 +4367,7 @@ elseif data.type_.ID == "UserTypeGeneral" then
 acca = 'شخصي'
 end
 if data.first_name_ == false then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*💢 ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
 return false  end
 text = '*🗯 ※ ايديه » ❪* `'..kk.id_..
 '` ❫\n💠* ※ معـرفه » ❪* [@'..data.username_..']'..
@@ -4415,7 +4415,7 @@ tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = iduser}
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = iduser,offset_ = 0,limit_ = 100},function(arg,pho) 
 tdcli_function ({ID = "GetUser",user_id_ = iduser},function(arg,data) 
 if data.message_ == "User not found" then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*💢 ※ لا استطيع استخراج معلوماته ✨ *\n', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ لا استطيع استخراج معلوماته ✨ *\n', 1, 'md')
 return false  end
 if pho.total_count_ == 0 then
 photouser = ''
@@ -4460,7 +4460,7 @@ elseif data.type_.ID == "UserTypeGeneral" then
 acca = 'شخصي'
 end
 if data.first_name_ == false then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*💢 ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
 return false  end
 if data.username_ == false then
 text = '🗯 ※ ايديه » ❪ '..iduser..
@@ -4713,7 +4713,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖️ ※ عدد المشتركين 
 end      
 if text and text:match("^ضع عدد التفعيل$") and is_devtaha(msg) then  
 TIGERBOT:setex(TIGER_ID.."numadd:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  
-local t = '*📊 ※ ارسل لي العدد الان*'  
+local t = '*💬 ※ ارسل لي العدد الان*'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
 end
 if text ==('رفع الادمنيه') and is_monsh(msg) then
@@ -4742,7 +4742,7 @@ TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,admins[i].user_id_)
 end
 end
 if num2 == 0 then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🚫 ※ لا توجد ادمنية ليتم رفعهم*\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا توجد ادمنية ليتم رفعهم*\n✓', 1, 'md') 
 else
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ تمت ترقية • ※ '..num2..'  ※• من ادمنية المجموعه*\n✓', 1, 'md') 
 end
@@ -5429,7 +5429,7 @@ local SET2 = text:match('^رفع عضو مميز @(.*)')
 local username = (SET1 or SET2)
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -5537,7 +5537,7 @@ local SET2 = text:match('^تنزيل عضو مميز @(.*)')
 local username = (SET1 or SET2)
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -5751,7 +5751,7 @@ if text and text:match('^رفع مميز عام @(.*)') and is_devtaha(msg) then
 local username = text:match('^رفع مميز عام @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -5855,7 +5855,7 @@ if text and text:match('^تنزيل مميز عام @(.*)') and is_devtaha(msg) 
 local username = text:match('^تنزيل مميز عام @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -5957,7 +5957,7 @@ if text and text:match('^رفع مدير @(.*)') and is_owner(msg) then
 local username = text:match('^رفع مدير @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6061,7 +6061,7 @@ if text and text:match('^تنزيل مدير @(.*)') and is_owner(msg) then
 local username = text:match('^تنزيل مدير @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6163,7 +6163,7 @@ if text and text:match('^رفع ادمن @(.*)') and is_monsh(msg) then
 local username = text:match('^رفع ادمن @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6267,7 +6267,7 @@ if text and text:match('^تنزيل ادمن @(.*)') and is_monsh(msg) then
 local username = text:match('^تنزيل ادمن @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6371,7 +6371,7 @@ local username2 = text:match('^رفع منشى @(.*)')
 local username = username1 or username2
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6479,7 +6479,7 @@ local username2 = text:match('^تنزيل منشى @(.*)')
 local username = username1 or username2
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6583,7 +6583,7 @@ if text and text:match('^رفع مطور @(.*)') and is_devtaha(msg) then
 local username = text:match('^رفع مطور @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6687,7 +6687,7 @@ if text and text:match('^تنزيل مطور @(.*)') and is_devtaha(msg) then
 local username = text:match('^تنزيل مطور @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6843,7 +6843,7 @@ if text and text:match('^رفع القيود @(.*)') and is_mod(msg) then
 local username = text:match('رفع القيود @(.*)')  
 function unbanusername(extra,result,success)  
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -6974,7 +6974,7 @@ local username2 = text:match('الغاء حظر @(.*)')
 local username = username1 or username2 
 function unbanusername(extra,result,success)  
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -7144,7 +7144,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد منشئين في هاذه المجموعه' 
+t = '*❕ ※* لا يوجد منشئين في هاذه المجموعه' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7161,7 +7161,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد مكتومين في هاذه المجموعه' 
+t = '*❕ ※* لا يوجد مكتومين في هاذه المجموعه' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7178,7 +7178,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد مقيدين في هاذه المجموعه' 
+t = '*❕ ※* لا يوجد مقيدين في هاذه المجموعه' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7189,7 +7189,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لأ أستطيع حظر نفسي * ', 1, 'md')  
 return false  end 
 if TIGER1(msg.chat_id_,result.sender_user_id_) then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ عذرآ لآ أستطيع حظر » ❪ '..get_mokforkick(msg.chat_id_,result.sender_user_id_)..' ❫ *\n', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لآ أستطيع حظر » ❪ '..get_mokforkick(msg.chat_id_,result.sender_user_id_)..' ❫ *\n', 1, 'md') 
 return false  end 
 tdcli_function ({
 ID = "GetUser",
@@ -7239,7 +7239,7 @@ if text and text:match('^حظر عام @(.*)') and is_devtaha(msg) then
 local username = text:match('^حظر عام @(.*)') 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -7420,7 +7420,7 @@ if text and text:match('^الغاء العام @(.*)') and is_devtaha(msg) then
 local username = text:match('الغاء العام @(.*)')  
 function unbanusername(extra,result,success)  
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -7510,7 +7510,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※* انا لست ادمن يرج
 return false  end 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -7655,7 +7655,7 @@ local SET2 = text:match('^الغاء الكتم @(.*)')
 local username = (SET1 or SET2)
 function unbanusername(extra,result,success)  
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -7761,7 +7761,7 @@ TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ تم وضع القيود عليك ل�
 return false  end 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -7880,7 +7880,7 @@ TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ تم وضع القيود عليك ل�
 return false  end 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.code_ and result.code_ == 400 and result.message_ == "USERNAME_NOT_OCCUPIED" then  
@@ -8115,7 +8115,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※* انا لست ادمن يرج
 return false  end 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖 ※ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
@@ -9040,7 +9040,7 @@ end
 if text == "جهاتي" then
 local addmempar = tonumber(TIGERBOT:get(TIGER_ID..'add:mempar'..msg.chat_id_..':'..msg.sender_user_id_) or 0) 
 if addmempar == 0 then
-taha = '*🚫 ※ عذرا انت لم تقم باضافه احد هنا *'
+taha = '*❕ ※ عذرا انت لم تقم باضافه احد هنا *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 else
 tahaa = '*🔖️ ※ عدد جهاتك المضافه هنا » ❪ '..addmempar..' ❫ جهة \n✔🙋🏻‍♂️*'
@@ -9057,7 +9057,7 @@ elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
 if tonumber(msg.sender_user_id_) == tonumber(267308044) then
-t = 'مطور السورس 🔱'
+t = 'مطور السورس'
 elseif tonumber(msg.sender_user_id_) == tonumber(SUDO) then
 t = 'مطور اساسي'
 elseif TIGERBOT:sismember(TIGER_ID..'sudo:bot',msg.sender_user_id_) then
@@ -9082,8 +9082,8 @@ end
 if text == 'تغير الايدي' and is_devtaha(msg) or text == 'تغيير الايدي' and is_devtaha(msg) then
 TIGERBOT:setex(TIGER_ID.."CHENG:ID"..msg.chat_id_..""..msg.sender_user_id_,200,true)  
 local tahaid= [[
-*📮 ※ اهلا عزيزي المطور 
-📬 ※ يمكنك استخدام الدوال الاتيه ↓
+*🔖 ※ اهلا عزيزي المطور 
+💢 ※ يمكنك استخدام الدوال الاتيه ↓
  ٴ━━━━━━━━━━
 1• دالة طبع الايدي »* `IDGET`
 *2• دالة طبع المعرف »* `USERGET`
@@ -9193,15 +9193,15 @@ if text == 'قفل التثبيت' and tonumber(msg.reply_to_message_id_) > 0 an
 tdcli_function ({ ID = "GetChannelFull",  channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  TIGERBOT:set(TIGER_ID..'pinned'..msg.chat_id_,data.pinned_message_id_)  end,nil)
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال التثبيت \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال التثبيت \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9221,7 +9221,7 @@ if tt ~= 'عضو' then
 TIGERBOT:sadd(TIGER_ID..'LOCK:PINMSG'..msg.chat_id_,result.sender_user_id_)     
 sendMention(msg,msg.chat_id_,' 👤 ※ العضو » {'..CatchNamertp(data.first_name_)..'}'..'\n☑ ※ تم منعه من التثبيت هنا\n',result.sender_user_id_)   
 else
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ هذا مجرد عضو هنا\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ هذا مجرد عضو هنا\n👨🏻‍✈️*")   
 end
 end
 end,nil)   
@@ -9236,23 +9236,23 @@ function py_username(extra, result, success)
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = result.id_},function(arg,da) 
 if da and da.status_.ID == "ChatMemberStatusEditor" or da and da.status_.ID == "ChatMemberStatusCreator" then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال التثبيت \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال التثبيت \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:PINMSG'..msg.chat_id_,result.id_)     
@@ -9269,7 +9269,7 @@ if tt ~= 'عضو' then
 TIGERBOT:sadd(TIGER_ID..'LOCK:PINMSG'..msg.chat_id_,result.id_)     
 sendMention(msg,msg.chat_id_,' 👤 ※ العضو » {'..CatchNamertp(result.type_.user_.first_name_)..'}'..'\n☑ ※ تم منعه من التثبيت هنا\n',result.id_)   
 else
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ هذا مجرد عضو \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ هذا مجرد عضو \n👨🏻‍✈️*")   
 end
 end
 end,nil)
@@ -9290,7 +9290,7 @@ if text and text:match('^فتح التثبيت @(.*)') and is_owner(msg) then
 local username = text:match('فتح التثبيت @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9306,15 +9306,15 @@ end
 if text == 'قفل الملصقات' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الملصقات \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الملصقات \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9329,23 +9329,23 @@ local user = text:match('قفل الملصقات @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الملصقات \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الملصقات \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:STEKR'..msg.chat_id_,result.id_)     
@@ -9367,7 +9367,7 @@ if text and text:match('^فتح الملصقات @(.*)') and is_owner(msg) then
 local username = text:match('فتح الملصقات @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9383,15 +9383,15 @@ end
 if text == 'قفل الصور' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ لا تستطيع منعي من ارسال الصور \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الصور \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9406,23 +9406,23 @@ local user = text:match('قفل الصور @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الصور \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الصور \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:PHOTO'..msg.chat_id_,result.id_)     
@@ -9444,7 +9444,7 @@ if text and text:match('^فتح الصور @(.*)') and is_owner(msg) then
 local username = text:match('فتح الصور @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9459,15 +9459,15 @@ end
 if text == 'قفل الاونلاين' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الاونلاين \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الاونلاين \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9482,23 +9482,23 @@ local user = text:match('قفل الاونلاين @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الاونلاين \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الاونلاين \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:INLIN'..msg.chat_id_,result.id_)     
@@ -9520,7 +9520,7 @@ if text and text:match('^فتح الاونلاين @(.*)') and is_owner(msg) the
 local username = text:match('فتح الاونلاين @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9535,15 +9535,15 @@ end
 if text == 'قفل التوجيه' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال التوجيه \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال التوجيه \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9558,23 +9558,23 @@ local user = text:match('قفل التوجيه @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال التوجيه \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال التوجيه \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:FWD'..msg.chat_id_,result.id_)     
@@ -9596,7 +9596,7 @@ if text and text:match('^فتح التوجيه @(.*)') and is_owner(msg) then
 local username = text:match('فتح التوجيه @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9611,15 +9611,15 @@ end
 if text == 'قفل الروابط' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الروابط \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الروابط \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9634,23 +9634,23 @@ local user = text:match('قفل الروابط @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الروابط \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الروابط \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:LINKS'..msg.chat_id_,result.id_)     
@@ -9672,7 +9672,7 @@ if text and text:match('^فتح الروابط @(.*)') and is_owner(msg) then
 local username = text:match('فتح الروابط @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9687,15 +9687,15 @@ end
 if text == 'قفل السيلفي' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال السيلفي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال السيلفي \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9710,23 +9710,23 @@ local user = text:match('قفل السيلفي @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال السيلفي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال السيلفي \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:SELPHY'..msg.chat_id_,result.id_)     
@@ -9748,7 +9748,7 @@ if text and text:match('^فتح السيلفي @(.*)') and is_owner(msg) then
 local username = text:match('فتح السيلفي @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9763,15 +9763,15 @@ end
 if text == 'قفل الصوت' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الصوت \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الصوت \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9786,23 +9786,23 @@ local user = text:match('قفل الصوت @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الصوت \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الصوت \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:VICO'..msg.chat_id_,result.id_)     
@@ -9824,7 +9824,7 @@ if text and text:match('^فتح الصوت @(.*)') and is_owner(msg) then
 local username = text:match('فتح الصوت @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9839,15 +9839,15 @@ end
 if text == 'قفل الفيديو' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الفيديو \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الفيديو \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9862,23 +9862,23 @@ local user = text:match('قفل الفيديو @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الفيديو \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الفيديو \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:VIDEO'..msg.chat_id_,result.id_)     
@@ -9900,7 +9900,7 @@ if text and text:match('^فتح الفيديو @(.*)') and is_owner(msg) then
 local username = text:match('فتح الفيديو @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9915,15 +9915,15 @@ end
 if text == 'قفل الماركدون' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الماركدون \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الماركدون \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9938,23 +9938,23 @@ local user = text:match('قفل الماركدون @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال الماركدون \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال الماركدون \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:MARKDWN'..msg.chat_id_,result.id_)     
@@ -9976,7 +9976,7 @@ if text and text:match('^فتح الماركدون @(.*)') and is_owner(msg) the
 local username = text:match('فتح الماركدون @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n??🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n????‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -9984,22 +9984,22 @@ TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ هاذا معرف قناة \n👨🏻
 return false 
 end      
 TIGERBOT:srem(TIGER_ID..'LOCK:MARKDWN'..msg.chat_id_,result.id_)     
-sendMention(msg,msg.chat_id_,' 👤 ※ العضو » {'..CatchNamertprtp(result.type_.user_.first_name_)..'}'..'\n📬 ※ تم الغاء منع الماركدون عنه \n',result.id_)   
+sendMention(msg,msg.chat_id_,' 👤 ※ العضو » {'..CatchNamertprtp(result.type_.user_.first_name_)..'}'..'\n☑ ※ تم الغاء منع الماركدون عنه \n',result.id_)   
 end    
 tdcli_function ({ID = "SearchPublicChat",username_ = username},py_username,nil) 
 end
 if text == 'قفل المتحركه' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال المتحركه \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال المتحركه \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -10014,23 +10014,23 @@ local user = text:match('قفل المتحركه @(.*)')
 function py_username(extra, result, success)   
 
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال المتحركه \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال المتحركه \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨??‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨??‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:GIF'..msg.chat_id_,result.id_)     
@@ -10052,7 +10052,7 @@ if text and text:match('^فتح المتحركه @(.*)') and is_owner(msg) then
 local username = text:match('فتح المتحركه @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -10067,15 +10067,15 @@ end
 if text == 'قفل المعرفات' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال المعرفات \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال المعرفات \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -10089,23 +10089,23 @@ if text and text:match('^قفل المعرفات @(.*)') and is_owner(msg) then
 local user = text:match('قفل المعرفات @(.*)')    
 function py_username(extra, result, success)   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من ارسال المعرفات \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارسال المعرفات \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:USERNAME'..msg.chat_id_,result.id_)     
@@ -10127,7 +10127,7 @@ if text and text:match('^فتح المعرفات @(.*)') and is_owner(msg) then
 local username = text:match('فتح المعرفات @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -10142,15 +10142,15 @@ end
 if text == 'قفل الحظر' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من { طرد - حظر } المستخدمين \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من { طرد - حظر } المستخدمين \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -10164,23 +10164,23 @@ if text and text:match('^قفل الحظر @(.*)') and is_owner(msg) then
 local user = text:match('قفل الحظر @(.*)')    
 function py_username(extra, result, success)   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا استطيع منع القنواة\n👨🏻‍✈️*")   
 return false 
 end      
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ لا تستطيع منعي من { طرد - حظر } المستخدمين \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من { طرد - حظر } المستخدمين \n👨🏻‍✈️*")   
 return false  
 end   
 if getrtp(msg.chat_id_,result.id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
 return false  
 end    
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:BAN'..msg.chat_id_,result.id_)     
@@ -10202,7 +10202,7 @@ if text and text:match('^فتح الحظر @(.*)') and is_owner(msg) then
 local username = text:match('فتح الحظر @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -10217,11 +10217,11 @@ end
 if text == 'منح الحظر' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ انا بوت استطيع طرد - حظر المستخدمين \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا بوت استطيع طرد - حظر المستخدمين \n👨🏻‍✈️*")   
 return false  
 end   
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -10234,11 +10234,11 @@ end
 if text == 'الغاء منح الحظر' and tonumber(msg.reply_to_message_id_) > 0 and is_owner(msg) then   
 function by_reply(extra, result, success)   
 if not msg.can_be_deleted_ == true then   
-TIGER_send(msg.chat_id_,msg.id_,"*💢 ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا لست ادمن هنا يرجى ترقيتي \n👨🏻‍✈️*")   
 return false 
 end      
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then    
-TIGER_send(msg.chat_id_,msg.id_,"*📮 ※ انا بوت لا تستطيع منعي من الحظر - الطرد \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ انا بوت لا تستطيع منعي من الحظر - الطرد \n👨🏻‍✈️*")   
 return false  
 end   
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -10252,7 +10252,7 @@ if text and text:match('^منح الحظر @(.*)') and is_owner(msg) then
 local username = text:match('منح الحظر @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
@@ -10268,7 +10268,7 @@ if text and text:match('^الغاء منح الحظر @(.*)') and is_owner(msg) 
 local username = text:match('الغاء منح الحظر @(.*)')   
 function py_username(extra,result,success)   
 if result and result.code_ == 400 or result and result.message_ == "USERNAME_NOT_OCCUPIED" then
-TIGER_send(msg.chat_id_,msg.id_,"*🚫 ※ المعرف غير صحيح \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨🏻‍✈️*")   
 return false  
 end   
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
