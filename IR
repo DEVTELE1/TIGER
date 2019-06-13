@@ -1,0 +1,6 @@
+killall screen
+while(true) do
+rm -fr ../.telegram-cli
+screen ./TIGER.sh
+done
+echo -e "TIGER IS RUN BOT"
