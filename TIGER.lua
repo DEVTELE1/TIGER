@@ -1022,7 +1022,7 @@ TIGERBOT:set(TIGER_ID.."add:bot:group"..msg.chat_id_, true)
 else
 addmod(msg.chat_id_) 
 if ( data.member_count_ > tonumber(TIGERBOT:get(TIGER_ID..'setadd:bot'..bot_id) or 100) ) then
-test = '*📮 ※ تـم تفعيــل المجموعه بـنجـاح ✔🙋🏻‍♂️\n📬 ※ تم ترقية المنشئ والادمنيه *\n\nꪜ'
+test = '*☑ ※ تـم تفعيــل المجموعه بـنجـاح ✔🙋🏻‍♂️\n🃏 ※ تم ترقية المنشئ والادمنيه *\n\nꪜ'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,test, 1, 'md')
 TIGERBOT:sadd(TIGER_ID..'add:num'..msg.sender_user_id_,msg.chat_id_) 
 TIGERBOT:set(TIGER_ID.."add:bot:group"..msg.chat_id_, true)  
@@ -2876,7 +2876,7 @@ monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)
 end
 if text == 'قفل التوجيه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✔??🏻‍♂️\n☑ ※ تـم قفـل التوجيه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✔🙋🏻‍♂️\n☑ ※ تـم قفـل التوجيه \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التوجيه بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'ked')  
 monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✔🙋🏻‍♂️\n☑ ※ تـم قفـل التوجيه بالتقييد \n✓',msg.sender_user_id_)  
