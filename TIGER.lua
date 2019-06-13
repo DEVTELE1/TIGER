@@ -138,7 +138,7 @@ SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 SUDOUSERNAME = sudos.USERNAME
 TIGER_ID = sudos.token:match("(%d+)")  
-NAMEBOT = (TIGERBOT:get(TIGER_ID..'TIGER:name') or 'عراق')
+NAMEBOT = (TIGERBOT:get(TIGER_ID..'TIGER:name') or 'تايكر')
 bot_id = sudos.token:match("(%d+)")  
 chaneel = sudos.token 
 plugins = {}
@@ -2876,7 +2876,7 @@ monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)
 end
 if text == 'قفل التوجيه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✔🙋🏻‍♂️\n☑ ※ تـم قفـل التوجيه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✔??🏻‍♂️\n☑ ※ تـم قفـل التوجيه \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التوجيه بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'ked')  
 monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} ✔🙋🏻‍♂️\n☑ ※ تـم قفـل التوجيه بالتقييد \n✓',msg.sender_user_id_)  
