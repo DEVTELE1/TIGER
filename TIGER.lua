@@ -799,7 +799,7 @@ local function trigger_anti_spam(msg,type)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if type == 'kick' then 
 if data.username_ then
-taha = '\n*📮 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم طرده *'  
+taha = '\n*👤 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم طرده *'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 kick(msg,msg.chat_id_,msg.sender_user_id_) 
 else
@@ -813,7 +813,7 @@ delete_msg(msg.chat_id_,{[0] = msg.id_})
 end 
 if type == 'keed' then
 if data.username_ then
-taha = '\n*📮 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم تقييده *'  
+taha = '\n*👤 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم تقييده *'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..msg.sender_user_id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,msg.sender_user_id_) 
@@ -826,7 +826,7 @@ return false
 end  
 if type == 'mute' then
 if data.username_ then
-taha = '\n*📮 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم كتمه *'  
+taha = '\n*👤 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم كتمه *'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,msg.sender_user_id_) 
 else
@@ -919,7 +919,7 @@ if photo then
 local klishwelc = TIGERBOT:get("klish:welc"..bot_id)  
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, photo,klishwelc)     
 else   
-local klishwelc = '🚨 ※ مرحبا صديقي انا بوت حمايه ،\n🛠 ※ يمڪنني حمايه مجموعتڬ ،\n📮 ※ ارفعني ڪمشرف في المجموعه ،\n📛 ※ ۅمن بعدها يتم تفعيل المجموعه ،\n🎲 ※ ويتم رفع الادمنيه والمدير تلقائيا\n'
+local klishwelc = '🚨 ※ مرحبا صديقي انا بوت حمايه ،\n🛠 ※ يمڪنني حمايه مجموعتڬ ،\n📮 ※ ارفعني ڪمشرف في المجموعه ،\n🃏 ※ ۅمن بعدها يتم تفعيل المجموعه ،\n🎲 ※ ويتم رفع الادمنيه والمدير تلقائيا\n'
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil,'./requfiles/IMG_20190515_215611_840.jpg',klishwelc)     
 end 
 end   
@@ -1150,10 +1150,10 @@ ID = "GetUser",
 user_id_ = msg.sender_user_id_
 },function(arg,data) 
 if data.username_ then
-taha = '\n*👤 ※ العضو ↫ ❪*[@'..data.username_..']*❫*\n*💠 ※ لا تستطيع الدردشه هنا*\n*📛 ※ يجب عليك اضافة اعضاء*\n*📬 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫*'  
+taha = '\n*👤 ※ العضو ↫ ❪*[@'..data.username_..']*❫*\n*💠 ※ لا تستطيع الدردشه هنا*\n*🃏 ※ يجب عليك اضافة اعضاء*\n*📬 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫*'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 else
-taha = ' 👤 ※ العضو ↫ ❪'..data.id_..'❫\n💠 ※ لا تستطيع الدردشه هنا\n📛 ※ يجب عليك اضافة اعضاء\n📬 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫'  
+taha = ' 👤 ※ العضو ↫ ❪'..data.id_..'❫\n💠 ※ لا تستطيع الدردشه هنا\n🃏 ※ يجب عليك اضافة اعضاء\n📬 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫'  
 TIGERmonshn(msg.chat_id_, data.id_, 0, taha, 13, utf8.len(data.id_))  
 end
 end,nil)
@@ -1231,7 +1231,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n
 TIGERBOT:del(TIGER_ID..'viewchannel'..msg.sender_user_id_)
 return false  end 
 if not msg.forward_info_ then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📛 ※* هاذا ليس توجيه من القناة', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🃏 ※* هاذا ليس توجيه من القناة', 1, 'md') 
 TIGERBOT:del(TIGER_ID..'viewchannel'..msg.sender_user_id_) 
 else 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '✔🙋🏻‍♂️* ※*  عدد المشاهدات المنشور ( '..msg.views_..' ) مشاهده ♨', 1, 'md') 
@@ -1259,7 +1259,7 @@ end
 if data.message_ == "CHANNEL_INVALID" then
 TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*📬 ※* لا استطيع استخراج معلومات المجموعه  \n", 1, 'md')  
 changeChatMemberStatus(ch, bot_id, "Left")
-TIGER_sendMsg(ch,0, 1, "*📛 ※* يرجى تفعيل صلاحيات للبوت عندها يمكنك اضافتي\n", 1, 'md')  
+TIGER_sendMsg(ch,0, 1, "*🃏 ※* يرجى تفعيل صلاحيات للبوت عندها يمكنك اضافتي\n", 1, 'md')  
 return false  end
 if data.message_ == "CHANNEL_PRIVATE" then
 TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*📮 ※* لا استطيع استخراج معلومات المجموعه  \n", 1, 'md')  
@@ -1424,7 +1424,7 @@ if text and text:match("^الغاء$") then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
 TIGERBOT:del(TIGER_ID.."photo:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)
 return false  end 
-TIGERBOT:del(TIGER_ID.."photo:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  local pro = tonumber(text:match("(%d+)")) local function myprofile(extra, result, success) if result.total_count_ == 0 then TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '*🔖 ※* عذرا انت لا تمتلك صور في البروفايل\n', 1, 'md') else if result.total_count_ >= pro then if result.photos_[0] then sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_, '\n🌄 ※ صورتك رقم  '..pro..' \n📋 ※ عدد صورك  '..result.total_count_..' \n📊 ※ حجم صورتك  '..result.photos_[0].sizes_[1].photo_.size_..' ') end else TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '\n*📛 ※* انت لا تمتلك صوره رقم  *{'..pro..'}*\n*🌁 ※* عدد صورك هي *{'..result.total_count_..'}*', 1, 'md')  end end end getUserProfilePhotos(msg.sender_user_id_, pro-1, 1000, myprofile)  end
+TIGERBOT:del(TIGER_ID.."photo:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  local pro = tonumber(text:match("(%d+)")) local function myprofile(extra, result, success) if result.total_count_ == 0 then TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '*🔖 ※* عذرا انت لا تمتلك صور في البروفايل\n', 1, 'md') else if result.total_count_ >= pro then if result.photos_[0] then sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_, '\n🌄 ※ صورتك رقم  '..pro..' \n📋 ※ عدد صورك  '..result.total_count_..' \n📊 ※ حجم صورتك  '..result.photos_[0].sizes_[1].photo_.size_..' ') end else TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '\n*🃏 ※* انت لا تمتلك صوره رقم  *{'..pro..'}*\n*🌁 ※* عدد صورك هي *{'..result.total_count_..'}*', 1, 'md')  end end end getUserProfilePhotos(msg.sender_user_id_, pro-1, 1000, myprofile)  end
 if TIGERBOT:get(TIGER_ID.."link:group"..msg.chat_id_) == 'setlinkwai' and is_mod(msg) then 
 if text and text:match("^الغاء$") then 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n✓", 1, "md") 
@@ -1772,7 +1772,7 @@ local pvstart = TIGERBOT:get(TIGER_ID.."pvstart")
 if pvstart then    
 TIGER_sendMsg(msg.sender_user_id_, 0, 1, ''..check_markdown(pvstart)..'', 1, "md")    
 else    
-TIGER_sendMsg(msg.sender_user_id_, msg.id_, 1, '📬* ※* تم ارسال رسالتك الى المطور\n*📛 ※* اشترك في قناة المطور \n*🚫 ※* [اضغط هنا للدخول الى قناة](https://t.me/joinchat/AAAAAElyffap0iuWjaf9eQ) \n', 1, "md")    
+TIGER_sendMsg(msg.sender_user_id_, msg.id_, 1, '📬* ※* تم ارسال رسالتك الى المطور\n*🃏 ※* اشترك في قناة المطور \n*🚫 ※* [اضغط هنا للدخول الى قناة](https://t.me/joinchat/AAAAAElyffap0iuWjaf9eQ) \n', 1, "md")    
 end     
 if not TIGERBOT:sismember(TIGER_ID.."usersbot",msg.chat_id_) then    
 TIGERBOT:sadd(TIGER_ID.."usersbot",msg.chat_id_)    
@@ -1803,7 +1803,7 @@ local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15).
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*📮 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ تم حظره من التواصل\n✓*'
+zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ تم حظره من التواصل\n✓*'
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
@@ -1813,7 +1813,7 @@ local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15).
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*📮 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم حظره من التواصل\n✓*'
+zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم حظره من التواصل\n✓*'
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
@@ -1828,7 +1828,7 @@ local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15).
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*📮 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*☑ ※ تم الغاء حظره من التواصل\n✓*'
+zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*☑ ※ تم الغاء حظره من التواصل\n✓*'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
@@ -1838,7 +1838,7 @@ local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15).
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*📮 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم الغاء حظره من التواصل\n✓*'
+zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم الغاء حظره من التواصل\n✓*'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
@@ -1849,7 +1849,7 @@ tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data)
 tdcli_function({ID='GetChat',chat_id_ = id_user},function(arg,dataq)
 tdcli_function ({ ID = "SendChatAction",chat_id_ = id_user, action_ = {  ID = "SendMessageTypingAction", progress_ = 100} },function(arg,ta) 
 if ta.code_ == 400 or ta.code_ == 5 then
-local taha = '\n📬 ※ فشل ارسال رسالتك لان العضو قام بحظر البوت'
+local taha = '\n❕ ※ فشل ارسال رسالتك لان العضو قام بحظر البوت'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 return false  end 
 if text then    
@@ -1921,28 +1921,28 @@ end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,bot_in_daerct)    
 end 
 if text == 'فتح الكل' and is_devtaha(msg) then   taha = '*🚫 ※* تم فتح جميع الاوامر   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")      TIGERBOT:del(TIGER_ID..'lock:photo'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:vico'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:ste'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:file'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:phon'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:links'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:ved'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:fwd'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:gif'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:musec'..bot_id)    end      
-if text == 'قفل الكل' and is_devtaha(msg) then   taha = '*📛 ※* تم قفل جميع الاوامر  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")      TIGERBOT:set(TIGER_ID..'lock:photo'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:vico'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:ste'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:file'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:phon'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:links'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:ved'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:fwd'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:gif'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:musec'..bot_id,true)     end   
+if text == 'قفل الكل' and is_devtaha(msg) then   taha = '*🃏 ※* تم قفل جميع الاوامر  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")      TIGERBOT:set(TIGER_ID..'lock:photo'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:vico'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:ste'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:file'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:phon'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:links'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:ved'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:fwd'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:gif'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:musec'..bot_id,true)     end   
 if text == 'فتح الصور' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الصور   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:photo'..bot_id) end  
-if text == 'قفل الصور' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الصور  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:photo'..bot_id,true) end 
+if text == 'قفل الصور' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الصور  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:photo'..bot_id,true) end 
 if text == 'فتح الصوت' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الصوت   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:vico'..bot_id) end  
-if text == 'قفل الصوت' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الصوت  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:vico'..bot_id,true) end 
+if text == 'قفل الصوت' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الصوت  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:vico'..bot_id,true) end 
 if text == 'فتح الاغاني' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الاغاني   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:musec'..bot_id) end  
-if text == 'قفل الاغاني' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الاغاني  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:musec'..bot_id,true) end 
+if text == 'قفل الاغاني' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الاغاني  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:musec'..bot_id,true) end 
 if text == 'فتح المتحركه' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح المتحركه   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:gif'..bot_id) end  
-if text == 'قفل المتحركه' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل المتحركه  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:gif'..bot_id,true) end 
+if text == 'قفل المتحركه' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل المتحركه  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:gif'..bot_id,true) end 
 if text == 'فتح التوجيه' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح التوجيه   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:fwd'..bot_id) end  
-if text == 'قفل التوجيه' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل التوحيه  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:fwd'..bot_id,true) end 
+if text == 'قفل التوجيه' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل التوحيه  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:fwd'..bot_id,true) end 
 if text == 'فتح الفيديو' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الفيديو   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:ved'..bot_id) end  
-if text == 'قفل الفيديو' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الفيديو  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:ved'..bot_id,true) end 
+if text == 'قفل الفيديو' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الفيديو  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:ved'..bot_id,true) end 
 if text == 'فتح الروابط' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الروابط   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:links'..bot_id) end  
-if text == 'قفل الروابط' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الروابط  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:links'..bot_id,true) end 
+if text == 'قفل الروابط' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الروابط  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:links'..bot_id,true) end 
 if text == 'فتح الجهات' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الجهات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:phon'..bot_id) end  
-if text == 'قفل الجهات' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الجهات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:phon'..bot_id,true) end 
+if text == 'قفل الجهات' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الجهات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:phon'..bot_id,true) end 
 if text == 'فتح الملفات' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الملفات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:file'..bot_id) end  
-if text == 'قفل الملفات' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الملفات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:file'..bot_id,true) end 
+if text == 'قفل الملفات' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الملفات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:file'..bot_id,true) end 
 if text == 'فتح الملصقات' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الملصقات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:ste'..bot_id) end  
-if text == 'قفل الملصقات' and is_devtaha(msg) then  taha = '*📛 ※* تم قفل الملصقات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:ste'..bot_id,true) end 
-if text == 'الاعدادات 🔏' and is_devtaha(msg) then  if TIGERBOT:get(TIGER_ID..'lock:photo'..bot_id) then    lock_photo = '* مقفل ✓ *'      else     lock_photo = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:vico'..bot_id) then    lockvic = '* مقفل ✓ *'      else     lockvic = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:ste'..bot_id) then    lockste = '* مقفل ✓ *'      else     lockste = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:file'..bot_id) then    lockfile = '* مقفل ✓ *'     else     lockfile = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:phon'..bot_id) then    lockphon = '* مقفل ✓ *'      else     lockphon = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:links'..bot_id) then    lock_link = '* مقفل ✓ *'      else     lock_link = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:ved'..bot_id) then    lock_vid = '* مقفل ✓ *'      else     lock_vid = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:fwd'..bot_id) then    lock_fwd = '* مقفل ✓ *'      else     lock_fwd = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:gif'..bot_id) then    lock_gif = '* مقفل ✓ *'      else     lock_gif = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:musec'..bot_id) then    lock_muse = '* مقفل ✓ *'      else     lock_muse = '*مفتوح ✘*'    end    local text = '*📛 ※* اهلا بك في اعدادات الخاص ✓'..'\n*ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*\n'..    '\n*📬 ※* الروابط '..lock_link..    '\n'..'*📬 ※* الصور '..lock_photo..    '\n'..'*📬 ※* الاغاني '..lockvic..    '\n'..'*📬 ※* الملصقات '..lockste..    '\n'..'*📬 ※* الملفات '..lockfile..    '\n'..'*📬 ※* الجهات '..lockphon..    '\n'..'*📬 ※* الفيديو '..lock_vid..    '\n'..'*📬 ※* التوجيه '..lock_fwd..    '\n'..'*📬 ※* المتحركه '..lock_gif..    '\n'..'*📬 ※* الصوت '..lock_muse..    '\n\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n🚨* ※* اضافه الى ذالك تستطيع قفل وفتح الكل\n🚸* ※* قفل الكل \n🚸* ※* فتح الكل'    TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md')     end     
+if text == 'قفل الملصقات' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الملصقات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:ste'..bot_id,true) end 
+if text == 'الاعدادات 🔏' and is_devtaha(msg) then  if TIGERBOT:get(TIGER_ID..'lock:photo'..bot_id) then    lock_photo = '* مقفل ✓ *'      else     lock_photo = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:vico'..bot_id) then    lockvic = '* مقفل ✓ *'      else     lockvic = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:ste'..bot_id) then    lockste = '* مقفل ✓ *'      else     lockste = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:file'..bot_id) then    lockfile = '* مقفل ✓ *'     else     lockfile = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:phon'..bot_id) then    lockphon = '* مقفل ✓ *'      else     lockphon = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:links'..bot_id) then    lock_link = '* مقفل ✓ *'      else     lock_link = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:ved'..bot_id) then    lock_vid = '* مقفل ✓ *'      else     lock_vid = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:fwd'..bot_id) then    lock_fwd = '* مقفل ✓ *'      else     lock_fwd = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:gif'..bot_id) then    lock_gif = '* مقفل ✓ *'      else     lock_gif = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:musec'..bot_id) then    lock_muse = '* مقفل ✓ *'      else     lock_muse = '*مفتوح ✘*'    end    local text = '*🃏 ※* اهلا بك في اعدادات الخاص ✓'..'\n*ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*\n'..    '\n*📬 ※* الروابط '..lock_link..    '\n'..'*📬 ※* الصور '..lock_photo..    '\n'..'*📬 ※* الاغاني '..lockvic..    '\n'..'*📬 ※* الملصقات '..lockste..    '\n'..'*📬 ※* الملفات '..lockfile..    '\n'..'*📬 ※* الجهات '..lockphon..    '\n'..'*📬 ※* الفيديو '..lock_vid..    '\n'..'*📬 ※* التوجيه '..lock_fwd..    '\n'..'*📬 ※* المتحركه '..lock_gif..    '\n'..'*📬 ※* الصوت '..lock_muse..    '\n\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n🚨* ※* اضافه الى ذالك تستطيع قفل وفتح الكل\n🚸* ※* قفل الكل \n🚸* ※* فتح الكل'    TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md')     end     
 if text =='الاوامر 📑' or text == 'الاوامر' then
 if not is_devtaha(msg) then
 else 
@@ -1968,24 +1968,24 @@ local text = [[*
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md')  
 end
 end  
-if text == 'مسح المحظورين 📢' and is_devtaha(msg) then       local list = TIGERBOT:smembers(TIGER_ID..'pv:ban'..msg.chat_id_)   for k,v in pairs(list) do     TIGERBOT:del(TIGER_ID..'pv:ban'..msg.chat_id_)   TIGERBOT:del('numlocktextpv'..bot_id..v)  end   TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📛* ※* تم مسح المحظورين', 1, 'md')     end
-if text == 'تفعيل البوت الخدمي 🎮' and is_devtaha(msg) then local  taha = '*📛 ※*تم تفعيل البوت خدمي  ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:del(TIGER_ID..'lock:bot:free'..bot_id) end 
-if text == 'تعطيل البوت الخدمي 🚸' and is_devtaha(msg) then taha = '*📛 ※*تم تعطيل البوت الخدمي  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:set(TIGER_ID..'lock:bot:free'..bot_id,true) end
-if text == 'تفعيل تواصل 📨' and is_devtaha(msg) then local  taha = '*📛 ※*تم تفعيل بوت التواصل  ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:del(TIGER_ID..'lock:botl'..bot_id) end 
-if text == 'تعطيل تواصل 📩' and is_devtaha(msg) then taha = '*📛 ※*تم تعطيل التواصل  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:set(TIGER_ID..'lock:botl'..bot_id,true) end
-if text == 'تحديث ♻' and is_devtaha(msg) then  local filed = io.popen('ls plugins_'):lines() for files in filed do if files:match(".lua$") then end end dofile('TIGER.lua') load_plugins() io.popen("rm -rf ~/.telegram-cli/data/audio/*") io.popen("rm -rf ~/.telegram-cli/data/document/*") io.popen("rm -rf ~/.telegram-cli/data/photo/*") io.popen("rm -rf ~/.telegram-cli/data/sticker/*") io.popen("rm -rf ~/.telegram-cli/data/temp/*") io.popen("rm -rf ~/.telegram-cli/data/thumb/*") io.popen("rm -rf ~/.telegram-cli/data/video/*") io.popen("rm -rf ~/.telegram-cli/data/voice/*") io.popen("rm -rf ~/.telegram-cli/data/profile_photo/*")   TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📛 ※* تم تحديث البوت', 1, 'md') end 
-if text == "وضع اسم البوت ⚡" and is_devtaha(msg) then TIGERBOT:setex(TIGER_ID..'namebot:witting'..msg.sender_user_id_,300,true) TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📛 ※* ارسل لي الاسم 📯\n",1, 'md')  end
+if text == 'مسح المحظورين 📢' and is_devtaha(msg) then       local list = TIGERBOT:smembers(TIGER_ID..'pv:ban'..msg.chat_id_)   for k,v in pairs(list) do     TIGERBOT:del(TIGER_ID..'pv:ban'..msg.chat_id_)   TIGERBOT:del('numlocktextpv'..bot_id..v)  end   TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'🃏* ※* تم مسح المحظورين', 1, 'md')     end
+if text == 'تفعيل البوت الخدمي 🎮' and is_devtaha(msg) then local  taha = '*🃏 ※*تم تفعيل البوت خدمي  ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:del(TIGER_ID..'lock:bot:free'..bot_id) end 
+if text == 'تعطيل البوت الخدمي 🚸' and is_devtaha(msg) then taha = '*🃏 ※*تم تعطيل البوت الخدمي  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:set(TIGER_ID..'lock:bot:free'..bot_id,true) end
+if text == 'تفعيل تواصل 📨' and is_devtaha(msg) then local  taha = '*🃏 ※*تم تفعيل بوت التواصل  ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:del(TIGER_ID..'lock:botl'..bot_id) end 
+if text == 'تعطيل تواصل 📩' and is_devtaha(msg) then taha = '*🃏 ※*تم تعطيل التواصل  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:set(TIGER_ID..'lock:botl'..bot_id,true) end
+if text == 'تحديث ♻' and is_devtaha(msg) then  local filed = io.popen('ls plugins_'):lines() for files in filed do if files:match(".lua$") then end end dofile('TIGER.lua') load_plugins() io.popen("rm -rf ~/.telegram-cli/data/audio/*") io.popen("rm -rf ~/.telegram-cli/data/document/*") io.popen("rm -rf ~/.telegram-cli/data/photo/*") io.popen("rm -rf ~/.telegram-cli/data/sticker/*") io.popen("rm -rf ~/.telegram-cli/data/temp/*") io.popen("rm -rf ~/.telegram-cli/data/thumb/*") io.popen("rm -rf ~/.telegram-cli/data/video/*") io.popen("rm -rf ~/.telegram-cli/data/voice/*") io.popen("rm -rf ~/.telegram-cli/data/profile_photo/*")   TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🃏 ※* تم تحديث البوت', 1, 'md') end 
+if text == "وضع اسم البوت ⚡" and is_devtaha(msg) then TIGERBOT:setex(TIGER_ID..'namebot:witting'..msg.sender_user_id_,300,true) TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🃏 ※* ارسل لي الاسم 📯\n",1, 'md')  end
 if text == 'مسح المميزين عام 🌟' and is_devtaha(msg) then      local list = TIGERBOT:smembers(TIGER_ID..'vip:groups')    if #list == 0 then  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*📮 ※* لا يوجد مميزين عام ليتم مسحهم\n', 1, 'md')   return false  end  local num = 0  for k,v in pairs(list) do    TIGERBOT:srem(TIGER_ID.."vip:groups",v)    num = num + 1  end   TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑ ※ تم مسح {'..num..'} من المميزين عام *\n', 1, 'md')   end
 if text == 'مسح المطورين 👮' and is_devtaha(msg) then     local list = TIGERBOT:smembers(TIGER_ID..'sudo:bot')    if #list == 0 then  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*📮 ※* لا يوجد مطورين ليتم مسحهم\n', 1, 'md')   return false  end  local num = 0  for k,v in pairs(list) do    TIGERBOT:srem(TIGER_ID.."sudo:bot",v)    num = num + 1  end   TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑ ※ تم مسح {'..num..'} من المطورين *\n', 1, 'md')   end
 if text == 'مسح قائمه العام 🚷' and is_devtaha(msg) then   local list = TIGERBOT:smembers(TIGER_ID..'TIGER:gbaned')    if #list == 0 then  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*📮 ※* لا يوجد محظورين عام ليتم مسحهم\n', 1, 'md')   return false  end  local num = 0  for k,v in pairs(list) do    TIGERBOT:srem(TIGER_ID.."TIGER:gbaned",v)    num = num + 1  end   TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*☑ ※ تم مسح {'..num..'} من المحظورين عام *\n', 1, 'md')   end
 if text and text:match("^ضع رد تواصل 💻$") and is_devtaha(msg) then   TIGERBOT:setex(TIGER_ID.."sudo:pv" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📬* ※* ارسل لي النص الذي تريده ', 1, 'md') end 
 if text and text:match("^ضع كليشه المطور 🎐$") and is_devtaha(msg) then TIGERBOT:setex(TIGER_ID.."sudo:dev" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📬* ※* ارسل لي النص الذي تريده ', 1, 'md') end 
 if text and text:match("^ضع كليشه ستارت 📠$") and is_devtaha(msg) then TIGERBOT:setex(TIGER_ID.."start:msgofstart" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📬* ※* ارسل لي النص الذي تريده ', 1, 'md') end 
-if text == 'تفعيل رساله الترحيب 🎌' and is_devtaha(msg) then local  taha = '*📛 ※*تم تفعيل رسالة ترحيب عند الاضافه  ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:del(TIGER_ID..'lock:klsh:add'..bot_id) end 
+if text == 'تفعيل رساله الترحيب 🎌' and is_devtaha(msg) then local  taha = '*🃏 ※*تم تفعيل رسالة ترحيب عند الاضافه  ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:del(TIGER_ID..'lock:klsh:add'..bot_id) end 
 if text == 'تعطيل رساله الترحيب 📱' and is_devtaha(msg) then taha = '*📮 ※*تم تعطيل رسالة ترحيب عند الاضافه  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") TIGERBOT:set(TIGER_ID..'lock:klsh:add'..bot_id,true) end
-if text == "حذف رد التواصل 📌" and is_devtaha(msg) then  TIGERBOT:del(TIGER_ID.."pvstart") TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*📛 ※*تم حذف رد التوصل', 1, "md") end 
-if text == "حذف كليشه ستارت 🃏" and is_devtaha(msg) then  TIGERBOT:del(TIGER_ID.."start:msgofstart1") TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*📛 ※*تم حذف كليشه ستارت', 1, "md") end 
-if text == "حذف كليشه المطور 🀄" and is_devtaha(msg) then  TIGERBOT:del(TIGER_ID.."dev") TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*📛 ※*تم حذف كليشه المطور', 1, "md") end 
+if text == "حذف رد التواصل 📌" and is_devtaha(msg) then  TIGERBOT:del(TIGER_ID.."pvstart") TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*🃏 ※*تم حذف رد التوصل', 1, "md") end 
+if text == "حذف كليشه ستارت 🃏" and is_devtaha(msg) then  TIGERBOT:del(TIGER_ID.."start:msgofstart1") TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*🃏 ※*تم حذف كليشه ستارت', 1, "md") end 
+if text == "حذف كليشه المطور 🀄" and is_devtaha(msg) then  TIGERBOT:del(TIGER_ID.."dev") TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*🃏 ※*تم حذف كليشه المطور', 1, "md") end 
 if text and text:match("^ضع عدد الاعضاء 📜$") and is_devtaha(msg) then  TIGERBOT:setex(TIGER_ID.."numadd:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  local t = '*📊 ※ ارسل لي العدد الان*'  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') end
 if text == "جلب رد التواصل 📚" and is_devtaha(msg) then if TIGERBOT:get(TIGER_ID.."pvstart") then pvstart = TIGERBOT:get(TIGER_ID.."pvstart") TIGER_sendMsg(msg.chat_id_, msg.id_, 1,''..check_markdown(pvstart)..'', 1, 'md')  else  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*✉ ※ لا يوجد رد في التواصل \n📮 ※* ارسل `ضع رد التواصل`\n✓', 1, 'md')  end  end
 if text == "جلب كليشه ستارت 📚" and is_devtaha(msg) then  local start = TIGERBOT:get(TIGER_ID.."start:msgofstart1")  if start then TIGER_sendMsg(msg.chat_id_, msg.id_, 1,''..check_markdown(start)..'', 1, 'md') else TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*🎭 ※ لم يتم وضع كليشه ستارت *\n', 1, 'md') end end
@@ -1996,7 +1996,7 @@ if text=="اذاعه عام بالتوجيه 💾" and msg.reply_to_message_id_ 
 if text=="اذاعه 📡" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   TIGERBOT:setex(TIGER_ID.."bc:in:grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮 ※* ارسل لي سواء كان » ❪ رساله , صوره , متحركه , ملصق  ❫ للاذاعه الى المجموعات\n✓", 1, "md")   end
 if text=="اذاعه للكل 📡" and msg.reply_to_message_id_ == 0  and is_devtaha(msg) then   TIGERBOT:setex(TIGER_ID.."bc:in:all" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮 ※* ارسل لي سواء كان » ❪ رساله , صوره , متحركه , ملصق  ❫ للاذاعه الى الكل\n✓", 1, "md")   end
 if text=="اذاعه خاص 📡" and msg.reply_to_message_id_ == 0 and is_devtaha(msg) then   TIGERBOT:setex(TIGER_ID.."bc:in:pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true)   TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📮 ※* ارسل لي سواء كان » ❪ رساله , صوره , متحركه , ملصق  ❫ للاذاعه الى الخاص\n✓", 1, "md")   end 
-if text ==('المجموعات 📇') and is_devtaha(msg) then    local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')   if #list == 0 then  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*✔🙋🏻‍♂️ ※ لا توجد مجموعات حاليا *\n', 1, 'md')  return false  end local t = '⚡ ※* اهلا بك في ايدي المجموعات 🍁*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'    for k,v in pairs(list) do     local nummsg = tonumber(TIGERBOT:get(TIGER_ID..'groupmsg:'..v..':'))   numrgroup(v) local numg = (TIGERBOT:get(TIGER_ID.."numgrop"..v) or '3')  local namechat = TIGERBOT:get(TIGER_ID..'group:name'..v)   if namechat then  t = t..'*'..k.."➛* `"..v.."` "..tfgroup(nummsg).."\n*« "..namechat..' » ❪'..numg..'❫*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'     else  t = t..'*'..k.."➛* `"..v.."` "..tfgroup(nummsg).."\n* ❪"..numg..'❫*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'     end  file = io.open("TIGER_groups", "w") file:write([[ ]]..isnothtml(t)..[[ ]]) file:close()   end    t = t..'*📮 ※*لعرض معلومات مجموعه معينه\n*✔🙋🏻‍♂️ ※ ارسل كشف من ثم ايدي المجموعه*\n*🚫 ※ مثال ❪كشف -10012345667❫*\n꞉'    if #list >= 25 then    local groups = TIGERBOT:scard(TIGER_ID..'bot:gpsby:id')    sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './TIGER_groups','📛 ※ عذرا لديك الكثير من المجموعات\n📬 ※ تم ارسال المجموعات في الملف\n🚫 ※ عدد المجموعات • ※'..groups..' ※•',dl_cb, nil)   else   TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')    end   end
+if text ==('المجموعات 📇') and is_devtaha(msg) then    local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')   if #list == 0 then  TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*✔🙋🏻‍♂️ ※ لا توجد مجموعات حاليا *\n', 1, 'md')  return false  end local t = '⚡ ※* اهلا بك في ايدي المجموعات 🍁*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'    for k,v in pairs(list) do     local nummsg = tonumber(TIGERBOT:get(TIGER_ID..'groupmsg:'..v..':'))   numrgroup(v) local numg = (TIGERBOT:get(TIGER_ID.."numgrop"..v) or '3')  local namechat = TIGERBOT:get(TIGER_ID..'group:name'..v)   if namechat then  t = t..'*'..k.."➛* `"..v.."` "..tfgroup(nummsg).."\n*« "..namechat..' » ❪'..numg..'❫*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'     else  t = t..'*'..k.."➛* `"..v.."` "..tfgroup(nummsg).."\n* ❪"..numg..'❫*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'     end  file = io.open("TIGER_groups", "w") file:write([[ ]]..isnothtml(t)..[[ ]]) file:close()   end    t = t..'*📮 ※*لعرض معلومات مجموعه معينه\n*✔🙋🏻‍♂️ ※ ارسل كشف من ثم ايدي المجموعه*\n*🚫 ※ مثال ❪كشف -10012345667❫*\n꞉'    if #list >= 25 then    local groups = TIGERBOT:scard(TIGER_ID..'bot:gpsby:id')    sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './TIGER_groups','🃏 ※ عذرا لديك الكثير من المجموعات\n📬 ※ تم ارسال المجموعات في الملف\n🚫 ※ عدد المجموعات • ※'..groups..' ※•',dl_cb, nil)   else   TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')    end   end
 if text == "تحديث السورس 🔱" and is_devtaha(msg) then  TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '♻ • جاري تحديث السورس • ♻', 1, 'md') 
 os.execute('rm -rf TIGER.lua') 
 os.execute("rm -fr plugins_/help_rep.lua")
@@ -4026,7 +4026,7 @@ kicck(msg,msg.chat_id_,admins[i].user_id_)
 c = c + 1
 end     
 if (c - x) == 0 then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚫 ※ لا توجد بوتات هنا *\n ", 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※ لا توجد بوتات هنا *\n ", 1, 'md')
 else
 local t = '*💢 ※ عدد البوتات هنا » ❪'..c..'❫*\n*🔖 ※ عدد البوتات التي هي ادمن » ❪'..x..'❫*\n*☑ ※ تم طرد » ❪'..(c - x)..'❫ من البوتات*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') 
@@ -4051,7 +4051,7 @@ tr = ' ❪✯❫'
 end
 text = text.."⟡➺ [@"..ta.username_..']'..tr.."\n"
 if #admins == 0 then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚫 ※ لا توجد بوتات هنا *\n ", 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※ لا توجد بوتات هنا *\n ", 1, 'md')
 return false end
 if #admins == i then 
 local a = '\nٴ━━━━━━━━━━\n*💢 ※ عدد البوتات التي هنا » ❪'..n..'❫* بوت\n'
@@ -4369,16 +4369,16 @@ end
 if data.first_name_ == false then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
 return false  end
-text = '*🗯 ※ ايديه » ❪* `'..kk.id_..
-'` ❫\n💠* ※ معـرفه » ❪* [@'..data.username_..']'..
-' ❫\n⚜* ※ اسمه » ❪* `'..CatchName(data.first_name_,20)..
-'` ❫\n⭐* ※ رتبـة الكروب » ❪ '..rtpa..
-' ❫\n🎖 ※ رتبـة البوت » ❪ '..t..
-' ❫\n📨 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)..
-' ❫\n🗳 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
-'\n🚫 ※ نوع القيود » ❪ '..kkeed..
-' ❫\n🔹 ※ التواجد » ❪ '..tt..
-' ❫\n⚡ ※ نوع حسابه » ❪ '..acca..' ❫*'
+text = '*🎟 ※ ايديه » ❪* `'..kk.id_..
+'` ❫\n🎫* ※ معـرفه » ❪* [@'..data.username_..']'..
+' ❫\n📓* ※ اسمه » ❪* `'..CatchName(data.first_name_,20)..
+'` ❫\n🃏* ※ رتبـة الكروب » ❪ '..rtpa..
+' ❫\n🀄 ※ رتبـة البوت » ❪ '..t..
+' ❫\n📖 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..kk.id_) or 0)..
+' ❫\n💌 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
+'\n🔖 ※ نوع القيود » ❪ '..kkeed..
+' ❫\n💢 ※ التواجد » ❪ '..tt..
+' ❫\n🎴 ※ نوع حسابه » ❪ '..acca..' ❫*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end,nil)
 end,nil)
@@ -4463,27 +4463,27 @@ if data.first_name_ == false then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
 return false  end
 if data.username_ == false then
-text = '🗯 ※ ايديه » ❪ '..iduser..
-' ❫\n⚜ ※ اسمه » ❪ {'..CatchName(data.first_name_,20)..
-' }❫\n⭐ ※ رتبـة الكروب » ❪ '..rtpa..
-' ❫\n🎖 ※ رتبـة البوت » ❪ '..t..
-' ❫\n📨 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)..
-' ❫\n🗳 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
-'\n🚫 ※ نوع القيود » ❪ '..kkeed..
-' ❫\n🔹 ※ التواجد » ❪ '..tt..
-' ❫\n⚡ ※ نوع حسابه » ❪ '..acca..' ❫'
+text = '🎟 ※ ايديه » ❪ '..iduser..
+' ❫\n📓 ※ اسمه » ❪ {'..CatchName(data.first_name_,20)..
+' }❫\n🃏 ※ رتبـة الكروب » ❪ '..rtpa..
+' ❫\n🀄 ※ رتبـة البوت » ❪ '..t..
+' ❫\n📖 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)..
+' ❫\n💌 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
+'\n🔖 ※ نوع القيود » ❪ '..kkeed..
+' ❫\n💢 ※ التواجد » ❪ '..tt..
+' ❫\n🎴 ※ نوع حسابه » ❪ '..acca..' ❫'
 monsend(msg,msg.chat_id_,text,iduser) 
 else
-text = '*🗯 ※ ايديه » ❪* `'..iduser..
-'` ❫\n💠* ※ معـرفه » ❪* [@'..data.username_..']'..
-' ❫\n⚜* ※ اسمه » ❪* `'..CatchName(data.first_name_,20)..
-'` ❫\n⭐* ※ رتبـة الكروب » ❪ '..rtpa..
-' ❫\n🎖 ※ رتبـة البوت » ❪ '..t..
-' ❫\n📨 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)..
-' ❫\n🗳 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
-'\n🚫 ※ نوع القيود » ❪ '..kkeed..
-' ❫\n🔹 ※ التواجد » ❪ '..tt..
-' ❫\n⚡ ※ نوع حسابه » ❪ '..acca..' ❫*'
+text = '*🎟 ※ ايديه » ❪* `'..iduser..
+'` ❫\n🎫* ※ معـرفه » ❪* [@'..data.username_..']'..
+' ❫\n📓* ※ اسمه » ❪* `'..CatchName(data.first_name_,20)..
+'` ❫\n🃏* ※ رتبـة الكروب » ❪ '..rtpa..
+' ❫\n🀄 ※ رتبـة البوت » ❪ '..t..
+' ❫\n📖 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..iduser) or 0)..
+' ❫\n💌 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
+'\n🔖 ※ نوع القيود » ❪ '..kkeed..
+' ❫\n💢 ※ التواجد » ❪ '..tt..
+' ❫\n🎴 ※ نوع حسابه » ❪ '..acca..' ❫*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end
 end,nil)
@@ -4565,27 +4565,27 @@ if data.first_name_ == false then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*💢 ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
 return false  end
 if data.username_ == false then
-text = '🗯 ※ ايديه » ❪ '..result.sender_user_id_..
-' ❫\n⚜ ※ اسمه » ❪ {'..CatchName(data.first_name_,20)..
-' }❫\n⭐ ※ رتبـة الكروب » ❪ '..rtpa..
-' ❫\n🎖 ※ رتبـة البوت » ❪ '..t..
-' ❫\n📨 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)..
-' ❫\n🗳 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
-'\n🚫 ※ نوع القيود » ❪ '..kkeed..
-' ❫\n🔹 ※ التواجد » ❪ '..tt..
-' ❫\n⚡ ※ نوع حسابه » ❪ '..acca..' ❫'
+text = '🎟 ※ ايديه » ❪ '..result.sender_user_id_..
+' ❫\n📓 ※ اسمه » ❪ {'..CatchName(data.first_name_,20)..
+' }❫\n🃏 ※ رتبـة الكروب » ❪ '..rtpa..
+' ❫\n🀄 ※ رتبـة البوت » ❪ '..t..
+' ❫\n📖 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)..
+' ❫\n💌 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
+'\n🔖 ※ نوع القيود » ❪ '..kkeed..
+' ❫\n💢 ※ التواجد » ❪ '..tt..
+' ❫\n🎴 ※ نوع حسابه » ❪ '..acca..' ❫'
 monsend(msg,msg.chat_id_,text,data.id_) 
 else
-text = '*🗯 ※ ايديه » ❪* `'..result.sender_user_id_..
-'` ❫\n💠* ※ معـرفه » ❪* [@'..data.username_..']'..
-' ❫\n⚜* ※ اسمه » ❪* `'..CatchName(data.first_name_,20)..
-'` ❫\n⭐* ※ رتبـة الكروب » ❪ '..rtpa..
-' ❫\n🎖 ※ رتبـة البوت » ❪ '..t..
-' ❫\n📨 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)..
-' ❫\n🗳 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
-'\n🚫 ※ نوع القيود » ❪ '..kkeed..
-' ❫\n🔹 ※ التواجد » ❪ '..tt..
-' ❫\n⚡ ※ نوع حسابه » ❪ '..acca..' ❫*'
+text = '*🎟 ※ ايديه » ❪* `'..result.sender_user_id_..
+'` ❫\n🎫* ※ معـرفه » ❪* [@'..data.username_..']'..
+' ❫\n📓* ※ اسمه » ❪* `'..CatchName(data.first_name_,20)..
+'` ❫\n🃏* ※ رتبـة الكروب » ❪ '..rtpa..
+' ❫\n🀄 ※ رتبـة البوت » ❪ '..t..
+' ❫\n📖 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..result.sender_user_id_) or 0)..
+' ❫\n💌 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
+'\n🔖 ※ نوع القيود » ❪ '..kkeed..
+' ❫\n💢 ※ التواجد » ❪ '..tt..
+' ❫\n🎴 ※ نوع حسابه » ❪ '..acca..' ❫*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end
 end,nil)
@@ -4674,15 +4674,15 @@ end
 if data.first_name_ == false then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*💢 ※ الحساب محذوف لا استطيع استخراج معلوماته *\n', 1, 'md')
 return false  end
-text = '🗯 ※ ايديه » ❪ '..tes.content_.entities_[0].user_id_..
-' ❫\n⚜ ※ اسمه » ❪ {'..CatchName(data.first_name_,20)..
-' }❫\n⭐ ※ رتبـة الكروب » ❪ '..rtpa..
-' ❫\n🎖 ※ رتبـة البوت » ❪ '..t..
-' ❫\n📨 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)..
-' ❫\n🗳 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
-'\n🚫 ※ نوع القيود » ❪ '..kkeed..
-' ❫\n🔹 ※ التواجد » ❪ '..tt..
-' ❫\n⚡ ※ نوع حسابه » ❪ '..acca..' ❫'
+text = '🎟 ※ ايديه » ❪ '..tes.content_.entities_[0].user_id_..
+' ❫\n📓 ※ اسمه » ❪ {'..CatchName(data.first_name_,20)..
+' }❫\n🃏 ※ رتبـة الكروب » ❪ '..rtpa..
+' ❫\n🀄 ※ رتبـة البوت » ❪ '..t..
+' ❫\n📖 ※ رسـائله » ❪ '..(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..tes.content_.entities_[0].user_id_) or 0)..
+' ❫\n💌 ※ تفــاعله » ❪ '..formsgg(msgss)..' ❫'..photouser1..
+'\n🔖 ※ نوع القيود » ❪ '..kkeed..
+' ❫\n💢 ※ التواجد » ❪ '..tt..
+' ❫\n🎴 ※ نوع حسابه » ❪ '..acca..' ❫'
 monsend(msg,msg.chat_id_,text,tes.content_.entities_[0].user_id_) 
 end,nil)
 end,nil)
@@ -4787,7 +4787,7 @@ end
 tdcli_function ({ID = "GetUser",user_id_ = owner_id
 },function(arg,b) 
 if b.first_name_ == false then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*🚫 ※ المنشئ حاذف لا استطيع رفعه منشئ *\n', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ المنشئ حاذف لا استطيع رفعه منشئ *\n', 1, 'md')
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,owner_id) 
 return false  end
 if b.username_ == false then 
@@ -4824,9 +4824,9 @@ end
 if text == "الرابط" then 
 local link = TIGERBOT:get(TIGER_ID.."link:group"..msg.chat_id_)            
 if link then                              
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*ٴ📮 ※ »* رابط مجموعة ↓\n*ٴ🎴 ※ » '..TIGERBOT:get(TIGER_ID..'group:name'..msg.chat_id_)..' *\n*ٴ📛 ※* » ['..link..']\n✓', 1, 'md')                          
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*ٴ🀄 ※ «* رابط مجموعة ↓\n*ٴ🎴 ※ » '..TIGERBOT:get(TIGER_ID..'group:name'..msg.chat_id_)..' *\n*ٴ🃏 ※* » ['..link..']\n✓', 1, 'md')                          
 else                
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🚫 ※* لا يوجد رابط المجموعه\n*🔖 ※ ارسل » ❪ ضع رابط ❫ لوضع رابط المجموعه*\n✓', 1, 'md')              
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※* لا يوجد رابط المجموعه\n*🔖 ※ ارسل » ❪ ضع رابط ❫ لوضع رابط المجموعه*\n✓', 1, 'md')              
 end            
 end
 if text and text:match("^مسح الرابط$") and is_mod(msg) then              
@@ -4870,7 +4870,7 @@ local rules = TIGERBOT:get(TIGER_ID.."rules:group" .. msg.chat_id_)
 if rules then     
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, rules, 1, nil)   
 else      
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚫 ※* لا يوجد قوانين هنا \n✔🙋🏻‍♂️",  1, "md")   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※* لا يوجد قوانين هنا \n✔🙋🏻‍♂️",  1, "md")   
 end    
 end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
@@ -4885,7 +4885,7 @@ local text = [[
 
 🔖 ※ [لـ تنصيب سورس تــايــكـــر ☑️](https://t.me/Source_Tiger) 
 
-📮 ※[لـ تواصل 📩](t.me/Q_2Bot) 
+ 💬 ※[لـ تواصل 📩](t.me/Q_2Bot) 
 ]] 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
@@ -4984,9 +4984,9 @@ end
 if text ==('المجموعات') and is_devtaha(msg) then
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  
 if #list == 0 then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*🚫 ※ لا توجد مجموعات حاليا *\n', 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ لا توجد مجموعات حاليا *\n', 1, 'md')   
 return false  end
-local t = '🔖 ※* اهلا بك في ايدي المجموعات  ※*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'  
+local t = '🃏 ※* اهلا بك في ايدي المجموعات  ※*\n*ٴ⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃⁃*\n'  
 for k,v in pairs(list) do   
 local nummsg = tonumber(TIGERBOT:get(TIGER_ID..'groupmsg:'..v..':')) 
 numrgroup(v) local numg = (TIGERBOT:get(TIGER_ID.."numgrop"..v) or '3')
@@ -5001,7 +5001,7 @@ end
 t = t..'*📜 ※*لعرض معلومات مجموعه معينه\n*💬 ※ ارسل كشف من ثم ايدي المجموعه*\n*🔖 ※ مثال ❪كشف -10012345667❫*\n꞉'  
 if #list >= 25 then  
 local groups = TIGERBOT:scard(TIGER_ID..'bot:gpsby:id')  
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './TIGER_groups.txt','📛 ※ عذرا لديك الكثير من المجموعات\n🔖 ※ تم ارسال المجموعات في الملف\n💢 ※ عدد المجموعات • ※'..groups..' ※•',dl_cb, nil) 
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './TIGER_groups.txt','🃏 ※ عذرا لديك الكثير من المجموعات\n🔖 ※ تم ارسال المجموعات في الملف\n💢 ※ عدد المجموعات • ※'..groups..' ※•',dl_cb, nil) 
 else 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')  
 end 
@@ -5289,9 +5289,9 @@ tdcli_function ({ ID = "GetChannelFull",
 channel_id_ = getChatId(msg.chat_id_).ID },
 function(arg,tah)  
 if tah.invite_link_ then
-linkgn = '📛* ※* اسم الكروب ➘\n ٴ❴ ['..data.title_..']('..tah.invite_link_..') ❵ ➺'
+linkgn = '🃏* ※* اسم الكروب ➘\n ٴ❴ ['..data.title_..']('..tah.invite_link_..') ❵ ➺'
 else
-linkgn = '📛* ※* اسم الكروب ➘\n ٴ❴ `'..data.title_..'` ❵ ➺'
+linkgn = '🃏* ※* اسم الكروب ➘\n ٴ❴ `'..data.title_..'` ❵ ➺'
 end
 local text = 
 '\n*📮 ※ اهلا بك عزيزي في الاعدادات 🌟*\nٴ━━━━━━━━━━━━'..
@@ -8461,7 +8461,7 @@ TIGERBOT:del(TIGER_ID..'demrtpa:'..msg.chat_id_..':'..msg.sender_user_id_, true)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🎴 ※* انت هنا لست سواء عضو ليس لديك رتبه في البوت\n✓', 1, 'md') 
 TIGERBOT:del(TIGER_ID..'demrtpa:'..msg.chat_id_..':'..msg.sender_user_id_, true)  
 else 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '📛* ※* اهلا بك عزيزي ❪ '..get_mok3(msg.chat_id_,msg.sender_user_id_)..' ❫✔🙋🏻‍♂️\n📮* ※* رائع الان يمكنك تطبيق الشروط\n⚀* ※* ارسل ❪ نعم ❫ ليتم تنزيلك\n*⚁ ※* ارسل ❪ لا ❫ لالغاء تنزيلك\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '🃏* ※* اهلا بك عزيزي ❪ '..get_mok3(msg.chat_id_,msg.sender_user_id_)..' ❫✔🙋🏻‍♂️\n📮* ※* رائع الان يمكنك تطبيق الشروط\n⚀* ※* ارسل ❪ نعم ❫ ليتم تنزيلك\n*⚁ ※* ارسل ❪ لا ❫ لالغاء تنزيلك\n✓', 1, 'md') 
 end 
 end 
 end 
@@ -8922,7 +8922,7 @@ photouser1 = ''
 else
 photouser1 = '\n*🎆 ※ عدد صوره » ❪ '..pho.total_count_..' ❫*'
 end
-local taha = '\n*📛 ※ اهلا عزيزي المستخدم 🍂\nٴ━━━━━━━━━━━*'..'\n*🗯 ※ ايديـك » ❪ '..msg.sender_user_id_..' ❫*'..usertaha..'\n*⚜ ※ اسمك » ❪* `'..CatchNamee(data.first_name_,45)..'` *❫*'..'\n*📨 ※ رسـائلك » ❪ '..tahamsg..' ❫*'..photouser1..'\n*🎖 ※ رتبتـك » ❪ '..t..' ❫*\n*⭐ ※ رتبة الكروب » ❪ '..rtpa..' ❫*\n*🗳 ※ تفــاعلك » ❪ '..formsgg(msguser)..' ❫*\n*📮 ※ نسبـة تفاعلك » ❪ '..string.sub(nupmsgg, 1,5)..'% ❫*'
+local taha = '\n*🃏 ※ اهلا عزيزي المستخدم 🍂\nٴ━━━━━━━━━━━*'..'\n*🗯 ※ ايديـك » ❪ '..msg.sender_user_id_..' ❫*'..usertaha..'\n*⚜ ※ اسمك » ❪* `'..CatchNamee(data.first_name_,45)..'` *❫*'..'\n*📨 ※ رسـائلك » ❪ '..tahamsg..' ❫*'..photouser1..'\n*🎖 ※ رتبتـك » ❪ '..t..' ❫*\n*⭐ ※ رتبة الكروب » ❪ '..rtpa..' ❫*\n*🗳 ※ تفــاعلك » ❪ '..formsgg(msguser)..' ❫*\n*📮 ※ نسبـة تفاعلك » ❪ '..string.sub(nupmsgg, 1,5)..'% ❫*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, ''..taha..'', 1, "md") 
 end,nil)
 end,nil)
@@ -8930,7 +8930,7 @@ end,nil)
 end
 if text == 'عدد الاضافه' or text == 'شكد اضيف' or text == 'شكد العدد' then 
 local whatnumadded = (TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_) or 0) 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"📇* ※* عدد الاضافات المطلوبه\n📮* ※* *"..whatnumadded.."* اشخاص \n", 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"📇* ※* عدد الاضافات المطلوبه\n🎴* ※* *"..whatnumadded.."* اشخاص \n", 1, 'md') 
 end
 if text == "مسح رسايلي" or text == "مسح رسائلي" or text == "حذف رسايلي" or text == "حذف رسائلي" then  
 local getmsgs = TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_) or 0
@@ -8947,9 +8947,9 @@ end
 if text == "معرفي"  then  
 function getmepar(extra,result,success)  
 if result.username_ then 
-zo = '*🎫 ※ معرفك  ⟀ *\n\n*📬 ※ ➺⦅* [@'..result.username_..']* ⦆*\n' 
+zo = '*🎫 ※ معرفك  ⟀ *\n\n*🎴 ※ ➺⦅* [@'..result.username_..']* ⦆*\n' 
 else 
-zo = '*🚫 ※ انت لا تمتلك معرف في حسابك *\n✓' 
+zo = '*🃏 ※ انت لا تمتلك معرف في حسابك *\n✓' 
 end 
 local taha = zo
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
@@ -9005,7 +9005,7 @@ elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
 if tonumber(result.id_) == tonumber(bot_id) then
-local zo = '📮 ※ هاذا اني \n📬 ※ رتبتي في الكروب » ❪ {'..rtpa..'} ❫\n✓'
+local zo = '🎴 ※ هاذا اني \n🃏 ※ رتبتي في الكروب » ❪ {'..rtpa..'} ❫\n✓'
 monsend(msg,msg.chat_id_,zo,result.id_)   
 return false  end 
 local zo = '🔖 ※ رتبته البوت » { '..get_rtpa(msg.chat_id_,result.id_)..' }\n📓 ※ رتبته الكروب » { '..rtpa..' }*\n'
@@ -9025,7 +9025,7 @@ elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
 if tonumber(userid) == tonumber(bot_id) then
-local zo = '📮 ※ هاذا اني \n📬 ※ رتبتي في الكروب » ❪ {'..rtpa..'} ❫\n✓'
+local zo = '🎴 ※ هاذا اني \n🃏 ※ رتبتي في الكروب » ❪ {'..rtpa..'} ❫\n✓'
 monsend(msg,msg.chat_id_,zo,userid)   
 return false  end 
 local zo = '🔖  ※ رتبته البوت » { '..get_rtpa(msg.chat_id_,userid)..' }\n📓 ※ رتبته الكروب » { '..rtpa..' }*\n'
