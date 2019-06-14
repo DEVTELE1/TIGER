@@ -1434,7 +1434,7 @@ if text and text:match("(https://telegram.me/joinchat/%S+)") or text and text:ma
 local glink = text:match("(https://telegram.me/joinchat/%S+)") or text:match("(https://t.me/joinchat/%S+)")   
 local hash = "link:group"..msg.chat_id_   
 TIGERBOT:set(TIGER_ID..hash,glink)   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📬 ※* تم حفظ الرابط الخاص بالمجموعه', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※* تم حفظ الرابط الخاص بالمجموعه', 1, 'md')  
 end   
 end 
 end
@@ -3834,7 +3834,7 @@ what = 'ملف 📁'
 elseif msg.content_.photo_ then 
 what = 'صوره 🎆'
 elseif msg.content_.video_ then  
-what = 'فيديو 📹'
+what = 'فيديو ??'
 end
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📊 ※ تم حفظ الردَ الخاص پك\n🌐 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
 TIGERBOT:del(TIGER_ID.."add:repallt"..msg.sender_user_id_..bot_id)    
@@ -9079,7 +9079,7 @@ local zo = '\n🔖  ※ رتبته البوت »  {'..t..'} \n📓 ※ رتبت�
 monsend(msg,msg.chat_id_,zo,msg.sender_user_id_)   
 end,nil)
 end
-if text == 'تغير الايدي' and is_devtaha(msg) or text == 'تغيير الايدي' and is_devtaha(msg) then
+if text == 'تغير الايدي' and is_devtaha(msg) or text == 'تغيير الايدي' and is_devtaha(msg) or text == 'تعين الايدي' and is_devtaha(msg) then
 TIGERBOT:setex(TIGER_ID.."CHENG:ID"..msg.chat_id_..""..msg.sender_user_id_,200,true)  
 local tahaid= [[
 *🔖 ※ اهلا عزيزي المطور 
