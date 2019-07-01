@@ -446,7 +446,7 @@ end
 function formsgg(msgs)  
 local taha = ''  
 if msgs < 100 then 
-taha = 'غير متفاعل ❌' 
+taha = 'غير متفاعل' 
 elseif msgs < 200 then 
 taha = 'بده يتحسن ✔' 
 elseif msgs < 400 then 
