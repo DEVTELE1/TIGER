@@ -24,10 +24,111 @@ NUMPGAME = (TIGERBOT:get(TIGER_ID..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*🎊¦ مبروك فزت 🍂\n🎁¦ اصبح عدد نقودك » { '..NUMPGAME..' }\n🎭¦* للعب مره اخرى ارسل `ترتيب` \n', 1, 'md')
 end 
 
+if TIGERBOT:get(TIGER_ID.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_) then 
+if text and text:match("^(%d+)$") then
+if tonumber(text:match("^(%d+)$")) > 50000 then
+taha = "*📬¦ لا تستطيع اضافة اكثر من 50000 رساله\n*" 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
+TIGERBOT:del(TIGER_ID.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_)  
+return false  end 
+local GET_IDUSER = TIGERBOT:get(TIGER_ID..'SET:ID:USER'..msg.chat_id_)  
+taha = "\n📬*¦ روح خالي 😉 تم اضافة له { "..text:match("^(%d+)$").." }* رساله"
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
+TIGERBOT:incrby(TIGER_ID..'user:messages:'..msg.chat_id_..':'..GET_IDUSER,text:match("^(%d+)$"))  
+
+end
+TIGERBOT:del(TIGER_ID.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_)  
+end
+
+if TIGERBOT:get(TIGER_ID.."SETEX:NUM"..msg.chat_id_..""..msg.sender_user_id_) then 
+if text and text:match("^(%d+)$") then
+if tonumber(text:match("^(%d+)$")) > 50000 then
+taha = "*📬¦ لا تستطيع اضافة اكثر من 1000 نقطه\n*"
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
+TIGERBOT:del(TIGER_ID.."SETEX:NUM"..msg.chat_id_..""..msg.sender_user_id_)  
+return false  end 
+local GET_IDUSER = TIGERBOT:get(TIGER_ID..'SET:ID:USER:NUM'..msg.chat_id_)  
+taha = "\n📬*¦ طكو طكو عمي 😻 تم اضافة له { "..text:match("^(%d+)$").." }* نقطه"
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
+TIGERBOT:incrby(TIGER_ID..'NUM:GAMES'..msg.chat_id_..GET_IDUSER, text:match("^(%d+)$"))  
+end
+TIGERBOT:del(TIGER_ID.."SETEX:NUM"..msg.chat_id_..""..msg.sender_user_id_)  
+end
+
+
+if TIGERBOT:get(TIGER_ID.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
+if text and text:match("^(%d+)$") then
+local NUM = text:match("^(%d+)$")
+if tonumber(NUM) > 6 then
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1,"*📬¦ عذرا لا يوجد سواء { 6 } اختيارات فقط ارسل اختيارك مره اخره*\n", 1, "md")    
+return false  end 
+local GETNUM = TIGERBOT:get(TIGER_ID.."GAMES"..msg.chat_id_)
+if tonumber(NUM) == tonumber(GETNUM) then
+TIGERBOT:del(TIGER_ID.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1,'*📮¦ مبروك فزت وطلعت المحيبس بل ايد رقم { '..NUM..' }\n🎊¦ لقد حصلت على { 3 }من نقاط يمكنك استبدالهن برسائل *', 1, "md")    
+TIGERBOT:incrby(TIGER_ID..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,3)  
+elseif tonumber(NUM) ~= tonumber(GETNUM) then
+TIGERBOT:del(TIGER_ID.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1,'\n*📮¦ للاسف لقد خسرت \n📬¦ المحيبس بل ايد رقم { '..GETNUM..' }\n💥¦ حاول مره اخرى للعثور على المحيبس *', 1, "md")    
 end
 end
+end
+if TIGERBOT:get(TIGER_ID.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then  
+if text and text:match("^(%d+)$") then
+local NUM = text:match("^(%d+)$")
+if tonumber(NUM) > 20 then
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1,"*📬¦ عذرآ لا يمكنك تخمين عدد اكبر من ال { 20 } خمن رقم ما بين ال{ 1 و 20 } *\n", 1, "md")    
+return false  end 
+local GETNUM = TIGERBOT:get(TIGER_ID.."GAMES:NUM"..msg.chat_id_)
+if tonumber(NUM) == tonumber(GETNUM) then
+TIGERBOT:del(TIGER_ID..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
+TIGERBOT:del(TIGER_ID.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+TIGERBOT:incrby(TIGER_ID..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,5)  
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1,'*🔖¦ مبروك فزت ويانه وخمنت الرقم الصحيح\n🚸¦ تم اضافة { 5 } من النقاط *\n', 1, "md")    
+elseif tonumber(NUM) ~= tonumber(GETNUM) then
+TIGERBOT:incrby(TIGER_ID..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_,1)
+if tonumber(TIGERBOT:get(TIGER_ID..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)) >= 3 then
+TIGERBOT:del(TIGER_ID..'SADD:NUM'..msg.chat_id_..msg.sender_user_id_)
+TIGERBOT:del(TIGER_ID.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1,'\n*📮¦ اوبس لقد خسرت في اللعبه \n📬¦ حظآ اوفر في المره القادمه \n🔰¦ كان الرقم الذي تم تخمينه { '..GETNUM..' }\n*', 1, "md")    
+else
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1,'\n*📛¦ اوبس تخمينك غلط \n📌¦ ارسل رقم تخمنه مره اخره \n*', 1, "md")    
+end
+end
+end
+end
+------
+end
+end
+
 local function GAMES(msg, MSG_TEXT)
 if chat_type == 'super' then 
+if MSG_TEXT[1] == 'محيبس' or MSG_TEXT[1] == 'بات' then   
+Num = math.random(1,6)
+TIGERBOT:set(TIGER_ID.."GAMES"..msg.chat_id_,Num) 
+TEST = [[
+*➀       ➁     ➂      ➃      ➄     ➅
+↓      ↓     ↓      ↓     ↓     ↓
+👊 ‹› 👊 ‹› 👊 ‹› 👊 ‹› 👊 ‹› 👊
+
+
+📮¦ اختر لأستخراج المحيبس الايد التي تحمل المحيبس 
+🎁¦ الفائز يحصل على { 3 } من النقاط *
+]]
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1, TEST, 1, "md") 
+TIGERBOT:setex(TIGER_ID.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
+return false  
+end
+
+if MSG_TEXT[1] == 'خمن' or MSG_TEXT[1] == 'تخمين' then   
+Num = math.random(1,20)
+TIGERBOT:set(TIGER_ID.."GAMES:NUM"..msg.chat_id_,Num) 
+TEST = '*\n📮¦ اهلا بك عزيزي في لعبة التخمين :\nٴ━━━━━━━━━━\n'..'⚠¦ ملاحظه لديك { 3 } محاولات فقط فكر قبل ارسال تخمينك \n\n'..'🔖¦ سيتم تخمين عدد ما بين ال {1 و 20} اذا تعتقد انك تستطيع الفوز جرب واللعب الان ؟ \n🎊¦ الفائز سيحصل على { 5 } من النقود \n💥*'
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1, TEST, 1, "md") 
+TIGERBOT:setex(TIGER_ID.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
+return false  
+end
+
 if MSG_TEXT[1] == 'الاسرع' and not TIGERBOT:get(TIGER_ID.."LOCK:GAMES"..msg.chat_id_) then 
 TIGERBOT:del(TIGER_ID..'SMALE:GAMES'..msg.chat_id_)
 katu = {'🍏','🍎','843578','9755','25677','578866','14589','🍐','🍊','🍋','🍌','🍉','🍇','🍓','🍈','🍒','🍑','🍍','🥥','🥝','🍅','🍆','🥑','🥦','🥒','🌶','🌽','🥕','🥔','🍠','🥐','🍞','🥖','🥨','🧀','🥚','🍳','🥞','🥓','🥩','🍗','🍖','🌭','🍔','🍟','🍕','🥪','🥙','🍼','☕️','🍵','🥤','🍶','🍺','🍻','🏀','⚽️','🏈','⚾️','🎾','🏐','🏉','🎱','🏓','🏸','🥅','🎰','🎮','🎳','🎯','🎲','🎻','🎸','🎺','🥁','🎹','🎼','🎧','🎤','🎬','🎨','🎭','🎪','🎟','🎫','🎗','🏵','🎖','🏆','🥌','🛷','🚕','7643','93289','3457','95439','378865','24568','9976','289','2288','2854','🚗','🚙','🚌','🚎','🏎','🚓','🚑','🚚','🚛','🚜','🇮🇶','⚔','🛡','🔮','🌡','💣','📌','📍','📓','📗','📂','📅','📪','📫','📬','📭','⏰','📺','🎚','☎️','📡'}
@@ -172,6 +273,25 @@ TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")
 end
 end
 
+if MSG_TEXT[1] == "اضف رسائل" and msg.reply_to_message_id_ == 0 then       
+if not is_monsh(msg) then   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"\n*📮¦ هاذا الامر خاص للمدراء فما فوق\n*", 1, 'md') 
+return false  end 
+local ID_USER = MSG_TEXT[2]
+TIGERBOT:set(TIGER_ID..'SET:ID:USER'..msg.chat_id_,ID_USER)  
+TIGERBOT:setex(TIGER_ID.."SETEX:MSG"..msg.chat_id_..""..msg.sender_user_id_,500,true)  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*📊¦ ارسل لي عدد الرسائل الذي تريده*\n', 1, 'md') 
+end
+if MSG_TEXT[1] == "اضف نقود" and msg.reply_to_message_id_ == 0 then       
+if not is_monsh(msg) then   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"\n*📮¦ هاذا الامر خاص للمدراء فما فوق\n*", 1, 'md') 
+return false  end 
+local ID_USER = MSG_TEXT[2]
+TIGERBOT:set(TIGER_ID..'SET:ID:USER:NUM'..msg.chat_id_,ID_USER)  
+TIGERBOT:setex(TIGER_ID.."SETEX:NUM"..msg.chat_id_..""..msg.sender_user_id_,500,true)  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*📊¦ ارسل لي عدد النقاط الذي تريده*\n', 1, 'md') 
+end
+
 if MSG_TEXT[1] == 'الالعاب' or MSG_TEXT[1] == 'اللعبه' then
 if TIGERBOT:get(TIGER_ID.."LOCK:GAMES"..msg.chat_id_) then 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"\n*📮¦ الالعاب تم تعطيلها هنا \n*", 1, 'md') 
@@ -183,6 +303,8 @@ local COMGAME = [[*
 ⚜¦ ترتيب الكلمات ارسل › ترتيب
 🎖¦ اسرع واحد ارسل › الاسرع
 💭¦ معاني السمايلات ارسل › معاني
+🗳¦ لعبة المحيبس ارسل › بات
+🔖¦ لعبة التخمين ارسل › خمن
 *
 ]]
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,COMGAME, 1, 'md') 
@@ -193,7 +315,10 @@ end
 end
 return {
 CMDS = {
-"^(محيبس)$",
+"^(محيبس)$", 
+"^(بات)$", 
+"^(تخمين)$", 
+"^(خمن)$", 
 "^(الاسرع)$",
 "^(ترتيب)$",
 "^(معاني)$",
@@ -202,6 +327,8 @@ CMDS = {
 "^(تفعيل الالعاب)$",
 "^(تعطيل اللعبه)$",
 "^(تعطيل الالعاب)$",
+"^(اضف رسائل) (%d+)$",
+"^(اضف نقود) (%d+)$",
 "^(اللعبه)$",
 "^(الالعاب)$",
 "^(بيع نقودي) (%d+)$",
