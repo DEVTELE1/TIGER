@@ -1,4 +1,4 @@
-local function TIGER_send(chat_id, reply_to_message_id, text)
+local function TIGER_sendMsg(chat_id, reply_to_message_id, text)
 local TextParseMode = {ID = "TextParseModeMarkdown"}
 tdcli_function ({ID = "SendMessage",chat_id_ = chat_id,reply_to_message_id_ = reply_to_message_id,disable_notification_ = 1,from_background_ = 1,reply_markup_ = nil,input_message_content_ = {ID = "InputMessageText",text_ = text,disable_web_page_preview_ = 1,clear_draft_ = 0,entities_ = {},parse_mode_ = TextParseMode,},}, dl_cb, nil)
 end
@@ -23,14 +23,14 @@ if chat_type == 'super' then
 function add_file(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.json') then
 if File_Name:lower():match('(%d+)') ~= bot_id:lower() then 
-TIGER_send(chat,msg.id_,"*📮¦ الملف ليس للبوت \n👨🏻‍✈️*")   
+TIGER_sendMsg(chat,msg.id_,"*📮¦ الملف ليس للبوت \n👨🏻‍✈️*")   
 return false 
 end      
 local File = json:decode(https.request('https://api.telegram.org/bot' .. chaneel .. '/getfile?file_id='..ID_FILE) ) 
 download_to_file('https://api.telegram.org/file/bot'..chaneel..'/'..File.result.file_path, ''..File_Name) 
-TIGER_send(chat,msg.id_,"*📮¦ جاري رفع الملف ♻*")   
+TIGER_sendMsg(chat,msg.id_,"*📮¦ جاري رفع الملف ♻*")   
 else
-TIGER_send(chat,msg.id_,"*📮¦ الملف ليس بصيغة ال json \n👨🏻‍✈️*")   
+TIGER_sendMsg(chat,msg.id_,"*📮¦ الملف ليس بصيغة ال json \n👨🏻‍✈️*")   
 end      
 local info_file = io.open('./'..bot_id..'.json', "r"):read('*a')
 local groups = JSON.decode(info_file)
@@ -151,7 +151,7 @@ File:close()
 sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..bot_id..'.json', '📮| عدد مجموعات البوت » '..#list..'',dl_cb, nil)
 end
 if MSG_TEXT[1] =='السيرفر' and is_devtaha(msg) then
-TIGER_send(msg.chat_id_,msg.id_,io.popen([[
+TIGER_sendMsg(msg.chat_id_,msg.id_,io.popen([[
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '• Uptime > '"$uptime"''
 ]]):read('*all'))
