@@ -446,11 +446,11 @@ end
 function formsgg(msgs)  
 local taha = ''  
 if msgs < 100 then 
-taha = 'غير متفاعل ❌' 
+taha = 'غير متفاعل' 
 elseif msgs < 200 then 
 taha = 'بده يتحسن ✔' 
 elseif msgs < 400 then 
-taha = 'شبه متفاعل ☄' 
+taha = 'شبه متفاعل' 
 elseif msgs < 700 then 
 taha = 'متفاعل ⭐' 
 elseif msgs < 1200 then 
@@ -4875,17 +4875,17 @@ end
 end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[ 
-🔖 ※اهلا بك في سورس تــايــكــر، 
+🤡 ※اهلا بك في سورس تــايــكــر، 
 
 🌐 ※[TIGER TEAM](https://t.me/Source_Tiger) 
 
-☑️ ※[قناه السورس](https://t.me/Source_Tiger)
+☑️ ※[قناه السورس](https://t.me/TIGER_DEV)
 
-🔘 ※[قناه شروحات سورس📍](https://t.me/TIGER_DEV) 
+🔘 ※[قناه شروحات سورس 📜](https://t.me/Source_Tiger) 
 
-🔖 ※ [لـ تنصيب سورس تــايــكـــر ☑️](https://t.me/Source_Tiger) 
+🔖 ※ [رابط كليشه التنصيب ✓ ](https://t.me/Source_Tiger) 
 
- 💬 ※[لـ تواصل 📩](t.me/Q_2Bot) 
+ 💬 ※[تواصل السورس 💌](t.me/Q_2Bot) 
 ]] 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   
 end
