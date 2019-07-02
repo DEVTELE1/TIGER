@@ -5006,23 +5006,6 @@ else
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')  
 end 
 end
-if text and text == "تاك للكل" and (is_owner(msg) or is_creatorbasic(msg)) then
-function tag_all(t1, t2)
-local text = "👨‍👧‍👦 ※ قائمه الاعضاء  ✓ ،\nꔹ┉♦️┉ ┉ ┉ ┉♦️┉ꔹ \n"
-i = 0
-for k, v in pairs(t2.members_) do
-i = i + 1
-local user_info = database:hgetall('TIGER_ID:'..bot_id..'user:'..v.user_id_)
-if user_info and user_info.username then
-local username = user_info.username
-text = text.."<b>|"..i.."|</b>~⪼(@"..username..")\n"
-end
-end
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'html')
-print(text)
-end
-tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tag_all,nil)
-end
 if text ==('مسح المطرودين') and is_monsh(msg) then local function delbans(extra, result)  if not msg.can_be_deleted_ == true then  TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚨 ※* تنبيــه انا لست ادمن يرجى ترقيتي ادمن هنا \n", 1, "md") else  local num = 0 for k,y in pairs(result.members_) do num = num + 1  changeChatMemberStatus(msg.chat_id_, y.user_id_, 'Left', dl_cb, nil)  end  TIGER_sendMsg(msg.chat_id_, msg.id_,  1,'تم الغاء الحظر عن *('..num..')* اشخاص \n', 1, 'md') end  end  getChannelMembers(msg.chat_id_, 0, 'Kicked', 200000, delbans, {chat_id_ = msg.chat_id_, msg_id_ = msg.id_})    end
 if text ==('مسح المحذوف') and is_monsh(msg) then local function deleteaccounts(extra, result) if not msg.can_be_deleted_ == true then TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🚨 ※* تنبيــه انا لست ادمن يرجى ترقيتي ادمن هنا 👮\n", 1, "md") else for k,v in pairs(result.members_) do  local function cleanaccounts(extra, result) if not result.first_name_ then changeChatMemberStatus(msg.chat_id_, result.id_, "Kicked") end end  getUser(v.user_id_, cleanaccounts, nil) end  TIGER_sendMsg(msg.chat_id_, msg.id_, 0,'✔🙋🏻‍♂️* ※*  تم مسح الحسابات المحذوفه', 1, 'md') end end  tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 1000}, deleteaccounts, nil) end 
 if is_mod(msg) then 
