@@ -799,12 +799,12 @@ local function trigger_anti_spam(msg,type)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if type == 'kick' then 
 if data.username_ then
-taha = '\n*👤 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم طرده *'  
+taha = '\n*👩🏿‍🚒 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم طرده *'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 kick(msg,msg.chat_id_,msg.sender_user_id_) 
 else
 kick(msg,msg.chat_id_,msg.sender_user_id_) 
-TIGERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, '👤 ※ العضــو » ( '..CatchName(data.first_name_,20)..' )\n📬 ※ قام بالتكرار هنا وتم طرده \n' , 14, utf8.len(data.first_name_)) 
+TIGERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, '👩🏿‍🚒 ※ العضــو » ( '..CatchName(data.first_name_,20)..' )\n📬 ※ قام بالتكرار هنا وتم طرده \n' , 14, utf8.len(data.first_name_)) 
 end
 return false  
 end 
@@ -813,12 +813,12 @@ delete_msg(msg.chat_id_,{[0] = msg.id_})
 end 
 if type == 'keed' then
 if data.username_ then
-taha = '\n*👤 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم تقييده *'  
+taha = '\n*👩🏿‍🚒 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم تقييده *'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..msg.sender_user_id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,msg.sender_user_id_) 
 else
-TIGERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, '👤 ※ العضــو » ( '..CatchName(data.first_name_,20)..' )\n📬 ※ قام بالتكرار هنا وتم تقييده \n' , 14, utf8.len(data.first_name_)) 
+TIGERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, '👩🏿‍🚒 ※ العضــو » ( '..CatchName(data.first_name_,20)..' )\n📬 ※ قام بالتكرار هنا وتم تقييده \n' , 14, utf8.len(data.first_name_)) 
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..msg.sender_user_id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,msg.sender_user_id_) 
 end
@@ -826,11 +826,11 @@ return false
 end  
 if type == 'mute' then
 if data.username_ then
-taha = '\n*👤 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم كتمه *'  
+taha = '\n*👩🏿‍🚒 ※ العضــو » ❪*[@'..data.username_..']*❫\n📬 ※ قام بالتكرار هنا وتم كتمه *'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,msg.sender_user_id_) 
 else
-TIGERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, '👤 ※ العضــو » ( '..CatchName(data.first_name_,20)..' )\n📬 ※ قام بالتكرار هنا وتم كتمه \n' , 14, utf8.len(data.first_name_))  
+TIGERmonshn(msg.chat_id_, msg.sender_user_id_, msg.id_, '👩🏿‍🚒 ※ العضــو » ( '..CatchName(data.first_name_,20)..' )\n📬 ※ قام بالتكرار هنا وتم كتمه \n' , 14, utf8.len(data.first_name_))  
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,msg.sender_user_id_) 
 end
 return false  
@@ -1772,7 +1772,7 @@ local pvstart = TIGERBOT:get(TIGER_ID.."pvstart")
 if pvstart then    
 TIGER_sendMsg(msg.sender_user_id_, 0, 1, ''..check_markdown(pvstart)..'', 1, "md")    
 else    
-TIGER_sendMsg(msg.sender_user_id_, msg.id_, 1, '📬* ※* تم ارسال رسالتك الى المطور\n*🃏 ※* اشترك في قناة المطور \n*🚫 ※* [اضغط هنا للدخول الى قناة](https://t.me/joinchat/AAAAAElyffap0iuWjaf9eQ) \n', 1, "md")    
+TIGER_sendMsg(msg.sender_user_id_, msg.id_, 1, '📬* ※* تم ارسال رسالتك الى المطور\n*🃏 ※* اشترك في قناة المطور \n*📓 ※* [اضغط هنا للدخول الى قناة](https://t.me/joinchat/AAAAAElyffap0iuWjaf9eQ) \n', 1, "md")    
 end     
 if not TIGERBOT:sismember(TIGER_ID.."usersbot",msg.chat_id_) then    
 TIGERBOT:sadd(TIGER_ID.."usersbot",msg.chat_id_)    
@@ -1799,21 +1799,21 @@ tdcli_function ({ID = "GetUser",user_id_ = id_user
 },function(arg,data) 
 if not TIGERBOT:sismember(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) then
 if data.username_ == false then
-local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ تم حظره من التواصل\n✓'
+local text = '👩🏿‍🚒 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ تم حظره من التواصل\n✓'
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ تم حظره من التواصل\n✓*'
+zo = '*👩🏿‍🚒 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ تم حظره من التواصل\n✓*'
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
 else
 if data.username_ == false then
-local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ بالتأكيد تم حظره من التواصل\n✓'
+local text = '👩🏿‍🚒 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ بالتأكيد تم حظره من التواصل\n✓'
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم حظره من التواصل\n✓*'
+zo = '*👩🏿‍🚒 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم حظره من التواصل\n✓*'
 TIGERBOT:incrby('numlocktextpv'..bot_id..id_user,10000000)    TIGERBOT:sadd(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
@@ -1824,21 +1824,21 @@ if text =='الغاء الحظر' then
 tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data) 
 if TIGERBOT:sismember(TIGER_ID..'pv:ban'..msg.chat_id_,id_user) then
 if data.username_ == false then
-local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم الغاء حظره من التواصل\n✓'
+local text = '👩🏿‍🚒 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم الغاء حظره من التواصل\n✓'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*☑ ※ تم الغاء حظره من التواصل\n✓*'
+zo = '*👩🏿‍🚒 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*☑ ※ تم الغاء حظره من التواصل\n✓*'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
 else
 if data.username_ == false then
-local text = '👤 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ بالتأكيد تم الغاء حظره من التواصل\n✓'
+local text = '👩🏿‍🚒 ※ العضــو ↫ ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ بالتأكيد تم الغاء حظره من التواصل\n✓'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGERmonshn(msg.chat_id_, id_user, msg.id_, text, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*👤 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم الغاء حظره من التواصل\n✓*'
+zo = '*👩🏿‍🚒 ※ العضــو ↫ ❪ *[@'..data.username_..'] ❫\n*📬 ※ بالتأكيد تم الغاء حظره من التواصل\n✓*'
 TIGERBOT:del('numlocktextpv'..bot_id..id_user)    TIGERBOT:srem(TIGER_ID..'pv:ban'..msg.chat_id_,id_user)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, "md") 
 end
@@ -1920,27 +1920,27 @@ end,nil)
 end    
 getMessage(msg.chat_id_, msg.reply_to_message_id_,bot_in_daerct)    
 end 
-if text == 'فتح الكل' and is_devtaha(msg) then   taha = '*🚫 ※* تم فتح جميع الاوامر   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")      TIGERBOT:del(TIGER_ID..'lock:photo'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:vico'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:ste'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:file'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:phon'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:links'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:ved'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:fwd'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:gif'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:musec'..bot_id)    end      
+if text == 'فتح الكل' and is_devtaha(msg) then   taha = '*📓 ※* تم فتح جميع الاوامر   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")      TIGERBOT:del(TIGER_ID..'lock:photo'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:vico'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:ste'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:file'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:phon'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:links'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:ved'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:fwd'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:gif'..bot_id)    TIGERBOT:del(TIGER_ID..'lock:musec'..bot_id)    end      
 if text == 'قفل الكل' and is_devtaha(msg) then   taha = '*🃏 ※* تم قفل جميع الاوامر  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")      TIGERBOT:set(TIGER_ID..'lock:photo'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:vico'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:ste'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:file'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:phon'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:links'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:ved'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:fwd'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:gif'..bot_id,true)    TIGERBOT:set(TIGER_ID..'lock:musec'..bot_id,true)     end   
-if text == 'فتح الصور' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الصور   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:photo'..bot_id) end  
+if text == 'فتح الصور' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الصور   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:photo'..bot_id) end  
 if text == 'قفل الصور' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الصور  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:photo'..bot_id,true) end 
-if text == 'فتح الصوت' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الصوت   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:vico'..bot_id) end  
+if text == 'فتح الصوت' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الصوت   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:vico'..bot_id) end  
 if text == 'قفل الصوت' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الصوت  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:vico'..bot_id,true) end 
-if text == 'فتح الاغاني' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الاغاني   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:musec'..bot_id) end  
+if text == 'فتح الاغاني' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الاغاني   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:musec'..bot_id) end  
 if text == 'قفل الاغاني' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الاغاني  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:musec'..bot_id,true) end 
-if text == 'فتح المتحركه' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح المتحركه   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:gif'..bot_id) end  
+if text == 'فتح المتحركه' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح المتحركه   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:gif'..bot_id) end  
 if text == 'قفل المتحركه' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل المتحركه  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:gif'..bot_id,true) end 
-if text == 'فتح التوجيه' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح التوجيه   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:fwd'..bot_id) end  
+if text == 'فتح التوجيه' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح التوجيه   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:fwd'..bot_id) end  
 if text == 'قفل التوجيه' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل التوحيه  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:fwd'..bot_id,true) end 
-if text == 'فتح الفيديو' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الفيديو   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:ved'..bot_id) end  
+if text == 'فتح الفيديو' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الفيديو   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:ved'..bot_id) end  
 if text == 'قفل الفيديو' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الفيديو  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:ved'..bot_id,true) end 
-if text == 'فتح الروابط' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الروابط   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:links'..bot_id) end  
+if text == 'فتح الروابط' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الروابط   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:links'..bot_id) end  
 if text == 'قفل الروابط' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الروابط  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:links'..bot_id,true) end 
-if text == 'فتح الجهات' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الجهات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:phon'..bot_id) end  
+if text == 'فتح الجهات' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الجهات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:phon'..bot_id) end  
 if text == 'قفل الجهات' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الجهات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:phon'..bot_id,true) end 
-if text == 'فتح الملفات' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الملفات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:file'..bot_id) end  
+if text == 'فتح الملفات' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الملفات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:file'..bot_id) end  
 if text == 'قفل الملفات' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الملفات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:file'..bot_id,true) end 
-if text == 'فتح الملصقات' and is_devtaha(msg) then  taha = '*🚫 ※* تم فتح الملصقات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:ste'..bot_id) end  
+if text == 'فتح الملصقات' and is_devtaha(msg) then  taha = '*📓 ※* تم فتح الملصقات   ✔' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:del(TIGER_ID..'lock:ste'..bot_id) end  
 if text == 'قفل الملصقات' and is_devtaha(msg) then  taha = '*🃏 ※* تم قفل الملصقات  ❌' TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md")  TIGERBOT:set(TIGER_ID..'lock:ste'..bot_id,true) end 
 if text == 'الاعدادات 🔏' and is_devtaha(msg) then  if TIGERBOT:get(TIGER_ID..'lock:photo'..bot_id) then    lock_photo = '* مقفل ✓ *'      else     lock_photo = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:vico'..bot_id) then    lockvic = '* مقفل ✓ *'      else     lockvic = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:ste'..bot_id) then    lockste = '* مقفل ✓ *'      else     lockste = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:file'..bot_id) then    lockfile = '* مقفل ✓ *'     else     lockfile = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:phon'..bot_id) then    lockphon = '* مقفل ✓ *'      else     lockphon = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:links'..bot_id) then    lock_link = '* مقفل ✓ *'      else     lock_link = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:ved'..bot_id) then    lock_vid = '* مقفل ✓ *'      else     lock_vid = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:fwd'..bot_id) then    lock_fwd = '* مقفل ✓ *'      else     lock_fwd = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:gif'..bot_id) then    lock_gif = '* مقفل ✓ *'      else     lock_gif = '*مفتوح ✘*'    end    if TIGERBOT:get(TIGER_ID..'lock:musec'..bot_id) then    lock_muse = '* مقفل ✓ *'      else     lock_muse = '*مفتوح ✘*'    end    local text = '*🃏 ※* اهلا بك في اعدادات الخاص ✓'..'\n*ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*\n'..    '\n*📬 ※* الروابط '..lock_link..    '\n'..'*📬 ※* الصور '..lock_photo..    '\n'..'*📬 ※* الاغاني '..lockvic..    '\n'..'*📬 ※* الملصقات '..lockste..    '\n'..'*📬 ※* الملفات '..lockfile..    '\n'..'*📬 ※* الجهات '..lockphon..    '\n'..'*📬 ※* الفيديو '..lock_vid..    '\n'..'*📬 ※* التوجيه '..lock_fwd..    '\n'..'*📬 ※* المتحركه '..lock_gif..    '\n'..'*📬 ※* الصوت '..lock_muse..    '\n\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n🚨* ※* اضافه الى ذالك تستطيع قفل وفتح الكل\n🚸* ※* قفل الكل \n🚸* ※* فتح الكل'    TIGER_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md')     end     
 if text =='الاوامر 📑' or text == 'الاوامر' then
@@ -3106,7 +3106,7 @@ TIGERBOT:del(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_)
 return false  end 
 if not TIGERBOT:sismember(TIGER_ID..'rep:media'..msg.chat_id_,text) then
 TIGERBOT:del(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_)  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} 🚫 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} 📓 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del("addreply1:gif"..text..msg.chat_id_)  
 TIGERBOT:del("addreply1:vico"..text..msg.chat_id_)  
 TIGERBOT:del("addreply1:stekr"..text..msg.chat_id_)  
@@ -3283,7 +3283,7 @@ end
 t = t..'*'..k..'• *❨`'..v..'`❩ *» {'..taha..'}*\n'    
 end  
 if #list == 0 then  
-t = "*🚫 ※* لا يوجد ردود مضافه"  
+t = "*📓 ※* لا يوجد ردود مضافه"  
 end  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, t, 1, 'md')  
 end  
@@ -3319,7 +3319,7 @@ local test = TIGERBOT:get(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_
 if test and test == 'reppp' then   
 if not TIGERBOT:sismember(TIGER_ID..'repmedia'..msg.chat_id_,text) then
 TIGERBOT:del(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_id_)
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} 🚫 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} 📓 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del("add:reply1:gif"..text..msg.chat_id_)  
 TIGERBOT:del("add:reply1:vico"..text..msg.chat_id_)  
 TIGERBOT:del("add:reply1:stekr"..text..msg.chat_id_)  
@@ -3516,7 +3516,7 @@ end
 t = t..'*'..k..'• *❨`'..v..'`❩ *» {'..taha..'}*\n'    
 end    
 if #list == 0 then    
-t = "*🚫 ※* لا يوجد ردود مضافه"    
+t = "*📓 ※* لا يوجد ردود مضافه"    
 end    
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, t, 1, 'md')    
 end
@@ -3556,7 +3556,7 @@ TIGERBOT:del(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)
 return false  end 
 if not TIGERBOT:sismember(TIGER_ID..'rep:media:all:rd'..bot_id,text) then
 TIGERBOT:del(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)    
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎫 ※ الكلمه » {* ["..text.."] *}  ※\n🚫 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎫 ※ الكلمه » {* ["..text.."] *}  ※\n📓 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del("add:repallt:gif:all:rd"..text..bot_id)    
 TIGERBOT:del("add:rep:tvico:all:rd"..text..bot_id)    
 TIGERBOT:del("add:rep:tstekr:all:rd"..text..bot_id)    
@@ -3762,7 +3762,7 @@ end
 t = t..'*'..k..'• *❨`'..v..'`❩ *» {'..taha..'}*\n'    
 end    
 if #list == 0 then    
-t = "*🚫 ※* لا يوجد ردود مضافه"    
+t = "*📓 ※* لا يوجد ردود مضافه"    
 end    
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, t, 1, 'md')    
 end
@@ -3801,7 +3801,7 @@ TIGERBOT:del(TIGER_ID.."add:repallt"..msg.sender_user_id_..bot_id)
 return false  end   
 if not TIGERBOT:sismember(TIGER_ID..'rep:media:all'..bot_id,text) then
 TIGERBOT:del(TIGER_ID.."add:repallt"..msg.sender_user_id_..bot_id)    
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *}  ※\n🚫 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *}  ※\n📓 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del(TIGER_ID.."add:repallt:gif:all"..text..bot_id)    TIGERBOT:del(TIGER_ID.."add:rep:tvico:all"..text..bot_id)    TIGERBOT:del(TIGER_ID.."add:rep:tstekr:all"..text..bot_id)    TIGERBOT:del(TIGER_ID.."add:rep:text:all"..text..bot_id) TIGERBOT:srem("rep:media:all"..bot_id,text) 
 else
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *}  ※\n💢 ※ تم حذفها من قائمة الردود *\n✔🙋🏻‍♂️\n", 1, 'md')  
@@ -4002,7 +4002,7 @@ sendok = sendok + 1
 end
 if #pv == i then 
 if sendok == 0 then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*🚫 ※ لا يوجد مشتركين وهميين في البوت* \n✓', 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*📓 ※ لا يوجد مشتركين وهميين في البوت* \n✓', 1, 'md')   
 else
 local ok = #pv - sendok
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*💢 ※ عدد المشتركين الان ↫ ❪ '..#pv..' ❫*\n*☑ ※ تم ازالة ↫ ❪ '..sendok..' ❫ من المشتركين*\n*🔖 ※ الان عدد المشتركين الحقيقي ↫ ❪ '..ok..' ❫ مشترك*\n✓', 1, 'md')   
@@ -4102,7 +4102,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end
 if text then 
 if is_mod(msg) then
-if text == 'ارسال نسخه' and is_devtaha(msg) then  sendDocument(SUDO, 0, 0, 1, nil, './TIGER.lua', '🚫 ※اسم الملف ( TIGER.lua )\n♻ ※عدد المشتركين ( '..(TIGERBOT:scard(TIGER_ID.."usersbot") or 0)..' )\n📮 ※عدد المجموعات ( '..(TIGERBOT:scard(TIGER_ID.."botgps") or 0)..' )',dl_cb, nil)  end
+if text == 'ارسال نسخه' and is_devtaha(msg) then  sendDocument(SUDO, 0, 0, 1, nil, './TIGER.lua', '📓 ※اسم الملف ( TIGER.lua )\n♻ ※عدد المشتركين ( '..(TIGERBOT:scard(TIGER_ID.."usersbot") or 0)..' )\n📮 ※عدد المجموعات ( '..(TIGERBOT:scard(TIGER_ID.."botgps") or 0)..' )',dl_cb, nil)  end
 if text == 'اذاعه خاص' and tonumber(msg.reply_to_message_id_) > 0 and is_devtaha(msg) then 
 function cb(a,b,c) 
 if b.content_.text_ then
@@ -5374,7 +5374,7 @@ local addchusername = TIGERBOT:get(TIGER_ID..'add:ch:username')
 taha = "*☑ ※ تم تفعيل الاشتراك الاجباري \n🔖 ※ على القناة » *["..addchusername.."]\n✓"
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 else
-taha = "*🚫 ※ لا يوجد قناة في الاشتراك الاجباري *\n✓"
+taha = "*📓 ※ لا يوجد قناة في الاشتراك الاجباري *\n✓"
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
 end
@@ -5384,7 +5384,7 @@ local getwelcom = TIGERBOT:get(TIGER_ID..'welcome:'..msg.chat_id_)
 if getwelcom then 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, ''..getwelcom..'', 1, 'html') 
 else 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🚫 ※* عذرا لم يتم وضع الترحيب \n', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📓 ※* عذرا لم يتم وضع الترحيب \n', 1, 'md') 
 end 
 end
 
@@ -5399,22 +5399,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز للـكروب\n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*☑ ※* تـم تـرقيتـه مميز للـكروب'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*☑ ※* تـم تـرقيتـه مميز للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز \n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*☑ ※* بالتاكيد هو مميز'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*☑ ※* بالتاكيد هو مميز'   
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
@@ -5444,11 +5444,11 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if not TIGERBOT:sismember(TIGER_ID..'vip:group'..msg.chat_id_,result.id_) then
-setvip = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* تـم تـرقيتـه مميز للـكروب'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* تـم تـرقيتـه مميز للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* بالتاكيد هو مميز'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* بالتاكيد هو مميز'   
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -5475,22 +5475,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'vip:group'..msg.chat_id_,user) then
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز للـكروب\n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مميز للـكروب'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مميز للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز \n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* بالتاكيد هو مميز'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* بالتاكيد هو مميز'   
 TIGERBOT:sadd(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
@@ -5509,21 +5509,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المميزين\n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المميزين\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* تم تنزيله من المميزين'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* تم تنزيله من المميزين'   
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مميز \n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مميز \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مميز'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مميز'   
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
 end
@@ -5552,10 +5552,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if TIGERBOT:sismember(TIGER_ID..'vip:group'..msg.chat_id_,result.id_) then
-setvip = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* تم تنزيله من المميزين'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من المميزين'   
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,result.id_)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مميز'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مميز'   
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,result.id_)  
 end
 else  
@@ -5581,21 +5581,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'vip:group'..msg.chat_id_,user) then
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المميزين\n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المميزين\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* تم تنزيله من المميزين'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* تم تنزيله من المميزين'   
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvip = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مميز \n✓'   
+setvip = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مميز \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvip, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 else
-setvip = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مميز'   
+setvip = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* بالتاكيد هو ليس مميز'   
 TIGERBOT:srem(TIGER_ID..'vip:group'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvip, 1, 'md') 
 end
@@ -5723,22 +5723,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'vip:groups',result.sender_user_id_) then
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز عام في البوت\n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز عام في البوت\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'vip:groups',result.sender_user_id_)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* تـم تـرقيتـه مميز عام في البوت'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* تـم تـرقيتـه مميز عام في البوت'   
 TIGERBOT:sadd(TIGER_ID..'vip:groups',result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز عام \n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز عام \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'vip:groups',result.sender_user_id_)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو مميز عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو مميز عام'   
 TIGERBOT:sadd(TIGER_ID..'vip:groups',result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
@@ -5766,11 +5766,11 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if not TIGERBOT:sismember(TIGER_ID..'vip:groups',result.id_) then
-setvips = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مميز عام البوت'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مميز عام البوت'   
 TIGERBOT:sadd(TIGER_ID..'vip:groups',result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو مميز عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو مميز عام'   
 TIGERBOT:sadd(TIGER_ID..'vip:groups',result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -5795,22 +5795,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'vip:groups',user) then
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز عام البوت\n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مميز عام البوت\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'vip:groups',user)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مميز عام البوت'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مميز عام البوت'   
 TIGERBOT:sadd(TIGER_ID..'vip:groups',user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز عام \n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مميز عام \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'vip:groups',user)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو مميز عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو مميز عام'   
 TIGERBOT:sadd(TIGER_ID..'vip:groups',user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
@@ -5829,21 +5829,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'vip:groups',result.sender_user_id_) then
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من مميزين عام\n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من مميزين عام\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:groups',result.sender_user_id_)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* تم تنزيله من مميزين عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* تم تنزيله من مميزين عام'   
 TIGERBOT:srem(TIGER_ID..'vip:groups',result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مميز عام \n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مميز عام \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:groups',result.sender_user_id_)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مميز عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مميز عام'   
 TIGERBOT:srem(TIGER_ID..'vip:groups',result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
 end
@@ -5870,10 +5870,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if TIGERBOT:sismember(TIGER_ID..'vip:groups',result.id_) then
-setvips = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* تم تنزيله من مميزين عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من مميزين عام'   
 TIGERBOT:srem(TIGER_ID..'vip:groups',result.id_)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مميز عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مميز عام'   
 TIGERBOT:srem(TIGER_ID..'vip:groups',result.id_)  
 end
 else  
@@ -5897,21 +5897,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*?? ※ لا تستطيع رفع وتن
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'vip:groups',user) then
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من مميزين عام\n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من مميزين عام\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:groups',user)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* تم تنزيله من مميزين عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* تم تنزيله من مميزين عام'   
 TIGERBOT:srem(TIGER_ID..'vip:groups',user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
 end
 else
 if data.username_ == false then
-setvips = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مميز عام \n✓'   
+setvips = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مميز عام \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setvips, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'vip:groups',user)  
 else
-setvips = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مميز عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* بالتاكيد هو ليس مميز عام'   
 TIGERBOT:srem(TIGER_ID..'vip:groups',user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setvips, 1, 'md') 
 end
@@ -5929,22 +5929,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مدير للـكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مدير للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مدير للـكروب'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مدير للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مدير \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مدير \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو مدير'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو مدير'   
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -5972,11 +5972,11 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if not TIGERBOT:sismember(TIGER_ID..'modergroup'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مدير للـكروب'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مدير للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو مدير'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو مدير'   
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -6001,22 +6001,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ لا تستطيع رفع وت�
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'modergroup'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مدير للـكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مدير للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مدير للـكروب'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مدير للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مدير \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مدير \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* بالتاكيد هو مدير'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* بالتاكيد هو مدير'   
 TIGERBOT:sadd(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -6035,21 +6035,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المدراء\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المدراء\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* تم تنزيله من المدراء'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* تم تنزيله من المدراء'   
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مدير \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مدير \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مدير'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مدير'   
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -6076,10 +6076,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if TIGERBOT:sismember(TIGER_ID..'modergroup'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* تم تنزيله من المدراء'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من المدراء'   
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,result.id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مدير'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مدير'   
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,result.id_)  
 end
 else  
@@ -6103,21 +6103,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'modergroup'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المدراء\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المدراء\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* تم تنزيله من المدراء'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* تم تنزيله من المدراء'   
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مدير \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مدير \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مدير'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* بالتاكيد هو ليس مدير'   
 TIGERBOT:srem(TIGER_ID..'modergroup'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -6135,22 +6135,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه ادمن للـكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه ادمن للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه ادمن للـكروب'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه ادمن للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو ادمن \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو ادمن \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو ادمن'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو ادمن'   
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -6178,11 +6178,11 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if not TIGERBOT:sismember(TIGER_ID..'mods:'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه ادمن للـكروب'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه ادمن للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو ادمن'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو ادمن'   
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -6207,22 +6207,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'mods:'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه ادمن للـكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه ادمن للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه ادمن للـكروب'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه ادمن للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو ادمن \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو ادمن \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو ادمن'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو ادمن'   
 TIGERBOT:sadd(TIGER_ID..'mods:'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -6241,21 +6241,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من الادمنيه\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من الادمنيه\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* تم تنزيله من الادمنيه'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* تم تنزيله من الادمنيه'   
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس ادمن \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس ادمن \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس ادمن'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس ادمن'   
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -6282,10 +6282,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if TIGERBOT:sismember(TIGER_ID..'mods:'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* تم تنزيله من الادمنيه'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من الادمنيه'   
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,result.id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس ادمن'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس ادمن'   
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,result.id_)  
 end
 else  
@@ -6309,21 +6309,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'mods:'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من الادمنيه\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من الادمنيه\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* تم تنزيله من الادمنيه'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* تم تنزيله من الادمنيه'   
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس ادمن \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس ادمن \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* بالتاكيد هو ليس ادمن'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* بالتاكيد هو ليس ادمن'   
 TIGERBOT:srem(TIGER_ID..'mods:'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -6341,22 +6341,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه منشئ للـكروب\n✓'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه منشئ للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه منشئ للـكروب'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه منشئ للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
 end
 else
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو منشئ \n✓'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو منشئ \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو منشئ'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو منشئ'   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
@@ -6386,11 +6386,11 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if not TIGERBOT:sismember(TIGER_ID..'moder'..msg.chat_id_,result.id_) then
-setmonsh = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه منشئ للـكروب'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه منشئ للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو منشئ'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو منشئ'   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -6417,22 +6417,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'moder'..msg.chat_id_,user) then
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه منشئ للـكروب\n✓'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه منشئ للـكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,user)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* تـم تـرقيتـه منشئ للـكروب'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* تـم تـرقيتـه منشئ للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
 end
 else
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو منشئ \n✓'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو منشئ \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,user)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو منشئ'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو منشئ'   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
@@ -6451,21 +6451,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المنشئين\n✓'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المنشئين\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* تم تنزيله من المنشئين'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* تم تنزيله من المنشئين'   
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
 end
 else
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس منشئ \n✓'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس منشئ \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس منشئ'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس منشئ'   
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
 end
@@ -6494,10 +6494,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if TIGERBOT:sismember(TIGER_ID..'moder'..msg.chat_id_,result.id_) then
-setmonsh = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* تم تنزيله من المنشئين'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من المنشئين'   
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,result.id_)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس منشئ'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس منشئ'   
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,result.id_)  
 end
 else  
@@ -6523,21 +6523,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'moder'..msg.chat_id_,user) then
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المنشئين\n'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المنشئين\n'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,user)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* تم تنزيله من المنشئين'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* تم تنزيله من المنشئين'   
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
 end
 else
 if data.username_ == false then
-setmonsh = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس منشئ \n✓'   
+setmonsh = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس منشئ \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, setmonsh, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,user)  
 else
-setmonsh = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* بالتاكيد هو ليس منشئ'   
+setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* بالتاكيد هو ليس منشئ'   
 TIGERBOT:srem(TIGER_ID..'moder'..msg.chat_id_,user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, setmonsh, 1, 'md') 
 end
@@ -6555,22 +6555,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'sudo:bot',result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مطور البوت\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مطور البوت\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 else
-zo = '*?? ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مطور البوت'   
+zo = '*?? ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مطور البوت'   
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مطور \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مطور \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو مطور'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*☑ ※* بالتاكيد هو مطور'   
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -6598,11 +6598,11 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if not TIGERBOT:sismember(TIGER_ID..'sudo:bot',result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مطور البوت'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه مطور البوت'   
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو مطور'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* بالتاكيد هو مطور'   
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -6627,22 +6627,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'sudo:bot',user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مطور البوت\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تـرقيتـه مطور البوت\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مطور البوت'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* تـم تـرقيتـه مطور البوت'   
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مطور \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد هو مطور \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو مطور'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*☑ ※* بالتاكيد هو مطور'   
 TIGERBOT:sadd(TIGER_ID..'sudo:bot',user)  
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -6661,21 +6661,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'sudo:bot',result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المطورين\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المطورين\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* تم تنزيله من المطورين'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* تم تنزيله من المطورين'   
 TIGERBOT:srem(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مطور \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مطور \n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مطور'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مطور'   
 TIGERBOT:srem(TIGER_ID..'sudo:bot',result.sender_user_id_)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -6702,10 +6702,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if TIGERBOT:sismember(TIGER_ID..'sudo:bot',result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* تم تنزيله من المطورين'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من المطورين'   
 TIGERBOT:srem(TIGER_ID..'sudo:bot',result.id_)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مطور'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مطور'   
 TIGERBOT:srem(TIGER_ID..'sudo:bot',result.id_)  
 end
 else  
@@ -6729,21 +6729,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'sudo:bot',user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم تنزيله من المطورين\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم تنزيله من المطورين\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'sudo:bot',user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* تم تنزيله من المطورين'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* تم تنزيله من المطورين'   
 TIGERBOT:srem(TIGER_ID..'sudo:bot',user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد هو ليس مطور \n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد هو ليس مطور \n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'sudo:bot',user)  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` *❫*\n*🚫 ※* بالتاكيد هو ليس مطور'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` *❫*\n*📓 ※* بالتاكيد هو ليس مطور'   
 TIGERBOT:srem(TIGER_ID..'sudo:bot',user)  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -6761,14 +6761,14 @@ user_id_ = result.sender_user_id_
 },function(arg,data) 
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) or TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_) or TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم رفع قيوده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم رفع قيوده\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تم رفع قيوده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تم رفع قيوده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
@@ -6777,14 +6777,14 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تم رفع قيوده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تم رفع قيوده\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*☑ ※* بالتاكيد تم رفع قيوده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*☑ ※* بالتاكيد تم رفع قيوده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
@@ -6810,14 +6810,14 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخرا
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,user) or TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,user) or TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم رفع قيوده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم رفع قيوده\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* تم رفع قيوده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* تم رفع قيوده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
@@ -6826,14 +6826,14 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تم رفع قيوده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تم رفع قيوده\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* بالتاكيد تم رفع قيوده\n✔🙋??‍♂️ ※'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* بالتاكيد تم رفع قيوده\n✔🙋??‍♂️'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
@@ -6864,14 +6864,14 @@ if data and data.code_ and data.code_ == 6 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخراج معلوماته*\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) or TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,result.id_) or TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* تم رفع قيوده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* تم رفع قيوده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* بالتاكيد تم رفع قيوده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* بالتاكيد تم رفع قيوده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
@@ -6902,21 +6902,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في ا
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء حظره\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم الغاء حظره\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تم الغاء حظره\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تم الغاء حظره\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء حظره\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تم الغاء حظره\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تم الغاء حظره\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -6950,21 +6950,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في ا
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء حظره\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم الغاء حظره\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تم الغاء حظره\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تم الغاء حظره\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء حظره\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تم الغاء حظره\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تم الغاء حظره\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7003,11 +7003,11 @@ if ban and ban.code_ and ban.code_ == 3 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في المجموعه *\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تم الغاء حظره\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تم الغاء حظره\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*?? ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*?? ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تم الغاء حظره\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7029,7 +7029,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد محظورين في هاذه المجموعه' 
+t = '*📓 ※* لا يوجد محظورين في هاذه المجموعه' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7046,7 +7046,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد ادمنيه في هاذه المجموعه' 
+t = '*📓 ※* لا يوجد ادمنيه في هاذه المجموعه' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7063,7 +7063,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد مميزين في هاذه المجموعه' 
+t = '*📓 ※* لا يوجد مميزين في هاذه المجموعه' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7080,7 +7080,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد مميزين عام في البوت' 
+t = '*📓 ※* لا يوجد مميزين عام في البوت' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7097,7 +7097,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد مطورين في البوت' 
+t = '*📓 ※* لا يوجد مطورين في البوت' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7114,7 +7114,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد مدراء في هاذه المجموعه' 
+t = '*📓 ※* لا يوجد مدراء في هاذه المجموعه' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end 
@@ -7131,7 +7131,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*🚫 ※* لا يوجد محظورين عام في البوت' 
+t = '*📓 ※* لا يوجد محظورين عام في البوت' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
@@ -7206,12 +7206,12 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في ا
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'TIGER:gbaned',result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم حظره عام من الكروبات\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم حظره عام من الكروبات\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,result.sender_user_id_) end
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تـم حظره عام من الكروبات\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تـم حظره عام من الكروبات\n✓'   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,result.sender_user_id_) end
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 seavusername(result.sender_user_id_) 
@@ -7219,12 +7219,12 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم حظره عام من الكروبات\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم حظره عام من الكروبات\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,result.sender_user_id_) end
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تـم حظره عام من الكروبات\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تـم حظره عام من الكروبات\n✓'   
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,result.sender_user_id_) end
 seavusername(result.sender_user_id_) 
@@ -7262,12 +7262,12 @@ if ban and ban.code_ and ban.code_ == 3 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في المجموعه *\n✓', 1, 'md') 
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'TIGER:gbaned',result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*?? ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تـم حظره عام من الكروبات\n??'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*?? ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تـم حظره عام من الكروبات\n??'   
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',result.id_)   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,result.id_) end
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تـم حظره عام من الكروبات\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تـم حظره عام من الكروبات\n✓'     
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',result.id_)   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,result.id_) end
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
@@ -7298,19 +7298,19 @@ if ban and ban.code_ and ban.code_ == 3 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في المجموعه *\n✓', 1, 'md') 
 return false  end
 if data and data.code_ and data.code_ == 6 then
-zo = '*👤 ※ العضــو » ❪ '..user..' ❫\n🚫 ※ تـم حظره عام من الكروبات\n✔🙋🏻‍♂️*'   
+zo = '*👩🏿‍🚒 ※ العضــو » ❪ '..user..' ❫\n📓 ※ تـم حظره عام من الكروبات\n✔🙋🏻‍♂️*'   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,user) end
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',user)   
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'TIGER:gbaned',user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم حظره عام من الكروبات\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم حظره عام من الكروبات\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,user) end
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تـم حظره عام من الكروبات\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تـم حظره عام من الكروبات\n✓'   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,user) end
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',user)   
 seavusername(user) 
@@ -7318,12 +7318,12 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم حظره عام من الكروبات\n✓'     
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم حظره عام من الكروبات\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,user) end
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تـم حظره عام من الكروبات\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تـم حظره عام من الكروبات\n✓'     
 TIGERBOT:sadd(TIGER_ID..'TIGER:gbaned',user)   
 local list = TIGERBOT:smembers(TIGER_ID..'bot:gpsby:id')  for k,v in pairs(list) do  kick(msg,v,user) end
 seavusername(user) 
@@ -7352,21 +7352,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في ا
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'TIGER:gbaned',result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء حظره عام\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم الغاء حظره عام\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تم الغاء حظره عام\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تم الغاء حظره عام\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء حظره عام\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تم الغاء حظره عام\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره عام\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تم الغاء حظره عام\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',result.sender_user_id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7391,28 +7391,28 @@ if data and data.code_ and data.code_ == 6 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخراج معلوماته*\n✓', 1, 'md') 
 return false  end
 if ban and ban.code_ and ban.code_ == 400 and ban.message_ == "CHAT_ADMIN_REQUIRED" then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🚫 ※ يرجى تفعيل صلاحيه حظر المستخدمين لاتمكن من الغاء حظره عام *\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📓 ※ يرجى تفعيل صلاحيه حظر المستخدمين لاتمكن من الغاء حظره عام *\n✓', 1, 'md') 
 return false  end
 if ban and ban.code_ and ban.code_ == 3 then 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في المجموعه *\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'TIGER:gbaned',user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء حظره عام\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم الغاء حظره عام\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تم الغاء حظره عام\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تم الغاء حظره عام\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',user)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء حظره عام\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تم الغاء حظره عام\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره عام\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تم الغاء حظره عام\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',user)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7449,11 +7449,11 @@ if ban and ban.code_ and ban.code_ == 3 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في المجموعه *\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'TIGER:gbaned',result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تم الغاء حظره عام\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تم الغاء حظره عام\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره عام\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تم الغاء حظره عام\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:gbaned',result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7479,22 +7479,22 @@ user_id_ = result.sender_user_id_
 },function(arg,data) 
 if not TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم كتمه من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم كتمه من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📬 ※* تـم كتمه من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تـم كتمه من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم كتمه من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم كتمه من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تـم كتمه من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تـم كتمه من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -7527,11 +7527,11 @@ if TIGER1(msg.chat_id_,result.id_) then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لآ أستطيع كتم » ❪ '..get_mokforkick(msg.chat_id_,result.id_)..' ❫ *\n', 1, 'md') 
 return false  end 
 if not TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تـم كتمه من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تـم كتمه من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.id_)   
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*?? ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تـم كتمه من الكروب\n✓'     
+zo = '*?? ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تـم كتمه من الكروب\n✓'     
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.id_)   
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -7559,22 +7559,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع كتم اد�
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم كتمه من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم كتمه من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تـم كتمه من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تـم كتمه من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,user)   
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم كتمه من الكروب\n✓'     
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم كتمه من الكروب\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تـم كتمه من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تـم كتمه من الكروب\n✓'     
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,user)   
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -7593,21 +7593,21 @@ user_id_ = result.sender_user_id_
 },function(arg,data) 
 if TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء كتمه\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم الغاء كتمه\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تم الغاء كتمه\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تم الغاء كتمه\n✓'   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء كتمه\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تم الغاء كتمه\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء كتمه\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تم الغاء كتمه\n✓'   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7632,21 +7632,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخرا
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء كتمه\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم الغاء كتمه\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تم الغاء كتمه\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تم الغاء كتمه\n✓'   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,user)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء كتمه\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تم الغاء كتمه\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تم الغاء كتمه\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تم الغاء كتمه\n✓'   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,user)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7676,11 +7676,11 @@ if data and data.code_ and data.code_ == 6 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*?? ※ لا استطيع استخراج معلوماته*\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'mutes'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تم الغاء كتمه\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تم الغاء كتمه\n✓'   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء كتمه\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تم الغاء كتمه\n✓'   
 TIGERBOT:srem(TIGER_ID..'mutes'..msg.chat_id_,result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -7722,22 +7722,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في ا
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم حظره من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم حظره من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تـم حظره من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تـم حظره من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم حظره من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم حظره من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تـم حظره من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تـم حظره من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.sender_user_id_)   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -7790,11 +7790,11 @@ if ban and ban.code_ and ban.code_ == 3 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في المجموعه *\n✓', 1, 'md') 
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تـم حظره من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تـم حظره من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تـم حظره من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تـم حظره من الكروب\n✓'     
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 end
@@ -7845,22 +7845,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخرا
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'TIGER:baned'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ تـم حظره من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ تـم حظره من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تـم حظره من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تـم حظره من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ بالتاكيد تـم حظره من الكروب\n✓'     
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ بالتاكيد تـم حظره من الكروب\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تـم حظره من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تـم حظره من الكروب\n✓'     
 TIGERBOT:sadd(TIGER_ID..'TIGER:baned'..msg.chat_id_,user)   
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -7899,7 +7899,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لأ أستطيع ط�
 return false  end 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = result.id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusLeft" then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تـم طرده من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تـم طرده من الكروب\n✓'     
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 return false  end
@@ -7917,7 +7917,7 @@ return false  end
 if ban and ban.code_ and ban.code_ == 3 then 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في المجموعه *\n✓', 1, 'md') 
 return false  end
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تـم طرده من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تـم طرده من الكروب\n✓'     
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 changeChatMemberStatus(msg.chat_id_, result.id_, "Left") 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -7963,22 +7963,22 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ انا لست ادمن في ا
 return false  end
 if da.status_.ID == "ChatMemberStatusLeft" then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم طرده من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم طرده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'TIGER:kick'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تـم طرده من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تـم طرده من الكروب\n✓'   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 kick(msg,msg.chat_id_,result.sender_user_id_)
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم طرده من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم طرده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 TIGERBOT:sadd(TIGER_ID..'TIGER:kick'..msg.chat_id_,result.sender_user_id_)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تـم طرده من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تـم طرده من الكروب\n✓'   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
@@ -8033,21 +8033,21 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخرا
 return false  end
 if da.status_.ID == "ChatMemberStatusLeft" then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📬 ※ بالتاكيد تـم طرده من الكروب\n✓'     
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم طرده من الكروب\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تـم طرده من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تـم طرده من الكروب\n✓'     
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 kick(msg,msg.chat_id_,user)
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم طرده من الكروب\n✓'     
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم طرده من الكروب\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 TIGERBOT:sadd(TIGER_ID..'TIGER:kick'..msg.chat_id_,user)   
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تـم طرده من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تـم طرده من الكروب\n✓'     
 TIGERBOT:sadd(TIGER_ID..'TIGER:kick'..msg.chat_id_,user)   
 seavusername(user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8080,24 +8080,24 @@ user_id_ = result.sender_user_id_
 },function(arg,data) 
 if not TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تقييده من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم تقييده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* '..result.sender_user_id_..' ❫\n*☑ ※* تـم تقييده من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* '..result.sender_user_id_..' ❫\n*📓 ※* تـم تقييده من الكروب\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.."") 
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تـم تقييده من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم تقييده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* '..result.sender_user_id_..' ❫\n*☑ ※* بالتاكيد تـم تقييده من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* '..result.sender_user_id_..' ❫\n*📓 ※* بالتاكيد تـم تقييده من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8132,12 +8132,12 @@ if TIGER1(msg.chat_id_,result.id_) then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لآ أستطيع تقييد » ❪ '..get_mokforkick(msg.chat_id_,result.id_)..' ❫ *\n', 1, 'md') 
 return false  end 
 if not TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تـم تقييده من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* تـم تقييده من الكروب\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تـم تقييده من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*📓 ※* بالتاكيد تـم تقييده من الكروب\n✓'     
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
@@ -8168,12 +8168,12 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع تقييد �
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم تقييده من الكروب\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تـم تقييده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تـم تقييده من الكروب\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* تـم تقييده من الكروب\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 seavusername(user) 
@@ -8181,12 +8181,12 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم تقييده من الكروب\n✓'     
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تـم تقييده من الكروب\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تـم تقييده من الكروب\n✓'     
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*📓 ※* بالتاكيد تـم تقييده من الكروب\n✓'     
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 seavusername(user) 
@@ -8206,24 +8206,24 @@ user_id_ = result.sender_user_id_
 },function(arg,data) 
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء تقييده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تم الغاء تقييده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء تقييده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📓 ※ بالتاكيد تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء تقييده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*📓 ※* بالتاكيد تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8249,24 +8249,24 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخرا
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم الغاء تقييده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* تم الغاء تقييده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تم الغاء تقييده\n✓'   
+zo = '👩🏿‍🚒 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* بالتاكيد تم الغاء تقييده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* بالتاكيد تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8297,12 +8297,12 @@ if data and data.code_ and data.code_ == 6 then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخراج معلوماته*\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) then
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* تم الغاء تقييده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* بالتاكيد تم الغاء تقييده\n✓'   
+zo = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* بالتاكيد تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8367,10 +8367,10 @@ local list = TIGERBOT:smembers(TIGER_ID..'filters:'..msg.chat_id_)
 local t = '*📜 ※* قائمه منع الكلمات 🍂 \n--------------------\n' for k,v in pairs(list) do t = t..'*'..k.."» { * `"..v.."` *} *\n"  end if #list == 0 then t = '*📜 ※* قائمه المنع فارغه' end TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') end 
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and is_mod(msg) then  
 if TIGERBOT:sismember(TIGER_ID..'lock:pin',msg.chat_id_) and not is_monsh(msg) then
-TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*🚫 ※* التثبيت مقفل في المجموعه \n✔🙋🏻‍♂️", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*📓 ※* التثبيت مقفل في المجموعه \n✔🙋🏻‍♂️", 1, 'md')  
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'LOCK:PINMSG'..msg.chat_id_,msg.sender_user_id_) then
-TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*🚫 ※* تم منعك من التثبيت هنا لا تستطيع التثبيت \n✔🙋🏻‍♂️", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*📓 ※* تم منعك من التثبيت هنا لا تستطيع التثبيت \n✔🙋🏻‍♂️", 1, 'md')  
 return false  end
 local id = msg.id_ 
 local msgs = {[0] = id}  
@@ -9318,7 +9318,7 @@ TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ لا تستطيع منعي من ارس
 return false  
 end   
 if getrtp(msg.chat_id_,result.sender_user_id_) then   
-TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨🏻‍✈️*")   
+TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ عذرا لا تستطيع منع » { المنشئين والمطورين } \n👨??‍✈️*")   
 return false  
 end    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
