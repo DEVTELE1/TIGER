@@ -8061,14 +8061,14 @@ end
 
 if text ==('تقييد') and is_mod(msg) or text ==('تقيد') and is_mod(msg) then 
 if msg.can_be_deleted_ == false then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕┇* انا لست ادمن يرجى رفعي والمحاوله مره اخره\n", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※* انا لست ادمن يرجى رفعي والمحاوله مره اخره\n", 1, "md") 
 return false  end 
 function prom_reply(extra, result, success) 
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ عذرآ لأ أستطيع تقييد نفسي * ', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لأ أستطيع تقييد نفسي * ', 1, 'md')  
 return false  end 
 if TIGER1(msg.chat_id_,result.sender_user_id_) then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ عذرآ لآ أستطيع تقييد » ❪ '..get_mokforkick(msg.chat_id_,result.sender_user_id_)..' ❫ *\n', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لآ أستطيع تقييد » ❪ '..get_mokforkick(msg.chat_id_,result.sender_user_id_)..' ❫ *\n', 1, 'md') 
 return false  end 
 tdcli_function ({
 ID = "GetUser",
@@ -8076,24 +8076,24 @@ user_id_ = result.sender_user_id_
 },function(arg,data) 
 if not TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫┇ تـم تقييده من الكروب\n✔🙋🏻‍♂️※'   
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تـم تقييده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫┇* تـم تقييده من الكروب\n✔🙋🏻‍♂️※'   
-TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* '..result.sender_user_id_..' ❫\n*☑ ※* تـم تقييده من الكروب\n✓'   
+HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.."") 
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫┇ بالتاكيد تـم تقييده من الكروب\n✔🙋🏻‍♂️※'   
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تـم تقييده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫┇* بالتاكيد تـم تقييده من الكروب\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* '..result.sender_user_id_..' ❫\n*☑ ※* بالتاكيد تـم تقييده من الكروب\n✓'   
 TIGERBOT:sadd(TIGER_ID..'mutes'..msg.chat_id_,result.sender_user_id_)   
 seavusername(result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8111,29 +8111,29 @@ local username1 = text:match('^تقييد @(.*)')
 local username2 = text:match('^تقيد @(.*)') 
 local username = username1 or username2
 if msg.can_be_deleted_ == false then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕┇* انا لست ادمن يرجى رفعي والمحاوله مره اخره\n", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※* انا لست ادمن يرجى رفعي والمحاوله مره اخره\n", 1, "md") 
 return false  end 
 function promreply(extra,result,success) 
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*🔖┇ المعرف لا يوجد فيه حساب *'
+local taha = '*❕ ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖┇ هاذا المعرف قناة وليس معرف حساب *\n✔🙋🏻‍♂️※', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ هاذا المعرف قناة وليس معرف حساب *\n✓', 1, 'md') 
 return false  end
 if tonumber(result.id_) == tonumber(bot_id) then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ عذرآ لأ أستطيع تقييد نفسي * ', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لأ أستطيع تقييد نفسي * ', 1, 'md')  
 return false  end 
 if TIGER1(msg.chat_id_,result.id_) then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ عذرآ لآ أستطيع تقييد » ❪ '..get_mokforkick(msg.chat_id_,result.id_)..' ❫ *\n', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لآ أستطيع تقييد » ❪ '..get_mokforkick(msg.chat_id_,result.id_)..' ❫ *\n', 1, 'md') 
 return false  end 
 if not TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) then
-zo = '*👤┇* العضــو » ❪ [@'..username..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫┇* تـم تقييده من الكروب\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* تـم تقييده من الكروب\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
-zo = '*👤┇* العضــو » ❪ [@'..username..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫┇* بالتاكيد تـم تقييده من الكروب\n✔🙋🏻‍♂️※'     
+zo = '*👤 ※* العضــو » ❪ [@'..username..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تـم تقييده من الكروب\n✓'     
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
@@ -8147,29 +8147,29 @@ local user1 = text:match('تقييد (%d+)')
 local user2 = text:match('تقيد (%d+)')
 local user = user1 or user2
 if msg.can_be_deleted_ == false then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕┇* انا لست ادمن يرجى رفعي والمحاوله مره اخره\n", 1, "md") 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※* انا لست ادمن يرجى رفعي والمحاوله مره اخره\n", 1, "md") 
 return false  end 
 if tonumber(user) == tonumber(bot_id) then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ عذرآ لأ أستطيع تقييد نفسي * ', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لأ أستطيع تقييد نفسي * ', 1, 'md')  
 return false  end 
 if TIGER1(msg.chat_id_,user) then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ عذرآ لآ أستطيع تقييد » ❪ '..get_mokforkick(msg.chat_id_,user)..' ❫ *\n', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ عذرآ لآ أستطيع تقييد » ❪ '..get_mokforkick(msg.chat_id_,user)..' ❫ *\n', 1, 'md') 
 return false  end 
 tdcli_function ({
 ID = "GetUser",
 user_id_ = user
 },function(arg,data) 
 if ban and ban.code_ and ban.code_ == 400 and ban.message_ == "USER_ADMIN_INVALID" then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ لا استطيع تقييد ادمنية المجموعه *\n✔🙋🏻‍♂️※', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع تقييد ادمنية المجموعه *\n✓', 1, 'md') 
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫┇ تـم تقييده من الكروب\n✔🙋🏻‍♂️※'   
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تـم تقييده من الكروب\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..user..'` ❫\n*🚫┇* تـم تقييده من الكروب\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* تـم تقييده من الكروب\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 seavusername(user) 
@@ -8177,12 +8177,12 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')
 end
 else
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫┇ بالتاكيد تـم تقييده من الكروب\n✔🙋🏻‍♂️※'     
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تـم تقييده من الكروب\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..user..'` ❫\n*🚫┇* بالتاكيد تـم تقييده من الكروب\n✔🙋🏻‍♂️※'     
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*🚫 ※* بالتاكيد تـم تقييده من الكروب\n✓'     
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.."") 
 TIGERBOT:sadd(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 seavusername(user) 
@@ -8194,7 +8194,7 @@ end
 if text == 'الغاء التقييد' and tonumber(msg.reply_to_message_id_) > 0 and is_mod(msg) or text == 'الغاء التقيد' and tonumber(msg.reply_to_message_id_) > 0 and is_mod(msg) then 
 function unbanreply(extra, result, success) 
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖┇ انا البوت ولست مقييد * \n', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ انا البوت ولست مقييد * \n', 1, 'md')  
 return false  end 
 tdcli_function ({
 ID = "GetUser",
@@ -8202,24 +8202,24 @@ user_id_ = result.sender_user_id_
 },function(arg,data) 
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) then
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫┇ تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫┇* تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫┇ بالتاكيد تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n🚫 ※ بالتاكيد تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫┇* بالتاكيد تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.sender_user_id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.sender_user_id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8234,35 +8234,35 @@ local user1 = text:match('الغاء التقييد (%d+)')
 local user = text:match('الغاء التقيد (%d+)') 
 local user = user1 or user2
 if tonumber(user) == tonumber(bot_id) then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖┇ انا البوت ولست مقيد * \n', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ انا البوت ولست مقيد * \n', 1, 'md')  
 return false  end 
 tdcli_function ({
 ID = "GetUser",
 user_id_ = user
 },function(arg,data) 
 if data and data.code_ and data.code_ == 6 then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ لا استطيع استخراج معلوماته*\n✔🙋🏻‍♂️※', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخراج معلوماته*\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,user) then
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑┇ تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..user..'` ❫\n*☑┇* تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
 else
 if data.username_ == false then
-zo = '👤┇ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑┇ بالتاكيد تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n☑ ※ بالتاكيد تم الغاء تقييده\n✓'   
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..user..'` ❫\n*☑┇* بالتاكيد تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..user..'` ❫\n*☑ ※* بالتاكيد تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,user) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
@@ -8276,29 +8276,29 @@ local username2 = text:match('الغاء التقيد @(.*)')
 local username = username1 or username2
 function unbanusername(extra,result,success)  
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
-local taha = '*💢┇ المعرف لا يوجد فيه حساب *'
+local taha = '*💢 ※ المعرف لا يوجد فيه حساب *'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 return false  end
 if result and result.type_ and result.type_.channel_ and result.type_.channel_.ID == "Channel" then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖┇ هاذا المعرف قناة وليس معرف حساب *\n✔🙋🏻‍♂️※', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ هاذا المعرف قناة وليس معرف حساب *\n✓', 1, 'md') 
 return false  end
 if tonumber(result.id_) == tonumber(bot_id) then  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖┇ انا البوت ولست مقيد * \n', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ انا البوت ولست مقيد * \n', 1, 'md')  
 return false  end 
 tdcli_function ({
 ID = "GetUser",
 user_id_ = result.id_
 },function(arg,data) 
 if data and data.code_ and data.code_ == 6 then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕┇ لا استطيع استخراج معلوماته*\n✔🙋🏻‍♂️※', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخراج معلوماته*\n✓', 1, 'md') 
 return false  end
 if TIGERBOT:sismember(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) then
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.id_..'` ❫\n*☑┇* تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*👤┇* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖┇ الايـدي » ❪* `'..result.id_..'` ❫\n*☑┇* بالتاكيد تم الغاء تقييده\n✔🙋🏻‍♂️※'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*☑ ※* بالتاكيد تم الغاء تقييده\n✓'   
 HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  
 TIGERBOT:srem(TIGER_ID..'tedmembars'..msg.chat_id_,result.id_) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
