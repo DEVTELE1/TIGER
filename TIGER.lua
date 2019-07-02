@@ -954,12 +954,12 @@ return false  end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if TIGERBOT:sismember(TIGER_ID..'bot:gps:id',msg.chat_id_) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📮 ※ المجموعه تم تفعيلها بالتاكيد \nꪜ*', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تفعيلها بالتاكيد \nꪜ*', 1, 'md')
 TIGERBOT:set(TIGER_ID.."add:bot:group"..msg.chat_id_, true) 
 else
 addmod(msg.chat_id_) 
 if ( data.member_count_ > tonumber(TIGERBOT:get(TIGER_ID..'setadd:bot'..bot_id) or 100) ) then
-test = '*📮 ※ تـم تفعيــل المجموعه بـنجـاح ✔🙋🏻‍♂️\n📬 ※ تم ترقية المنشئ والادمنيه *\n\nꪜ'
+test = '*☑ ※ تـم تفعيــل المجموعه بـنجـاح ✔🙋🏻‍♂️\n👩🏿‍🚒  ※ تم ترقية المنشئ والادمنيه *\n\n'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,test, 1, 'md')
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,msg.sender_user_id_)  
 TIGERBOT:sadd(TIGER_ID..'add:num'..msg.sender_user_id_,msg.chat_id_) 
@@ -1017,12 +1017,12 @@ return false  end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if TIGERBOT:sismember(TIGER_ID..'bot:gps:id',msg.chat_id_) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📮 ※ المجموعه تم تفعيلها بالتاكيد \nꪜ*', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تفعيلها بالتاكيد \nꪜ*', 1, 'md')
 TIGERBOT:set(TIGER_ID.."add:bot:group"..msg.chat_id_, true) 
 else
 addmod(msg.chat_id_) 
 if ( data.member_count_ > tonumber(TIGERBOT:get(TIGER_ID..'setadd:bot'..bot_id) or 100) ) then
-test = '*☑ ※ تـم تفعيــل المجموعه بـنجـاح ✔🙋🏻‍♂️\n🃏 ※ تم ترقية المنشئ والادمنيه *\n\nꪜ'
+test = '*☑ ※ تـم تفعيــل المجموعه بـنجـاح ✔🙋🏻‍♂️\n🃏 ※ تم ترقية المنشئ والادمنيه *\n\n'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,test, 1, 'md')
 TIGERBOT:sadd(TIGER_ID..'add:num'..msg.sender_user_id_,msg.chat_id_) 
 TIGERBOT:set(TIGER_ID.."add:bot:group"..msg.chat_id_, true)  
@@ -1032,7 +1032,7 @@ TIGERBOT:sadd(TIGER_ID.."botgps", msg.chat_id_)
 TIGERBOT:sadd(TIGER_ID.."bot:gps:id", msg.chat_id_)  
 else
 local taha = TIGERBOT:get(TIGER_ID..'setadd:bot'..bot_id)
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '🔬* ※* المجموعه تحتوي على *{'..data.member_count_..'}* عضو\n✔🙋🏻‍♂️* ※* لا استطيع تفعيل المجموعه \n📑* ※* يجب ان يكون عدد الاعضاء *{'..(taha or 100)..'}* \n ', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '🔬* ※* المجموعه تحتوي على *{'..data.member_count_..'}* عضو\n❕* ※* لا استطيع تفعيل المجموعه \n📑* ※* يجب ان يكون عدد الاعضاء *{'..(taha or 100)..'}* \n ', 1, 'md') 
 TIGERBOT:del(TIGER_ID.."test:group" .. msg.chat_id_)
 end
 if data.member_count_ > tonumber(TIGERBOT:get(TIGER_ID..'setadd:bot'..bot_id) or 100) and not is_devtaha(msg) then    
