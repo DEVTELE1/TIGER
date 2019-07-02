@@ -4295,11 +4295,11 @@ return false  end
 if kk.type_.ID == "ChannelChatInfo" then 
 if kk.type_.channel_.is_supergroup_ == false then
 local ac = 'قناة'
-local chan = '*🎴 ※ نوع الحساب » ❪ '..ac..' ❫\n🔖 ※ الايدي » ❪*`'..kk.id_..'`*❫\n🎫 ※ المعرف » ❪* [@'..username..'] *❫\n🔖 ※  الاسم » ❪ *`'..kk.title_..'`* ❫*'
+local chan = '*🎴 ※ نوع الحساب » ❪ '..ac..' ❫\n🔖 ※ الايدي » ❪*`'..kk.id_..'`*❫\n🎫 ※ المعرف » ❪* [@'..username..'] *❫\n👩🏿‍🚒 ※  الاسم » ❪ *`'..kk.title_..'`* ❫*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,chan, 1, 'md')
 else
 local aac = 'مجموعه'
-local chanb = '*🎴 ※ نوع الحساب » ❪ '..aac..' ❫\n🔖 ※ الايدي » ❪*`'..kk.id_..'`*❫\n🎫 ※ المعرف » ❪* [@'..username..'] *❫\n🔖 ※  الاسم » ❪ *`'..kk.title_..'`* ❫*'
+local chanb = '*🎴 ※ نوع الحساب » ❪ '..aac..' ❫\n🔖 ※ الايدي » ❪*`'..kk.id_..'`*❫\n🎫 ※ المعرف » ❪* [@'..username..'] *❫\n👩🏿‍🚒 ※  الاسم » ❪ *`'..kk.title_..'`* ❫*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,chanb, 1, 'md')
 end
 return false  end
@@ -7003,7 +7003,7 @@ zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ ا
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 else
-zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🔖 ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره\n✓'   
+zo = '*👤 ※* العضــو » ❪ [@'..data.username_..'] ❫\n*?? ※ الايـدي » ❪* `'..result.id_..'` ❫\n*🚫 ※* بالتاكيد تم الغاء حظره\n✓'   
 TIGERBOT:srem(TIGER_ID..'TIGER:baned'..msg.chat_id_,result.id_)   
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md') 
 end
