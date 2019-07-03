@@ -3041,7 +3041,7 @@ TIGERBOT:del(TIGER_ID.."addreply1:document"..v..msg.chat_id_)
 TIGERBOT:del(TIGER_ID.."addreply1:audio"..v..msg.chat_id_)  
 TIGERBOT:srem(TIGER_ID.."rep:media"..msg.chat_id_,v)  
 end  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🌐 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*☑ ※* تم مسح الردود جميعها \n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🖲 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*✔ ※* تم مسح الردود جميعها \n", 1, 'md')  
 end
 if  text == "قائمه الردود بالرد" and is_monsh(msg) then  
 local list = TIGERBOT:smembers(TIGER_ID.."rep:media"..msg.chat_id_)  
@@ -3083,10 +3083,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n
 TIGERBOT:del(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_)  
 return false  end 
 if TIGERBOT:sismember(TIGER_ID..'rep:media'..msg.chat_id_,text) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🔖 ※ لقد تم اضافة رد بهاذه الكلمه \n💬 ※ ارسل كلمه اخرى او ارسل الغاء*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🖲 ※ لقد تم اضافة رد بهاذه الكلمه \n💬 ※ ارسل كلمه اخرى او ارسل الغاء*\n✔🙋🏻‍♂️\n", 1, 'md')  
 else
 media = '{ متحركه ‹› ملصق ‹› صوره ‹› اغنيه ‹› بصمه ‹› ملف ‹› فيديو }'
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💬 ※ حسنآ ارسل الرد الان\n🔖 ※ يمكنك ارسال الرد » "..media.."*\n✔🙋🏻‍♂️", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💬 ※ حسنآ ارسل الرد الان\n🖲 ※ يمكنك ارسال الرد » "..media.."*\n✔🙋🏻‍♂️", 1, 'md')  
 TIGERBOT:set(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_,"repp")  
 TIGERBOT:set(TIGER_ID.."addreply2:"..msg.sender_user_id_..msg.chat_id_, text)  
 TIGERBOT:sadd(TIGER_ID.."rep:media"..msg.chat_id_,text)  
@@ -3106,7 +3106,7 @@ TIGERBOT:del(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_)
 return false  end 
 if not TIGERBOT:sismember(TIGER_ID..'rep:media'..msg.chat_id_,text) then
 TIGERBOT:del(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_)  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} 📓 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💈 ※ الكلمه » {* ["..text.."] *} ❕ ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del("addreply1:gif"..text..msg.chat_id_)  
 TIGERBOT:del("addreply1:vico"..text..msg.chat_id_)  
 TIGERBOT:del("addreply1:stekr"..text..msg.chat_id_)  
@@ -3117,7 +3117,7 @@ TIGERBOT:del("addreply1:document"..text..msg.chat_id_)
 TIGERBOT:del("addreply1:audio"..text..msg.chat_id_)
 TIGERBOT:srem("rep:media"..msg.chat_id_,text)  
 else
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} ☑ ※ تم حذفها من قائمة الردود *\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💈 ※ الكلمه » {* ["..text.."] *} ✔ ※ تم حذفها من قائمة الردود *\n🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_)  
 TIGERBOT:del(TIGER_ID.."addreply1:gif"..text..msg.chat_id_)  
 TIGERBOT:del(TIGER_ID.."addreply1:vico"..text..msg.chat_id_)  
@@ -3151,7 +3151,7 @@ what = 'صوره 🎆'
 elseif msg.content_.video_ then  
 what = 'فيديو 📹'
 end
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ تم حفظ الردَ الخاص پك\n🔖 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*✔ ※ تم حفظ الردَ الخاص پك\n🖲 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
 TIGERBOT:del(TIGER_ID.."addreply1:"..msg.sender_user_id_..msg.chat_id_)  
 local test = TIGERBOT:get(TIGER_ID.."addreply2:"..msg.sender_user_id_..msg.chat_id_)  
 if msg.content_.sticker_ then   
@@ -3283,7 +3283,7 @@ end
 t = t..'*'..k..'• *❨`'..v..'`❩ *» {'..taha..'}*\n'    
 end  
 if #list == 0 then  
-t = "*✔ ※* لا يوجد ردود مضافه"  
+t = "*❕ ※* لا يوجد ردود مضافه"  
 end  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, t, 1, 'md')  
 end  
@@ -3303,7 +3303,7 @@ if TIGERBOT:sismember(TIGER_ID..'repmedia'..msg.chat_id_,text) then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ لقد تم اضافة رد بهاذه الكلمه \n💬 ※ ارسل كلمه اخرى او ارسل الغاء*\n✔🙋🏻‍♂️\n", 1, 'md')  
 else
 media = '{ متحركه ‹› ملصق ‹› صوره ‹› اغنيه ‹› بصمه ‹› ملف ‹› فيديو }'
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💬 ※ حسنآ ارسل الرد الان\n🔖 ※ يمكنك ارسال الرد » "..media.."*\n✔🙋🏻‍♂️", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💬 ※ حسنآ ارسل الرد الان\n🖲 ※ يمكنك ارسال الرد » "..media.."*\n✔🙋🏻‍♂️", 1, 'md')  
 TIGERBOT:set(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_id_,"repp")  
 TIGERBOT:set(TIGER_ID.."add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
 TIGERBOT:sadd(TIGER_ID.."repmedia"..msg.chat_id_,text)  
@@ -3319,7 +3319,7 @@ local test = TIGERBOT:get(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_
 if test and test == 'reppp' then   
 if not TIGERBOT:sismember(TIGER_ID..'repmedia'..msg.chat_id_,text) then
 TIGERBOT:del(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_id_)
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} 📓 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💈 ※ الكلمه » {* ["..text.."] *} ❕ ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del("add:reply1:gif"..text..msg.chat_id_)  
 TIGERBOT:del("add:reply1:vico"..text..msg.chat_id_)  
 TIGERBOT:del("add:reply1:stekr"..text..msg.chat_id_)  
@@ -3330,7 +3330,7 @@ TIGERBOT:del("addreply1:document:gp"..text..msg.chat_id_)
 TIGERBOT:del("addreply1:audio:gp"..text..msg.chat_id_)
 TIGERBOT:srem("repmedia"..msg.chat_id_,text)  
 else
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *} ☑ ※ تم حذفها من قائمة الردود *\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💈 ※ الكلمه » {* ["..text.."] *} ✔ ※ تم حذفها من قائمة الردود *\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_id_)  
 TIGERBOT:del(TIGER_ID.."add:reply1:gif"..text..msg.chat_id_)  
 TIGERBOT:del(TIGER_ID.."add:reply1:vico"..text..msg.chat_id_)  
@@ -3365,7 +3365,7 @@ what = 'صوره 🎆'
 elseif msg.content_.video_ then  
 what = 'فيديو 📹'
 end
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ تم حفظ الردَ الخاص پك\n🔖 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*✔ ※ تم حفظ الردَ الخاص پك\n🖲 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
 TIGERBOT:del(TIGER_ID.."add:reply1"..msg.sender_user_id_..msg.chat_id_)  
 local test = TIGERBOT:get(TIGER_ID.."add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 if msg.content_.sticker_ then   
@@ -3490,7 +3490,7 @@ TIGERBOT:del(TIGER_ID.."all:addreply1:document:gp"..v..bot_id)
 TIGERBOT:del(TIGER_ID.."all:addreply1:audio:gp"..v..bot_id)
 TIGERBOT:srem(TIGER_ID.."rep:media:all:rd"..bot_id,v)    
 end    
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🌐 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*☑ ※* تم مسح الردود جميعها \n", 1, 'md')    
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📓 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*✔ ※* تم مسح الردود جميعها \n", 1, 'md')    
 end
 if  text == "ردود المطور بالرد" and is_devtaha(msg) then    
 local list = TIGERBOT:smembers(TIGER_ID.."rep:media:all:rd"..bot_id)    
@@ -3516,7 +3516,7 @@ end
 t = t..'*'..k..'• *❨`'..v..'`❩ *» {'..taha..'}*\n'    
 end    
 if #list == 0 then    
-t = "*✔ ※* لا يوجد ردود مضافه"    
+t = "*❕ ※* لا يوجد ردود مضافه"    
 end    
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, t, 1, 'md')    
 end
@@ -3532,10 +3532,10 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم الغاء الامر *\n
 TIGERBOT:del(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)    
 return false  end 
 if TIGERBOT:sismember(TIGER_ID.."rep:media:all:rd"..bot_id,text) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ لقد تم اضافة رد بهاذه الكلمه \n💬 ※ ارسل كلمه اخرى او ارسل الغاء*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*✔ ※ لقد تم اضافة رد بهاذه الكلمه \n💬 ※ ارسل كلمه اخرى او ارسل الغاء*\n✔🙋🏻‍♂️\n", 1, 'md')  
 else
 media = '{ متحركه ‹› ملصق ‹› صوره ‹› اغنيه ‹› بصمه ‹› ملف ‹› فيديو }'
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💬 ※ حسنآ ارسل الرد الان\n🔖 ※ يمكنك ارسال الرد » "..media.."*\n✔🙋🏻‍♂️", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💬 ※ حسنآ ارسل الرد الان\n🖲 ※ يمكنك ارسال الرد » "..media.."*\n✔🙋🏻‍♂️", 1, 'md')  
 TIGERBOT:set(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id,'yes1')    
 TIGERBOT:set(TIGER_ID.."addreply2:"..msg.sender_user_id_..bot_id, text)    
 TIGERBOT:sadd(TIGER_ID.."rep:media:all:rd"..bot_id,text)    
@@ -3556,7 +3556,7 @@ TIGERBOT:del(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)
 return false  end 
 if not TIGERBOT:sismember(TIGER_ID..'rep:media:all:rd'..bot_id,text) then
 TIGERBOT:del(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)    
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🎫 ※ الكلمه » {* ["..text.."] *}  ※\n📓 ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💈 ※ الكلمه » {* ["..text.."] *}  \n❕ ※ لا يوجد رد بهاذه الكلمه*\n✔🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del("add:repallt:gif:all:rd"..text..bot_id)    
 TIGERBOT:del("add:rep:tvico:all:rd"..text..bot_id)    
 TIGERBOT:del("add:rep:tstekr:all:rd"..text..bot_id)    
@@ -3567,7 +3567,7 @@ TIGERBOT:del("all:addreply1:document:gp"..text..bot_id)
 TIGERBOT:del("all:addreply1:audio:gp"..text..bot_id)
 TIGERBOT:del("rep:media:all:rd"..bot_id,text)    
 else
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📊 ※ الكلمه » {* ["..text.."] *}  ※\n☑ ※ تم حذفها من قائمة الردود *\n✔🙋🏻‍♂️\n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*💈 ※ الكلمه » {* ["..text.."] *}  ※\n✔ ※ تم حذفها من قائمة الردود *\n🙋🏻‍♂️\n", 1, 'md')  
 TIGERBOT:del(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)    
 TIGERBOT:del(TIGER_ID.."add:repallt:gif:all:rd"..text..bot_id)    
 TIGERBOT:del(TIGER_ID.."add:rep:tvico:all:rd"..text..bot_id)    
@@ -3601,7 +3601,7 @@ what = 'صوره 🎆'
 elseif msg.content_.video_ then  
 what = 'فيديو 📹'
 end
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ تم حفظ الردَ الخاص پك\n🔖 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*✔ ※ تم حفظ الردَ الخاص پك\n🖲 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
 TIGERBOT:del(TIGER_ID.."add:repallt:rd"..msg.sender_user_id_..bot_id)    
 local test = TIGERBOT:get(TIGER_ID.."addreply2:"..msg.sender_user_id_..bot_id)    
 if msg.content_.sticker_ then     
@@ -3838,7 +3838,7 @@ what = 'صوره 🎆'
 elseif msg.content_.video_ then  
 what = 'فيديو ??'
 end
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*📊 ※ تم حفظ الردَ الخاص پك\n🌐 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*✔ ※ تم حفظ الردَ الخاص پك\n🖲 ※ نو؏ الرد — { '..what..' }*', 1, 'md')  
 TIGERBOT:del(TIGER_ID.."add:repallt"..msg.sender_user_id_..bot_id)    
 local test = TIGERBOT:get(TIGER_ID.."addreply2:"..msg.sender_user_id_..bot_id)    
 if msg.content_.sticker_ then     
@@ -6549,7 +6549,7 @@ ID = "GetUser",
 user_id_ = result.sender_user_id_
 },function(arg,data) 
 if data and data.type_ and data.type_.ID == "UserTypeBot" then 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وتنزيل البوتات *\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*?? ※ لا تستطيع رفع وتنزيل البوتات *\n✓', 1, 'md') 
 return false  end
 if not TIGERBOT:sismember(TIGER_ID..'sudo:bot',result.sender_user_id_) then
 if data.username_ == false then
@@ -9166,7 +9166,7 @@ end
 end
 else
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'\n🎟  ※ ايديك ✓ '..msg.sender_user_id_..''..username..'\n🛰  ※ موقعك ✓ '..get_rtpa(msg.chat_id_,msg.sender_user_id_)..'\n📓  ※ موقع الكروب ✓ '..rtpa..'\n💌  ※ تفاعلك ✓ '..formsgg(msguser)..'\n📖  ※ رسائلك ✓ '..(msguser)..'\n📇  ※ صورك ✓ '..taha.total_count_..'\n')       
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'\n🎟  ※ ايديك ✓ '..msg.sender_user_id_..''..username..'\n🛰  ※ موقعك ✓ '..get_rtpa(msg.chat_id_,msg.sender_user_id_)..'\n📓  ※ موقع الكروب ✓ '..rtpa..'\n??  ※ تفاعلك ✓ '..formsgg(msguser)..'\n📖  ※ رسائلك ✓ '..(msguser)..'\n📇  ※ صورك ✓ '..taha.total_count_..'\n')       
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n🎟  ※ ايديك ✓ '..msg.sender_user_id_..''..usernamee..'\n🛰  ※ موقعك ✓ '..get_rtpa(msg.chat_id_,msg.sender_user_id_)..'\n📓  ※ موقع الكروب ✓ '..rtpa..'\n💌  ※ تفاعلك ✓ '..formsgg(msguser)..'\n📖  ※ رسائلك ✓ '..(msguser)..'\n'..'\n🌇 ※ لا يمكنني عرض صورتك لانك قمت بحظر البوت', 1, 'md')   
