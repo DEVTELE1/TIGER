@@ -2611,366 +2611,366 @@ end
 end 
 if text == 'قفل الدردشه' and msg.reply_to_message_id_ == 0 and is_monsh(msg) then 
 TIGERBOT:set(TIGER_ID.."lock:text"..msg.chat_id_,true) 
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الدردشه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الدردشه \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الاضافه' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID.."lock:AddMempar"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل اضافة الاعضاء \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل اضافة الاعضاء \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الدخول' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID.."lock:Join"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل دخول الاعضاء \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل دخول الاعضاء \n✓',msg.sender_user_id_)  
 elseif text == 'قفل البوتات' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID.."lock:Bot:kick"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل البوتات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل البوتات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل البوتات بالطرد' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID.."lock:Bot:kick"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل البوتات بالطرد\n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل البوتات بالطرد\n✓',msg.sender_user_id_)  
 elseif text == 'قفل البوتات بالتقييد' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID.."lock:Bot:kick"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل البوتات بالتقييد\n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل البوتات بالتقييد\n✓',msg.sender_user_id_)  
 elseif text == 'قفل اشعارات البوتات' and msg.reply_to_message_id_ == 0 and is_mod(msg) then  
 TIGERBOT:set(TIGER_ID..'lock:tagservrbot'..msg.chat_id_,true)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل اشعارات البوتات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل اشعارات البوتات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الاشعارات' and msg.reply_to_message_id_ == 0 and is_mod(msg) then  
 TIGERBOT:set(TIGER_ID..'lock:tagservr'..msg.chat_id_,true)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاشعارات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاشعارات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التثبيت' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID.."lockpin"..msg.chat_id_, true) 
 TIGERBOT:sadd(TIGER_ID..'lock:pin',msg.chat_id_) tdcli_function ({ ID = "GetChannelFull",  channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  TIGERBOT:set(TIGER_ID..'pinned'..msg.chat_id_,data.pinned_message_id_)  end,nil)
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التثبيت هنا \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التثبيت هنا \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التعديل' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID..'lock:edit'..msg.chat_id_,true) 
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل تعديل الكلمات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل تعديل الكلمات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل تعديل الميديا' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:set(TIGER_ID..'lock:edit:media'..msg.chat_id_,true) 
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل تعديل الميديا \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل تعديل الميديا \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الكل' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 add_lockal(msg.chat_id_)
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل جميع الاوامر \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل جميع الاوامر \n✓',msg.sender_user_id_)  
 end
 if text == 'فتح الاضافه' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID.."lock:AddMempar"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح اضافة الاعضاء \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح اضافة الاعضاء \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الدردشه' and msg.reply_to_message_id_ == 0 and is_monsh(msg) then 
 TIGERBOT:del(TIGER_ID.."lock:text"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الدردشه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الدردشه \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الدخول' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID.."lock:Join"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح دخول الاعضاء \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح دخول الاعضاء \n✓',msg.sender_user_id_)  
 elseif text == 'فتح البوتات' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID.."lock:Bot:kick"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح البوتات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح البوتات \n✓',msg.sender_user_id_)  
 elseif text == 'فتح البوتات بالطرد' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID.."lock:Bot:kick"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح البوتات بالطرد\n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح البوتات بالطرد\n✓',msg.sender_user_id_)  
 elseif text == 'فتح البوتات بالتقييد' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID.."lock:Bot:kick"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح البوتات بالتقييد\n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح البوتات بالتقييد\n✓',msg.sender_user_id_)  
 elseif text == 'فتح اشعارات البوتات' and msg.reply_to_message_id_ == 0 and is_mod(msg) then  
 TIGERBOT:del(TIGER_ID..'lock:tagservrbot'..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح اشعارات البوتات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح اشعارات البوتات \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الاشعارات' and msg.reply_to_message_id_ == 0 and is_mod(msg) then  
 TIGERBOT:del(TIGER_ID..'lock:tagservr'..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح الاشعارات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح الاشعارات \n✓',msg.sender_user_id_)  
 elseif text == 'فتح التثبيت' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID.."lockpin"..msg.chat_id_)  TIGERBOT:srem(TIGER_ID..'lock:pin',msg.chat_id_)
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح التثبيت هنا \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح التثبيت هنا \n✓',msg.sender_user_id_)  
 elseif text == 'فتح التعديل' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID..'lock:edit'..msg.chat_id_) 
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح تعديل الكلمات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح تعديل الكلمات \n✓',msg.sender_user_id_)  
 elseif text == 'فتح تعديل الميديا' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 TIGERBOT:del(TIGER_ID..'lock:edit:media'..msg.chat_id_) 
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح تعديل الميديا \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح تعديل الميديا \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الكل' and msg.reply_to_message_id_ == 0 and is_mod(msg) then 
 rem_lockal(msg.chat_id_) 
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح جميع الاوامر \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فـتح جميع الاوامر \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الروابط' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Link"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الروابط بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Link"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الروابط بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Link"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الروابط بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Link"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الروابط بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الروابط' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Link"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الروابط \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الروابط \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل المعرفات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:user:name"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل المعرفات بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:user:name"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل المعرفات بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:user:name"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل المعرفات بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:user:name"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المعرفات بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح المعرفات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:user:name"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح المعرفات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح المعرفات \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل التاك' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:hashtak"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التاك بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:hashtak"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التاك بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:hashtak"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التاك بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:hashtak"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التاك بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح التاك' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:hashtak"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح التاك \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح التاك \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الشارحه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Cmd"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الشارحه بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Cmd"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الشارحه بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Cmd"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الشارحه بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Cmd"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الشارحه بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الشارحه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Cmd"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الشارحه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الشارحه \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الصور' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Photo"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الصور بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Photo"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الصور بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Photo"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الصور بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Photo"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصور بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الصور' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Photo"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الصور \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الصور \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الفيديو' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Video"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الفيديو بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Video"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الفيديو بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Video"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الفيديو بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Video"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الفيديو بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الفيديو' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Video"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الفيديو \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الفيديو \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل المتحركه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Animation"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه \n✓',msg.sender_user_id_)  
 elseif text == 'قفل المتحركه بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Animation"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل المتحركه بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Animation"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل المتحركه بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Animation"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل المتحركه بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح المتحركه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Animation"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح المتحركه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح المتحركه \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الالعاب' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:geam"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الالعاب بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:geam"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الالعاب بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:geam"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الالعاب بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:geam"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الالعاب بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الالعاب' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:geam"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الالعاب \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الالعاب \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الاغاني' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Audio"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الاغاني بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Audio"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الاغاني بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Audio"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الاغاني بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Audio"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الاغاني بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الاغاني' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Audio"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الاغاني \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الاغاني \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الصوت' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:vico"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الصوت بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:vico"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الصوت بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:vico"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الصوت بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:vico"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الصوت بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الصوت' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:vico"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الصوت \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الصوت \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الكيبورد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Keyboard"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الكيبورد بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Keyboard"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الكيبورد بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Keyboard"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الكيبورد بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Keyboard"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكيبورد بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الكيبورد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Keyboard"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الكيبورد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الكيبورد \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الملصقات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Sticker"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الملصقات بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Sticker"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الملصقات بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Sticker"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الملصقات بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Sticker"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملصقات بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الملصقات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Sticker"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الملصقات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الملصقات \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل التوجيه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التوجيه بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التوجيه بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل التوجيه بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:forward"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل التوجيه بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح التوجيه' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:forward"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح التوجيه \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح التوجيه \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الملفات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Document"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الملفات بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Document"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الملفات بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Document"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الملفات بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Document"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الملفات بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الملفات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Document"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الملفات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الملفات \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل السيلفي' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Unsupported"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي \n✓',msg.sender_user_id_)  
 elseif text == 'قفل السيلفي بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Unsupported"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل السيلفي بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Unsupported"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل السيلفي بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Unsupported"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل السيلفي بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح السيلفي' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Unsupported"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح السيلفي \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح السيلفي \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الماركدون' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Markdaun"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الماركدون بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Markdaun"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الماركدون بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Markdaun"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الماركدون بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Markdaun"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الماركدون بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الماركدون' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Markdaun"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الماركدون \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الماركدون \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الجهات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Contact"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الجهات بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Contact"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الجهات بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Contact"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الجهات بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Contact"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الجهات بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الجهات' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Contact"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الجهات \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الجهات \n✓',msg.sender_user_id_)  
 end
 if text == 'قفل الكلايش' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Spam"..msg.chat_id_,'del')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكلايش \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكلايش \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الكلايش بالتقييد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Spam"..msg.chat_id_,'ked')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكلايش بالتقييد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكلايش بالتقييد \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الكلايش بالكتم' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Spam"..msg.chat_id_,'ktm')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكلايش بالكتم \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋??‍♂️\n✔ ※ تـم قفـل الكلايش بالكتم \n✓',msg.sender_user_id_)  
 elseif text == 'قفل الكلايش بالطرد' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:set(TIGER_ID.."lock:Spam"..msg.chat_id_,'kick')  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكلايش بالطرد \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم قفـل الكلايش بالطرد \n✓',msg.sender_user_id_)  
 elseif text == 'فتح الكلايش' and is_mod(msg) and msg.reply_to_message_id_ == 0 then 
 TIGERBOT:del(TIGER_ID.."lock:Spam"..msg.chat_id_)  
-monsend(msg,msg.chat_id_,'🔖 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الكلايش \n✓',msg.sender_user_id_)  
+monsend(msg,msg.chat_id_,'👩🏿‍🚒 ※ اهــلا عـزيـزي {'..get_rtba(msg)..'} 🙋🏻‍♂️\n✔ ※ تـم فتح الكلايش \n✓',msg.sender_user_id_)  
 end
 if text == "حذف الصوره" and is_mod(msg) then 
 deleteChatPhoto(msg.chat_id_) 
@@ -5868,7 +5868,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if TIGERBOT:sismember(TIGER_ID..'vip:groups',result.id_) then
-setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من مميزين عام'   
+setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*??🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* تم تنزيله من مميزين عام'   
 TIGERBOT:srem(TIGER_ID..'vip:groups',result.id_)  
 else
 setvips = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*📓 ※* بالتاكيد هو ليس مميز عام'   
