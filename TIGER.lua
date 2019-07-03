@@ -970,7 +970,7 @@ TIGERBOT:sadd(TIGER_ID.."botgps", msg.chat_id_)
 TIGERBOT:sadd(TIGER_ID.."bot:gps:id", msg.chat_id_)  
 else
 local taha = TIGERBOT:get(TIGER_ID..'setadd:bot'..bot_id)
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '🔬* ※* المجموعه تحتوي على *{'..data.member_count_..'}* عضو\n✔🙋🏻‍♂️* ※* لا استطيع تفعيل المجموعه \n📑* ※* يجب ان يكون عدد الاعضاء *{'..(taha or 100)..'}* \n ', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '🔬* ※* المجموعه تحتوي على *{'..data.member_count_..'}* عضو\n💈 ※* لا استطيع تفعيل المجموعه \n📑* ※* يجب ان يكون عدد الاعضاء *{'..(taha or 100)..'}* \n ', 1, 'md') 
 TIGERBOT:del(TIGER_ID.."test:group" .. msg.chat_id_)
 end
 if data.member_count_ > tonumber(TIGERBOT:get(TIGER_ID..'setadd:bot'..bot_id) or 100) and not is_devtaha(msg) then    
@@ -1234,7 +1234,7 @@ if not msg.forward_info_ then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🃏 ※* هاذا ليس توجيه من القناة', 1, 'md') 
 TIGERBOT:del(TIGER_ID..'viewchannel'..msg.sender_user_id_) 
 else 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '✔🙋🏻‍♂️* ※*  عدد المشاهدات المنشور ( '..msg.views_..' ) مشاهده ♨', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '💈* ※*  عدد المشاهدات المنشور ( '..msg.views_..' ) مشاهده ♨', 1, 'md') 
 TIGERBOT:del(TIGER_ID..'viewchannel'..msg.sender_user_id_) end end
 if text then   
 if is_filter(msg,text) then    
@@ -1348,7 +1348,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*❕ ※ ليس لدي صلاحية د�
 return false  
 end    
 if data and data.channel_ and data.channel_.username_ ~= false then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📮* ※* معرف المجموعه \n📬* ※* '..TIGERBOT:get(TIGER_ID..'group:name'..ch)..' \nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n✔🙋🏻‍♂️* ※* [@'..data.channel_.username_..']', 1, 'md')    
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📮* ※* معرف المجموعه \n📬* ※* '..TIGERBOT:get(TIGER_ID..'group:name'..ch)..' \nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n💈* ※* [@'..data.channel_.username_..']', 1, 'md')    
 return false  
 end    
 if data and data.code_ and data.code_ == 400 then    
@@ -1370,7 +1370,7 @@ end
 local success, res = pcall(JSON.decode, GetLin) 
 if data and data.channel_ and data.channel_.status_ and data.channel_.status_.ID == "ChatMemberStatusEditor" then
 if TIGERBOT:get(TIGER_ID..'group:name'..ch) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📮* ※* رابط المجموعه \n📬* ※* '..TIGERBOT:get(TIGER_ID..'group:name'..ch)..' \nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n✔🙋🏻‍♂️* ※* ['..(res.result or '..')..']', 1, 'md')    
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'📮* ※* رابط المجموعه \n📬* ※* '..TIGERBOT:get(TIGER_ID..'group:name'..ch)..' \nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n💈* ※* ['..(res.result or '..')..']', 1, 'md')    
 else
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'💠* ※* رابط المجموعه \nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ\n['..(res.result or '..')..']', 1, 'md')    
 end
@@ -3257,7 +3257,7 @@ TIGERBOT:del(TIGER_ID.."addreply1:document:gp"..v..msg.chat_id_)
 TIGERBOT:del(TIGER_ID.."addreply1:audio:gp"..v..msg.chat_id_)
 TIGERBOT:srem(TIGER_ID.."repmedia"..msg.chat_id_,v)  
 end  
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🌐 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*☑ ※* تم مسح الردود جميعها \n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📓 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*✔ ※* تم مسح الردود جميعها \n", 1, 'md')  
 end
 if  text == "قائمه الردود" and is_monsh(msg) then  
 local list = TIGERBOT:smembers(TIGER_ID.."repmedia"..msg.chat_id_)  
@@ -3736,7 +3736,7 @@ TIGERBOT:del("mall:addreply1:document:gp"..v..bot_id)
 TIGERBOT:del("mall:addreply1:audio:gp"..v..bot_id)
 TIGERBOT:srem("rep:media:all"..bot_id,v)    
 end    
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*🔖 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*☑ ※* تم مسح الردود جميعها \n", 1, 'md')    
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*📓 ※* المجموعه تحتوي على *{"..taha.."}* رد \n*✔ ※* تم مسح الردود جميعها \n", 1, 'md')    
 end
 if  text == "ردود المطور" and is_devtaha(msg) then    
 local list = TIGERBOT:smembers(TIGER_ID.."rep:media:all"..bot_id)    
@@ -3834,7 +3834,7 @@ what = 'اغنيه 🎵'
 elseif msg.content_.document_ then 
 what = 'ملف 📁'
 elseif msg.content_.photo_ then 
-what = 'صوره 🎆'
+what = 'صوره ??'
 elseif msg.content_.video_ then  
 what = 'فيديو ??'
 end
@@ -10307,7 +10307,7 @@ t = t..'*'..k.." ➺* ❲["..v.."](tg://user?id="..v..")❳\n"
 end
 end 
 if #list == 0 then 
-t = '*✔🙋🏻‍♂️* لا يوجد اعضاء لديهم صلاحيات الحظر في هاذه المجموعه  ✓' 
+t = '*❕ ※* لا يوجد اعضاء لديهم صلاحيات الحظر في هاذه المجموعه  ✓' 
 end 
 TIGER_sendMssg(msg.chat_id_,t,msg.id_,'md')
 end  
