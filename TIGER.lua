@@ -4035,6 +4035,13 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end 
 end,nil)  
 end   
+if text and text:match("^اضف رسائل (%d+)$") and is_monsh(msg.sender_user_id_, msg.chat_id_) then  
+taha0 = text:match("^اضف رسائل (%d+)$")
+TIGERBOT:set('TIGER_ID:'..bot_id..'id:user'..msg.chat_id_,taha0)  
+TIGERBOT:setex('TIGER_ID:'..bot_id.."numadd:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "🎖 ⁞ ارسل عدد الرسائل •", 1, "md")
+TIGERBOT(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
+end 
 if text == ("كشف البوتات") and is_monsh(msg) then 
 local function cb(extra,result,success)
 local admins = result.members_  
