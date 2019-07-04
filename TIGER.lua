@@ -8934,6 +8934,15 @@ if text == 'عدد الاضافه' or text == 'شكد اضيف' or text == 'شك
 local whatnumadded = (TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_) or 0) 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"📇* ※* عدد الاضافات المطلوبه\n🎴* ※* *"..whatnumadded.."* اشخاص \n", 1, 'md') 
 end
+if text:match("^(عدد السحكات)$") or text:match("^(سحكاتي)$") then
+local edit = TIGERBOT:get('TIGER_ID:'..bot_id..'user:editmsg'..msg.chat_id_..':'..msg.sender_user_id_) or 0
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "📮※ سحكاتك  ✓ *("..edit..")*", 1, 'md')
+end
+if text == 'حذف سحكاتي' then 
+TIGERBOT:del('TIGER_ID:'..bot_id..'user:editmsg'..msg.chat_id_..':'..msg.sender_user_id_)
+local taha = '🗑 ※ تم حذف سحكاتك ✓'
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, 'md')
+end
 if text == "مسح رسايلي" or text == "مسح رسائلي" or text == "حذف رسايلي" or text == "حذف رسائلي" then  
 local getmsgs = TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_) or 0
 local taha = '\n*💌  ※ رسائلك ✓  » ❪ '..getmsgs..' ❫ رساله\n✔ ※ تم مسح جميع رسائلك *\n✓'  
