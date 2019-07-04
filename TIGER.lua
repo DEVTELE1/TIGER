@@ -1397,7 +1397,7 @@ return false  end
 TIGERBOT:del(TIGER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_)  
 local welcome = text:match("(.*)")  
 TIGERBOT:set(TIGER_ID..'welcome:'..msg.chat_id_,welcome) 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n📬* ※* تم وضع الترحيب \n', 1, 'md')    
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n✔* ※* تم وضع الترحيب \n', 1, 'md')    
 end
 if TIGERBOT:get(TIGER_ID.."numadd:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
@@ -1416,7 +1416,7 @@ return false  end
 TIGERBOT:del(TIGER_ID.."set:description" .. msg.chat_id_ .. "" .. msg.sender_user_id_)   
 local Description = text:match("(.*)") 
 setChatDescription(msg.chat_id_, Description) 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n📬* ※* تم وضع وصف للمجموعه \n', 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n✔* ※* تم وضع وصف للمجموعه \n', 1, 'md')   
 end 
 
 if TIGERBOT:get(TIGER_ID.."photo:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
@@ -2974,7 +2974,7 @@ monsend(msg,msg.chat_id_,'💈 ※ اهــلا عـزيـزي {'..get_rtba(msg)
 end
 if text == "حذف الصوره" and is_mod(msg) then 
 deleteChatPhoto(msg.chat_id_) 
-TIGER_sendMsg(msg.chat_id_, msg.id_,1, '*☑ ※* تم حذف صورة المجموعه \n',1,'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_,1, '*✔ ※* تم حذف صورة المجموعه \n',1,'md') 
 end
 if text and text:match("^ضع وصف$") and is_mod(msg) then  
 TIGERBOT:setex(TIGER_ID.."set:description" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  
@@ -2984,7 +2984,7 @@ end
 if text and text:match("^ضع ترحيب$") and is_mod(msg) then  
 TIGERBOT:setex(TIGER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  
 local t = '*💬 ※* ارسل النص الذي تريده '  
-local tt = '\n*📊 ※* ايضا يمكنك وضع \n*💢 ※* دالة طباعه الاسم `name` \n*🔖 ※* ودالة طباعه اسم المجموعه `ngp`'
+local tt = '\n*📓 ※* ايضا يمكنك وضع \n*💢 ※* دالة طباعه الاسم `name` \n*💈※* ودالة طباعه اسم المجموعه `ngp`'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t..tt, 1, 'md') 
 end
 if text and text:match("^جلب صوره$") and not TIGERBOT:get(TIGER_ID.."lock:get:photo"..msg.chat_id_) then  
@@ -3013,7 +3013,7 @@ end
 if msg.content_.photo_ then   
 local test = TIGERBOT:get("addreply1:"..msg.sender_user_id_..bot_id)   
 if test == 'repp' then   
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*☑ ※ تم تغير كليشه الترحيب  ※*\n", 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "*✔ ※ تم تغير كليشه الترحيب*\n", 1, 'md')   
 TIGERBOT:del("addreply1:"..msg.sender_user_id_..bot_id)   
 local test = TIGERBOT:get("addreply2:"..msg.sender_user_id_..bot_id)   
 if msg.content_.photo_ then   
