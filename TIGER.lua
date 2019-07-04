@@ -8031,7 +8031,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*❕ ※ لا استطيع استخرا
 return false  end
 if da.status_.ID == "ChatMemberStatusLeft" then
 if data.username_ == false then
-zo = '👤 ※ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n✔ ※ بالتاكيد تـم طرده من الكروب\n✓'     
+zo = '👤 ※ العضــو »  ❪ '..CatchName(data.first_name_,15)..' ❫\n✔ ※ بالتاكيد تـم طرده من الكروب\n✓'     
 TIGERmonshn(msg.chat_id_, user, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))  
 else
 zo = '*👮‍♂ ※* العضــو » ❪ [@'..data.username_..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..user..'` ❫\n*✔ ※* بالتاكيد تـم طرده من الكروب\n✓'     
