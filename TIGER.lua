@@ -290,7 +290,7 @@ if TIGERBOT:get(TIGER_ID..'text:ch:user') then
 local textchuser = TIGERBOT:get(TIGER_ID..'text:ch:user')
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '['..textchuser..']', 1, 'md')
 else
-chdeva = '\n*📮 ※ لا تستطيع استخدام البوت ✔🙋🏻‍♂️\n📬 ※ عليك الاشتراك في قناة البوت\n🔖 ※ معرف القناة  ↡\n* ['..tahauser..']\n✓'
+chdeva = '\n*🖲 ※ لا تستطيع استخدام البوت ✔🙋🏻‍♂️\n🚦 ※ عليك الاشتراك في قناة البوت\n⚜ ※ معرف القناة  ↡\n* ['..tahauser..']\n✓'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, chdeva, 1, 'md');
 end
 elseif data.ok then
@@ -1135,9 +1135,9 @@ ID = "GetUser",
 user_id_ = msg.sender_user_id_
 },function(arg,data) 
 if data.username_ then
-TIGER_sendMsg(msg.chat_id_,msg.id_,1,'*📬 ※ العضو ↫ ❪*[@'..data.username_..']*❫*\n*🔖 ※ قمت باضافه ❪'..tonumber(TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_))..'❫* اعضاء \n*📮 ※ الان يمكنك الدردشه هنا* \n✓',1,'md')  
+TIGER_sendMsg(msg.chat_id_,msg.id_,1,'*📬 ※ العضو ↫ ❪*[@'..data.username_..']*❫*\n*🚦 ※ قمت باضافه ❪'..tonumber(TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_))..'❫* اعضاء \n*📮 ※ الان يمكنك الدردشه هنا* \n✓',1,'md')  
 else
-taha = '👤 ※ العضو ↫ ❪'..data.id_..'❫\n🔖 ※ قمت باضافه ❪'..tonumber(TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_))..'❫ اعضاء \n📮 ※ الان يمكنك الدردشه هنا \n✓'
+taha = '👤 ※ العضو ↫ ❪'..data.id_..'❫\n🚦 ※ قمت باضافه ❪'..tonumber(TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_))..'❫ اعضاء \n📮 ※ الان يمكنك الدردشه هنا \n✓'
 TIGERmonshn(msg.chat_id_, data.id_, 0, taha, 13, utf8.len(data.id_))  
 end
 end,nil)
@@ -1150,10 +1150,10 @@ ID = "GetUser",
 user_id_ = msg.sender_user_id_
 },function(arg,data) 
 if data.username_ then
-taha = '\n*👤 ※ العضو ↫ ❪*[@'..data.username_..']*❫*\n*💠 ※ لا تستطيع الدردشه هنا*\n*🃏 ※ يجب عليك اضافة اعضاء*\n*📬 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫*'  
+taha = '\n*👤 ※ العضو ↫ ❪*[@'..data.username_..']*❫*\n*⚜ ※ لا تستطيع الدردشه هنا*\n*🃏 ※ يجب عليك اضافة اعضاء*\n*🚦 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫*'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, taha, 1, "md")  
 else
-taha = ' 👤 ※ العضو ↫ ❪'..data.id_..'❫\n💠 ※ لا تستطيع الدردشه هنا\n🃏 ※ يجب عليك اضافة اعضاء\n📬 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫'  
+taha = ' 👤 ※ العضو ↫ ❪'..data.id_..'❫\n⚜ ※ لا تستطيع الدردشه هنا\n🃏 ※ يجب عليك اضافة اعضاء\n🚦 ※ العدد المطاوب للاضافه ❪ '..(mustadd)..' ❫'  
 TIGERmonshn(msg.chat_id_, data.id_, 0, taha, 13, utf8.len(data.id_))  
 end
 end,nil)
@@ -1257,17 +1257,17 @@ else
 usergp = ''
 end    
 if data.message_ == "CHANNEL_INVALID" then
-TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*📬 ※* لا استطيع استخراج معلومات المجموعه  \n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*❕ ※* لا استطيع استخراج معلومات المجموعه  \n", 1, 'md')  
 changeChatMemberStatus(ch, bot_id, "Left")
 TIGER_sendMsg(ch,0, 1, "*🃏 ※* يرجى تفعيل صلاحيات للبوت عندها يمكنك اضافتي\n", 1, 'md')  
 return false  end
 if data.message_ == "CHANNEL_PRIVATE" then
-TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*📮 ※* لا استطيع استخراج معلومات المجموعه  \n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*❕ ※* لا استطيع استخراج معلومات المجموعه  \n", 1, 'md')  
 changeChatMemberStatus(ch, bot_id, "Left")
-TIGER_sendMsg(ch,0, 1, "*📬 ※* يرجى تفعيل صلاحيات للبوت عندها يمكنك اضافتي\n", 1, 'md')  
+TIGER_sendMsg(ch,0, 1, "*⚜ ※* يرجئ تفعيل صلاحيات للبوت عندها يمكنك اضافتي\n", 1, 'md')  
 return false  end
 if data.channel_.status_.ID == "ChatMemberStatusMember" then
-TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*📬 ※* اني عضو بهاي المجموعه \n", 1, 'md')  
+TIGER_sendMsg(msg.chat_id_,msg.id_, 1, "*🚦 ※* اني عضو بهاي المجموعه \n", 1, 'md')  
 changeChatMemberStatus(ch, bot_id, "Left")
 return false  end
 local nummsg = tonumber(TIGERBOT:get(TIGER_ID..'groupmsg:'..ch..':')) 
@@ -5346,17 +5346,17 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end
 if text == "حذف رساله الاشتراك" and is_devtaha(msg) then  
 TIGERBOT:del(TIGER_ID..'text:ch:user')
-taha = "*☑ ※ تم مسح رساله الاشتراك*\n✓"
+taha = "*✔ ※ تم مسح رساله الاشتراك*\n✓"
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
 if text == "تفعيل الاشتراك الاجباري" and is_devtaha(msg) then  
 if TIGERBOT:get(TIGER_ID..'add:ch:id') then
 local addchusername = TIGERBOT:get(TIGER_ID..'add:ch:username')
-taha = "*💢 ※ الاشتراك الاجباري مفعل \n🇹🇲 ※ على القناة » *["..addchusername.."]\n✓"
+taha = "*✔ ※ الاشتراك الاجباري مفعل \n🇹🇲 ※ على القناة » *["..addchusername.."]\n✓"
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 else
 TIGERBOT:setex(TIGER_ID.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  
-taha = "*💢 ※ اهلا عزيزي المطور \n🔖 ※ ارسل معرف قناتك ليتم تفعيل الاشتراك الاجباري*\n✓"
+taha = "*🚦 ※ اهلا عزيزي المطور \n⚜ ※ ارسل معرف قناتك ليتم تفعيل الاشتراك الاجباري*\n✓"
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
 end
