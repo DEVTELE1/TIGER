@@ -3927,7 +3927,7 @@ end
 end
 --======================
 if text ==('ايديي') then   
-TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '*🔖 ※ اضغط على الايدي ليتم نسخه ➘*\n\n*🎫 ※ الايدي ◂⊱ *`'..msg.sender_user_id_..'` *⊰▸*\n✓', 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '*🖲 ※ اضغط على الايدي ليتم نسخه ➘*\n\n*⚠ ※ الايدي ❪ *`'..msg.sender_user_id_..'` *❫*\n✓', 1, 'md')   
 end
 
 if text == "تنظيف المجموعات" and is_devtaha(msg) then
@@ -6384,7 +6384,7 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*🔖 ※ لا تستطيع رفع وت
 return false  end
 if result.id_ then  
 if not TIGERBOT:sismember(TIGER_ID..'moder'..msg.chat_id_,result.id_) then
-setmonsh = '*👩🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه منشئ للـكروب'   
+setmonsh = '*??🏿‍🚒 ※* العضــو » ❪ [@'..username..'] ❫\n*🇹🇲 ※ الايـدي » ❪* `'..result.id_..'` *❫*\n*☑ ※* تـم تـرقيتـه منشئ للـكروب'   
 TIGERBOT:sadd(TIGER_ID..'moder'..msg.chat_id_,result.id_)  
 TIGERBOT:set(TIGER_ID.."user:Name"..result.id_,"@"..username)
 else
