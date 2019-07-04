@@ -8935,7 +8935,7 @@ local whatnumadded = (TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_) or 0)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"📇* ※* عدد الاضافات المطلوبه\n🎴* ※* *"..whatnumadded.."* اشخاص \n", 1, 'md') 
 end
 if text:match("^(عدد السحكات)$") or text:match("^(سحكاتي)$") then
-local edit = TIGERBOT:get('TIGER_ID:'..bot_id..'user:editmsg'..msg.chat_id_..':'..msg.sender_user_id_) or 0
+local getedit = TIGERBOT:get('TIGER_ID:'..bot_id..'user:editmsg'..msg.chat_id_..':'..msg.sender_user_id_) or 0
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "📮※ سحكاتك  ✓ *("..edit..")*", 1, 'md')
 end
 if text == 'حذف سحكاتي' then 
@@ -10120,7 +10120,7 @@ TIGER_send(msg.chat_id_,msg.id_,"*❕ ※ المعرف غير صحيح \n👨�
 return false  
 end   
 TIGERBOT:sadd(TIGER_ID..'LOCK:USERNAME'..msg.chat_id_,result.id_)     
-sendMention(msg,msg.chat_id_,' 👤 ※ العضو » {'..CatchNamertprtp(result.type_.user_.first_name_)..'}'..'\n📬 ※ تم منعه من ارسال المعرفات هنا\n',result.id_)   
+sendMention(msg,msg.chat_id_,' ?? ※ العضو » {'..CatchNamertprtp(result.type_.user_.first_name_)..'}'..'\n📬 ※ تم منعه من ارسال المعرفات هنا\n',result.id_)   
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = user},py_username,nil) 
 end 
