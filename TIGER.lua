@@ -954,7 +954,7 @@ return false  end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if TIGERBOT:sismember(TIGER_ID..'bot:gps:id',msg.chat_id_) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تفعيلها بالتاكيد \nꪜ*', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تفعيلها بالتاكيد \n✓*', 1, 'md')
 TIGERBOT:set(TIGER_ID.."add:bot:group"..msg.chat_id_, true) 
 else
 addmod(msg.chat_id_) 
@@ -1017,7 +1017,7 @@ return false  end
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, function(arg,data)  
 if TIGERBOT:sismember(TIGER_ID..'bot:gps:id',msg.chat_id_) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تفعيلها بالتاكيد \nꪜ*', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تفعيلها بالتاكيد \n✓*', 1, 'md')
 TIGERBOT:set(TIGER_ID.."add:bot:group"..msg.chat_id_, true) 
 else
 addmod(msg.chat_id_) 
@@ -1069,11 +1069,11 @@ TIGERBOT:set(TIGER_ID.."test:group"..msg.chat_id_,'TIGER')
 end  
 if text == 'تعطيل' and add_in_ch(msg) and is_sudo(msg) then      
 if not TIGERBOT:sismember(TIGER_ID..'bot:gps:id',msg.chat_id_) then
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تعطيــلها بالتاكيد \nꪜ*', 1, 'md')
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1, '*☑ ※ المجموعه تم تعطيــلها بالتاكيد \n✓*', 1, 'md')
 TIGERBOT:del(TIGER_ID.."add:bot:group"..msg.chat_id_, true)  
 TIGERBOT:del(TIGER_ID.."test:group" .. msg.chat_id_)
 else
-test = '*☑ ※ تـم تعطيــل المجموعه بـنجـاح ✔🙋🏻‍♂️ *\n\nꪜ'
+test = '*☑ ※ تـم تعطيــل المجموعه بـنجـاح ✔🙋🏻‍♂️ *\n\n✓'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,test, 1, 'md')
 TIGERBOT:del(TIGER_ID.."add:bot:group"..msg.chat_id_, true)  
 TIGERBOT:srem(TIGER_ID..'bot:gpsby:id', msg.chat_id_)   
@@ -1689,7 +1689,7 @@ if is_devtaha(msg) then
 local taha = '*📮 ※ اهلا بك عزيزي المطور ✓'..
 '\n📬 ※ هاذه اوامر الكيبورد خاصه بك'..
 '\n🔖 ※ ارسل الاوامر لعرض اوامر التواصل*'..
-'\n🔰 ※ ارسل امر وضع اسم البوت لوضع اسم لبوتك\nꪜ'
+'\n🔰 ※ ارسل امر وضع اسم البوت لوضع اسم لبوتك\n✓'
 local keyboard = {
 {'تفعيل تواصل 📨','تعطيل تواصل 📩','تحديث ♻','الاحصائيات 🔭'},
 {'تفعيل البوت الخدمي 🎮','تعطيل البوت الخدمي 🚸','المجموعات 📇'},
