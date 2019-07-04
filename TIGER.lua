@@ -2984,7 +2984,7 @@ end
 if text and text:match("^ضع ترحيب$") and is_mod(msg) then  
 TIGERBOT:setex(TIGER_ID.."welc:bot" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 10000, true)  
 local t = '*💬 ※* ارسل النص الذي تريده '  
-local tt = '\n*📓 ※* ايضا يمكنك وضع \n*💢 ※* دالة طباعه الاسم `name` \n*💈※* ودالة طباعه اسم المجموعه `ngp`'
+local tt = '\n*📓 ※* ايضا يمكنك وضع \n*💢 ※* دالة طباعه اسم العضو `name` \n*💈※* ودالة طباعه اسم المجموعه `ngp`'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,t..tt, 1, 'md') 
 end
 if text and text:match("^جلب صوره$") and not TIGERBOT:get(TIGER_ID.."lock:get:photo"..msg.chat_id_) then  
