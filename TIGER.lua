@@ -8935,7 +8935,7 @@ local whatnumadded = (TIGERBOT:get(TIGER_ID..'setadd:'..msg.chat_id_) or 0)
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"📇* ※* عدد الاضافات المطلوبه\n🎴* ※* *"..whatnumadded.."* اشخاص \n", 1, 'md') 
 end
 if text:match("^(عدد السحكات)$") or text:match("^(سحكاتي)$") then
-local getedit = TIGERBOT:get('TIGER_ID:'..bot_id..'user:editmsg'..msg.chat_id_..':'..msg.sender_user_id_) or 0
+local get_editmsg = TIGERBOT:get('TIGER_ID:'..bot_id..'user:editmsg'..msg.chat_id_..':'..msg.sender_user_id_) or 0
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1, "📮※ سحكاتك  ✓ *("..edit..")*", 1, 'md')
 end
 if text == 'حذف سحكاتي' then 
