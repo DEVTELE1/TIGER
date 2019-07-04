@@ -9036,7 +9036,7 @@ end,nil)
 end
 if text == "تفاعلي" then
 local msguser = tonumber(TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
-taha = '*📓 ※ تفاعلك هنا » ❪ '..formsgg(msguser)..' ❫\n✔🙋🏻‍♂️*'
+taha = '*💌 ※ تفاعلك هنا » ❪ '..formsgg(msguser)..' ❫\n✔🙋🏻‍♂️*'
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end
 if text == "جهاتي" then
@@ -9166,7 +9166,7 @@ end
 end
 else
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'\n🎟  ※ ايديك ✓ '..msg.sender_user_id_..''..username..'\n🛰  ※ موقعك ✓ '..get_rtpa(msg.chat_id_,msg.sender_user_id_)..'\n📓  ※ موقع الكروب ✓ '..rtpa..'\n??  ※ تفاعلك ✓ '..formsgg(msguser)..'\n📖  ※ رسائلك ✓ '..(msguser)..'\n📇  ※ صورك ✓ '..taha.total_count_..'\n')       
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, taha.photos_[0].sizes_[1].photo_.persistent_id_,'\n🎟  ※ ايديك ✓ '..msg.sender_user_id_..''..username..'\n🛰  ※ موقعك ✓ '..get_rtpa(msg.chat_id_,msg.sender_user_id_)..'\n📓  ※ موقع الكروب ✓ '..rtpa..'\n💌  ※ تفاعلك ✓ '..formsgg(msguser)..'\n📖  ※ رسائلك ✓ '..(msguser)..'\n📇  ※ صورك ✓ '..taha.total_count_..'\n')       
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'\n🎟  ※ ايديك ✓ '..msg.sender_user_id_..''..usernamee..'\n🛰  ※ موقعك ✓ '..get_rtpa(msg.chat_id_,msg.sender_user_id_)..'\n📓  ※ موقع الكروب ✓ '..rtpa..'\n💌  ※ تفاعلك ✓ '..formsgg(msguser)..'\n📖  ※ رسائلك ✓ '..(msguser)..'\n'..'\n🌇 ※ لا يمكنني عرض صورتك لانك قمت بحظر البوت', 1, 'md')   
