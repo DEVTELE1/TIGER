@@ -8734,81 +8734,81 @@ end
 end
 if text == 'تفعيل البوت الخدمي' and is_devtaha(msg) then 
 if TIGERBOT:get(TIGER_ID..'lock:bot:free'..bot_id) then
-taha = '*🌐 ※ تم تفعيل البوت الخدمي *\n✓' 
+taha = '*✔ ※ تم تفعيل البوت الخدمي *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:del(TIGER_ID..'lock:bot:free'..bot_id) 
 else
-taha = '*🌐 ※ بالتاكيد تم تفعيل البوت الخدمي  *\n✓' 
+taha = '*✔ ※ بالتاكيد تم تفعيل البوت الخدمي  *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
 if text == 'تعطيل البوت الخدمي' and is_devtaha(msg) then 
 if not TIGERBOT:get(TIGER_ID..'lock:bot:free'..bot_id) then
-taha = '*🌐 ※ تم تعطيل البوت الخدمي *\n✓' 
+taha = '*✔ ※ تم تعطيل البوت الخدمي *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:set(TIGER_ID..'lock:bot:free'..bot_id,true) 
 else
-taha = '*🌐 ※ بالتاكيد تم تعطيل البوت الخدمي  *\n✓' 
+taha = '*✔ ※ بالتاكيد تم تعطيل البوت الخدمي  *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
 if text == 'تفعيل كليشه الترحيب' and is_devtaha(msg) then 
 if TIGERBOT:get(TIGER_ID..'lock:klsh:add'..bot_id) then
-taha = '*🀄 ※ تم تفعيل كليشه الترحيب عند الاضافه*\n✓' 
+taha = '*✔ ※ تم تفعيل كليشه الترحيب عند الاضافه*\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:del(TIGER_ID..'lock:klsh:add'..bot_id) 
 else
-taha = '*🀄 ※ بالتاكيد تم تفعيل كليشه الترحيب عند الاضافه*\n✓' 
+taha = '*✔ ※ بالتاكيد تم تفعيل كليشه الترحيب عند الاضافه*\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
 if text == 'تعطيل كليشه الترحيب' and is_devtaha(msg) then 
 if not TIGERBOT:get(TIGER_ID..'lock:klsh:add'..bot_id) then
-taha = '*🀄 ※ تم تعطيل كليشه الترحيب عند الاضافه*\n✓' 
+taha = '*✔ ※ تم تعطيل كليشه الترحيب عند الاضافه*\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:set(TIGER_ID..'lock:klsh:add'..bot_id,true) 
 else
-taha = '*🀄 ※ بالتاكيد تم تعطيل كليشه الترحيب عند الاضافه*\n✓' 
+taha = '*✔ ※ بالتاكيد تم تعطيل كليشه الترحيب عند الاضافه*\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
 if text == 'تفعيل التواصل' and is_devtaha(msg) then 
 if TIGERBOT:get(TIGER_ID..'lock:botl'..bot_id) then
-taha = '*💢 ※ تم تفعيل البوت التواصل *\n✓' 
+taha = '*🖲 ※ تم تفعيل البوت التواصل *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:del(TIGER_ID..'lock:botl'..bot_id) 
 else
-taha = '*💢 ※ بالتاكيد تم تفعيل البوت التواصل  *\n✓' 
+taha = '*🖲 ※ بالتاكيد تم تفعيل البوت التواصل  *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
 if text == 'تعطيل التواصل' and is_devtaha(msg) then 
 if not TIGERBOT:get(TIGER_ID..'lock:botl'..bot_id) then
-taha = '*💢 ※ تم تعطيل البوت التواصل *\n✓' 
+taha = '*🖲 ※ تم تعطيل البوت التواصل *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:set(TIGER_ID..'lock:botl'..bot_id,true) 
 else
-taha = '*💢 ※ بالتاكيد تم تعطيل البوت التواصل  *\n✓' 
+taha = '*🖲 ※ بالتاكيد تم تعطيل البوت التواصل  *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
 if text == 'تفعيل الحظر' and is_monsh(msg) then   
 if TIGERBOT:get(TIGER_ID..'LOCK:BAN:KICK'..msg.chat_id_)  then
-taha = '*💢 ※ تم تفعيل { الحظر - الطرد } *\n✓' 
+taha = '*✔ ※ تم تفعيل { الحظر - الطرد } *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:del(TIGER_ID..'LOCK:BAN:KICK'..msg.chat_id_) 
 else
-taha = '*💢 ※ بالتاكيد تم تفعيل { الحظر - الطرد } *\n✓' 
+taha = '*✔ ※ بالتاكيد تم تفعيل { الحظر - الطرد } *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
 if text == 'تعطيل الحظر' and is_monsh(msg) then  
 if not TIGERBOT:get(TIGER_ID..'LOCK:BAN:KICK'..msg.chat_id_)  then
-taha = '*💢 ※ تم تعطيل { الحظر - الطرد } *\n✓' 
+taha = '*✔ ※ تم تعطيل { الحظر - الطرد } *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 TIGERBOT:set(TIGER_ID..'LOCK:BAN:KICK'..msg.chat_id_,true) 
 else
-taha = '*💢 ※ بالتاكيد تم تعطيل { الحظر - الطرد } *\n✓' 
+taha = '*✔ ※ بالتاكيد تم تعطيل { الحظر - الطرد } *\n✓' 
 TIGER_sendMsg( msg.chat_id_, msg.id_, 1, taha, 1, "md") 
 end
 end
@@ -8816,14 +8816,14 @@ if text and text:match("^صورتي (%d+)") and not TIGERBOT:get(TIGER_ID.."lock
 local pro = tonumber(text and text:match("^صورتي (%d+)")) 
 local function myprofile(extra, result, success) 
 if result.total_count_ == 0 then 
-TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '*📌 ※* عذرا انت لا تضع صوره في حسابك', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '*❕ ※* عذرا انت لا تضع صوره في حسابك', 1, 'md') 
 else 
 if result.total_count_ >= pro then 
 if result.photos_[0] then 
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_, '\n🌁 ※ صورتك رقم  '..pro..' \n📑 ※ عدد صورك  '..result.total_count_..' \n📊 ※ حجم صورتك  '..result.photos_[0].sizes_[1].photo_.size_..' ') 
 end 
 else 
-TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '\n*🔖️ ※* انت لا تمتلك صوره رقم  *{'..pro..'}*\n*🌁 ※* عدد صورك هي *{'..result.total_count_..'}*', 1, 'md')   
+TIGER_sendMsg(msg.chat_id_, msg.id_,  1, '\n*❕ ※* انت لا تمتلك صوره رقم  *{'..pro..'}*\n*🌁 ※* عدد صورك هي *{'..result.total_count_..'}*', 1, 'md')   
 end 
 end 
 end 
@@ -8854,7 +8854,7 @@ if TIGERBOT:get(TIGER_ID.."pvstart") then
 pvstart = TIGERBOT:get(TIGER_ID.."pvstart")
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,''..check_markdown(pvstart)..'', 1, 'md') 
 else 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*✉ ※ لا يوجد رد في التواصل \n📮 ※* ارسل `ضع رد التواصل`\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ لا يوجد رد في التواصل \n💌 ※* ارسل `ضع رد التواصل`\n✓', 1, 'md') 
 end 
 end
 if text == "جلب كليشه ستارت" and is_devtaha(msg) then  
@@ -8862,16 +8862,16 @@ local start = TIGERBOT:get(TIGER_ID.."start:msgofstart1")
 if start then 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,''..check_markdown(start)..'', 1, 'md') 
 else 
-TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*✉ ※ لا توجد كليشه في ستارت \n📮 ※* ارسل `ضع كليشه ستارت`\n✓', 1, 'md') 
+TIGER_sendMsg(msg.chat_id_, msg.id_, 1,'*❕ ※ لا توجد كليشه في ستارت \n💌 ※* ارسل `ضع كليشه ستارت`\n✓', 1, 'md') 
 end 
 end
 if text == "حذف رد التواصل" and is_devtaha(msg) then  
 TIGERBOT:del(TIGER_ID.."pvstart") 
-TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*☑ ※*تم حذف رد التوصل', 1, "md") 
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*✔ ※*تم حذف رد التوصل', 1, "md") 
 end 
 if text == "حذف كليشه ستارت" and is_devtaha(msg) then  
 TIGERBOT:del(TIGER_ID.."start:msgofstart1") 
-TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*☑ ※*تم حذف كليشه ستارت', 1, "md") 
+TIGER_sendMsg( msg.chat_id_, msg.id_, 1, '*✔ ※*تم حذف كليشه ستارت', 1, "md") 
 end 
 if text == 'معلوماتي' or text=='موقعي' or text == 'اكشفني' then 
 local msgtaha = 500 
@@ -8936,13 +8936,13 @@ TIGER_sendMsg(msg.chat_id_, msg.id_, 1,"📇* ※* عدد الاضافات ال�
 end
 if text == "مسح رسايلي" or text == "مسح رسائلي" or text == "حذف رسايلي" or text == "حذف رسائلي" then  
 local getmsgs = TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_) or 0
-local taha = '\n*💌  ※ رسائلك ✓  » ❪ '..getmsgs..' ❫ رساله\n☑ ※ تم مسح جميع رسائلك *\n✓'  
+local taha = '\n*💌  ※ رسائلك ✓  » ❪ '..getmsgs..' ❫ رساله\n✔ ※ تم مسح جميع رسائلك *\n✓'  
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md')  
 TIGERBOT:del(TIGER_ID..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_) 
 end
 if text == "رسايلي" or text == "رسائلي" or text == "msg" then 
 local getmsgs = TIGERBOT:get(TIGER_ID..'user:messages:'..msg.chat_id_..':'..msg.sender_user_id_) or 0
-local taha = '*💌  ※ رسائلك ✓ » ❪ '..getmsgs..' ❫ رسالة *' 
+local taha = '*💌  ※ رسائلك ✓ » ❪ '..getmsgs..' ❫  *' 
 TIGER_sendMsg(msg.chat_id_, msg.id_, 1,taha, 1, 'md') 
 end 
 end
